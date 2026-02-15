@@ -1224,11 +1224,11 @@ class Ui_Dialog(object):
 
         self.temperatura_2.setText(QCoreApplication.translate("Dialog", u"0", None))
         self.temperatura_1.setText(QCoreApplication.translate("Dialog", u"0", None))
-        self.combo_temp_1.setItemText(0, QCoreApplication.translate("Dialog", u"Celsius ", None))
+        self.combo_temp_1.setItemText(0, QCoreApplication.translate("Dialog", u"Celsius", None))
         self.combo_temp_1.setItemText(1, QCoreApplication.translate("Dialog", u"Kelvin", None))
         self.combo_temp_1.setItemText(2, QCoreApplication.translate("Dialog", u"Fahrenheit", None))
 
-        self.combo_temp_1.setCurrentText(QCoreApplication.translate("Dialog", u"Celsius ", None))
+        self.combo_temp_1.setCurrentText(QCoreApplication.translate("Dialog", u"Celsius", None))
         self.numero_4_temp.setText(QCoreApplication.translate("Dialog", u"4", None))
         self.numero_2_temp.setText(QCoreApplication.translate("Dialog", u"2", None))
         self.numero_6_temp.setText(QCoreApplication.translate("Dialog", u"6", None))

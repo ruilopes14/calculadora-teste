@@ -23,10 +23,10 @@ class FiltroVirgula(QObject):
     
     def eventFilter(self, obj, event):
         if event.type() == QEvent.KeyPress and event.key() == Qt.Key_Period:
-            # Se já tem vírgula, não adiciona outra
+
             if "," in self.campo.text():
                 return True
-            # Insere vírgula em vez de ponto
+            
             self.campo.insert(",")
             return True
         return False
@@ -35,6 +35,11 @@ filtro1 = FiltroVirgula(ui.distancia_1)
 ui.distancia_1.installEventFilter(filtro1)
 filtro2 = FiltroVirgula(ui.distancia_2)
 ui.distancia_2.installEventFilter(filtro2)
+
+filtro3 = FiltroVirgula(ui.temperatura_1)
+ui.temperatura_1.installEventFilter(filtro3)
+filtro4 = FiltroVirgula(ui.temperatura_2)
+ui.temperatura_2.installEventFilter(filtro4)
 
 ui.combo_distancia_1.view().window().setStyleSheet("""
     QWidget {
@@ -355,7 +360,8 @@ conversoes_temperatura = {
     "Fahrenheit": (5/9, -32), 
     "Kelvin": (1, -273.15),   
 }
-    
+
+
 def converter_distancia1():
     global convertendo
     if convertendo:  
@@ -387,8 +393,7 @@ def converter_distancia1():
     ui.distancia_2.setText(texto_formatado)
     
     convertendo = False 
-
-    
+   
 def converter_distancia2():
     global convertendo
     if convertendo:  
@@ -421,10 +426,12 @@ def converter_distancia2():
     
     convertendo = False
 
+
 def converter_temperatura1():
     global convertendo
     if convertendo:  
         return
+    
     texto_temperatura1 = ui.temperatura_1.text()
 
     if texto_temperatura1.startswith("0") and len(texto_temperatura1) > 1 and texto_temperatura1[1] not in [".", ","]:
@@ -446,6 +453,35 @@ def converter_temperatura1():
 
     texto_formatado = formatar_numero(resultado)
     ui.temperatura_2.setText(texto_formatado)
+    
+    convertendo = False
+
+def converter_temperatura2():
+    global convertendo
+    if convertendo:  
+        return
+
+    texto_temperatura2 = ui.temperatura_2.text()
+
+    if texto_temperatura2.startswith("0") and len(texto_temperatura2) > 1 and texto_temperatura2[1] not in [".", ","]:
+        texto = texto_temperatura2.lstrip("0") 
+        ui.temperatura_2.setText(texto)
+        texto_temperatura2 = texto
+
+    texto_limpo = texto_temperatura2.replace(" ", "").replace(",", ".")
+    try:
+        valor_temperatura2 = float(texto_limpo)
+    except:
+        return
+    unidade1 = ui.combo_temp_1.currentText()
+    unidade2 = ui.combo_temp_2.currentText()
+    convertendo = True
+    em_celsius = (valor_temperatura2 + conversoes_temperatura[unidade2][1] ) * conversoes_temperatura[unidade2][0]
+    resultado = (em_celsius / conversoes_temperatura[unidade1][0]) - conversoes_temperatura[unidade1][1]    
+    resultado = round(resultado, 4)
+
+    texto_formatado = formatar_numero(resultado)
+    ui.temperatura_1.setText(texto_formatado)
     
     convertendo = False
 
@@ -530,13 +566,18 @@ def apagar_foco():
     campo_ativo.setText(texto_atual [:-1] )
 
 def ir_para_calculadora():
+    apagar_tudo_foco ()
     ui.stackedWidget.setCurrentIndex(0)
     
 def ir_para_distancias():
+    apagar_tudo_foco ()
     ui.stackedWidget.setCurrentIndex(1)
 
 def ir_para_temperatura () :
+    apagar_tudo_foco ()
     ui.stackedWidget.setCurrentIndex(2)
+
+
 
 ui.botao_resultado.setDefault(True)
 
@@ -563,19 +604,6 @@ ui.botao_apagar_tudo.clicked.connect(limpar_tudo)
 ui.operador_percentagem.clicked.connect(percentagem) 
 ui.botao_sinal.clicked.connect(sinal)
 
-ui.distancia_1.textChanged.connect(converter_distancia1)
-ui.distancia_1.textChanged.connect(substituir_ponto_1)
-ui.distancia_2.textChanged.connect(converter_distancia2)
-ui.distancia_2.textChanged.connect(substituir_ponto_2)
-
-ui.temperatura_1.textChanged.connect(converter_temperatura1)
-
-
-
-ui.combo_distancia_1.currentIndexChanged.connect(converter_distancia1)
-ui.combo_distancia_2.currentIndexChanged.connect(converter_distancia1)
-
-
 ui.numero_1_dist.clicked.connect(lambda: numeros_distancia(1))
 ui.numero_2_dist.clicked.connect(lambda: numeros_distancia(2))
 ui.numero_3_dist.clicked.connect(lambda: numeros_distancia(3))
@@ -586,6 +614,13 @@ ui.numero_7_dist.clicked.connect(lambda: numeros_distancia(7))
 ui.numero_8_dist.clicked.connect(lambda: numeros_distancia(8))
 ui.numero_9_dist.clicked.connect(lambda: numeros_distancia(9))
 ui.numero_0_dist.clicked.connect(lambda: numeros_distancia(0))
+ui.distancia_1.textChanged.connect(converter_distancia1)
+ui.distancia_1.textChanged.connect(substituir_ponto_1)
+ui.distancia_2.textChanged.connect(converter_distancia2)
+ui.distancia_2.textChanged.connect(substituir_ponto_2)
+ui.combo_distancia_1.currentIndexChanged.connect(converter_distancia1)
+ui.combo_distancia_2.currentIndexChanged.connect(converter_distancia2)
+
 ui.numero_1_temp.clicked.connect(lambda: numeros_distancia(1))
 ui.numero_2_temp.clicked.connect(lambda: numeros_distancia(2))
 ui.numero_3_temp.clicked.connect(lambda: numeros_distancia(3))
@@ -596,6 +631,10 @@ ui.numero_7_temp.clicked.connect(lambda: numeros_distancia(7))
 ui.numero_8_temp.clicked.connect(lambda: numeros_distancia(8))
 ui.numero_9_temp.clicked.connect(lambda: numeros_distancia(9))
 ui.numero_0_temp.clicked.connect(lambda: numeros_distancia(0))
+ui.temperatura_1.textChanged.connect(converter_temperatura1)
+ui.combo_temp_1.currentIndexChanged.connect(converter_temperatura1)
+ui.temperatura_2.textChanged.connect(converter_temperatura2)
+ui.combo_temp_2.currentIndexChanged.connect(converter_temperatura2)
 
 ui.botao_apagar_dist.clicked.connect(apagar_foco)
 ui.botao_apagar_temp.clicked.connect(apagar_foco)

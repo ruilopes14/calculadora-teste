@@ -1965,11 +1965,11 @@ QComboBox::down-arrow {
 }</string>
      </property>
      <property name="currentText">
-      <string>Celsius </string>
+      <string>Celsius</string>
      </property>
      <item>
       <property name="text">
-       <string>Celsius </string>
+       <string>Celsius</string>
       </property>
      </item>
      <item>
