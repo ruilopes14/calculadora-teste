@@ -340,7 +340,12 @@ def abrir_menu():
     menu.addAction("Calculadora padrão", ir_para_calculadora)
     menu.addAction("Distâncias", ir_para_distancias)
     menu.addAction("Temperatura", ir_para_temperatura)
-
+    menu.addAction("Tempo", ir_para_tempo)
+    menu.addAction("Datas", ir_para_datas)
+    menu.addAction("Velocidades", ir_para_velocidades)
+    menu.addAction("Moedas", ir_para_moedas)
+    menu.addAction("Defenicoes", ir_para_defenicoes)
+    menu.addAction("Acerca de", ir_para_acerca_de)
     menu.exec(ui.toolButton_1.mapToGlobal(ui.toolButton_1.rect().bottomLeft()))
 
 
@@ -577,7 +582,29 @@ def ir_para_temperatura () :
     apagar_tudo_foco ()
     ui.stackedWidget.setCurrentIndex(2)
 
+def ir_para_tempo () :
+    apagar_tudo_foco ()
+    ui.stackedWidget.setCurrentIndex(4)
 
+def ir_para_datas () :
+    apagar_tudo_foco ()
+    ui.stackedWidget.setCurrentIndex(4)
+
+def ir_para_velocidades () :
+    apagar_tudo_foco ()
+    ui.stackedWidget.setCurrentIndex(4)
+
+def ir_para_moedas () :
+    apagar_tudo_foco ()
+    ui.stackedWidget.setCurrentIndex(4)
+
+def ir_para_defenicoes () :
+    apagar_tudo_foco ()
+    ui.stackedWidget.setCurrentIndex(4)
+
+def ir_para_acerca_de () :
+    apagar_tudo_foco ()
+    ui.stackedWidget.setCurrentIndex(4)
 
 ui.botao_resultado.setDefault(True)
 
@@ -643,6 +670,8 @@ ui.botao_apagar_tudo_temp.clicked.connect(apagar_tudo_foco)
 ui.toolButton_1.clicked.connect(abrir_menu)
 ui.toolButton_0.clicked.connect(abrir_menu)
 ui.toolButton_2.clicked.connect(abrir_menu)
+ui.toolButton_3.clicked.connect(abrir_menu)
+ui.toolButton_4.clicked.connect(abrir_menu)
 
 QShortcut(QKeySequence("1"), janela).activated.connect(lambda: numeros(1))
 QShortcut(QKeySequence("2"), janela).activated.connect(lambda: numeros(2))

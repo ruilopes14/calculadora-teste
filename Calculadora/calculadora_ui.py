@@ -23,7 +23,7 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
-        Dialog.resize(301, 439)
+        Dialog.resize(304, 439)
         self.stackedWidget = QStackedWidget(Dialog)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setGeometry(QRect(0, 0, 301, 431))
@@ -1148,10 +1148,46 @@ class Ui_Dialog(object):
         self.numero_3_temp.setCheckable(False)
         self.numero_3_temp.setChecked(False)
         self.stackedWidget.addWidget(self.page)
+        self.page_4 = QWidget()
+        self.page_4.setObjectName(u"page_4")
+        self.toolButton_3 = QToolButton(self.page_4)
+        self.toolButton_3.setObjectName(u"toolButton_3")
+        self.toolButton_3.setGeometry(QRect(10, 10, 21, 31))
+        self.toolButton_3.setFont(font2)
+        self.toolButton_3.setTabletTracking(False)
+        self.toolButton_3.setStyleSheet(u"QToolButton:hover {\n"
+"        color: #000;\n"
+"        background-color: #e0e0e0;\n"
+"        border-radius: 5px;\n"
+"    }\n"
+" ")
+        self.stackedWidget.addWidget(self.page_4)
+        self.page_5 = QWidget()
+        self.page_5.setObjectName(u"page_5")
+        self.label = QLabel(self.page_5)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(20, -10, 321, 251))
+        self.label_2 = QLabel(self.page_5)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(-10, 210, 311, 171))
+        self.label_2.setPixmap(QPixmap(u"construcao.png"))
+        self.label_2.setScaledContents(True)
+        self.toolButton_4 = QToolButton(self.page_5)
+        self.toolButton_4.setObjectName(u"toolButton_4")
+        self.toolButton_4.setGeometry(QRect(10, 10, 21, 31))
+        self.toolButton_4.setFont(font2)
+        self.toolButton_4.setTabletTracking(False)
+        self.toolButton_4.setStyleSheet(u"QToolButton:hover {\n"
+"        color: #000;\n"
+"        background-color: #e0e0e0;\n"
+"        border-radius: 5px;\n"
+"    }\n"
+" ")
+        self.stackedWidget.addWidget(self.page_5)
 
         self.retranslateUi(Dialog)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(4)
         self.operador_multiplicar.setDefault(False)
 
 
@@ -1241,5 +1277,9 @@ class Ui_Dialog(object):
         self.botao_apagar_temp.setText(QCoreApplication.translate("Dialog", u"\u27f5", None))
         self.numero_5_temp.setText(QCoreApplication.translate("Dialog", u"5", None))
         self.numero_3_temp.setText(QCoreApplication.translate("Dialog", u"3", None))
+        self.toolButton_3.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
+        self.label.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">Em </span></p><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">constru\u00e7\u00e3o</span></p></body></html>", None))
+        self.label_2.setText("")
+        self.toolButton_4.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
     # retranslateUi
 
