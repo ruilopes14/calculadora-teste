@@ -1,0 +1,17 @@
+css botão tol button 
+
+
+     QToolButton {
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        color: #666;
+    }
+ 
+
+qline transparente css
+
+background-color: transparent;
+border: 2px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
