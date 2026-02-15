@@ -39,7 +39,6 @@ ui.combo_distancia_1.view().setStyleSheet("""
     }
 """)
 
-
 ui.combo_distancia_2.view().setStyleSheet("""
     QListView {
         background-color: white;
@@ -62,10 +61,59 @@ ui.combo_distancia_2.view().window().setStyleSheet("""
     }
 """)
 
+
+ui.combo_temp_1.view().window().setStyleSheet("""
+    QWidget {
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+    }
+""")
+ui.combo_temp_1.view().setStyleSheet("""
+    QListView {
+        background-color: white;
+        border: 1px solid #ddd;
+        outline: 0;
+    }
+    QListView::item {
+        padding: 5px;
+        outline: 0 ;                                  
+    }
+    QListView::item:selected {
+        background-color: #ff7052;
+        color: white;
+    }
+""")
+
+ui.combo_temp_2.view().window().setStyleSheet("""
+    QWidget {
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+    }
+""")
+ui.combo_temp_2.view().setStyleSheet("""
+    QListView {
+        background-color: white;
+        border: 1px solid #ddd;
+        outline: 0;
+    }
+    QListView::item {
+        padding: 5px;
+        outline: 0 ;                                  
+    }
+    QListView::item:selected {
+        background-color: #ff7052;
+        color: white;
+    }
+""")
+
 validator = QDoubleValidator()
 validator.setLocale(QLocale(QLocale.Portuguese, QLocale.Portugal))
 ui.distancia_1.setValidator(validator)
 ui.distancia_2.setValidator(validator)
+ui.temperatura_1.setValidator(validator)
+ui.temperatura_2.setValidator(validator)
 
 def resource_path(path):
     if hasattr(sys, '_MEIPASS'):
@@ -263,9 +311,11 @@ def abrir_menu():
     background-color: #ff5032;  /* laranja/vermelho como CE */
     color: white;
 }
-""")
-    menu.addAction("Distâncias", ir_para_distancias)
+""") 
     menu.addAction("Calculadora padrão", ir_para_calculadora)
+    menu.addAction("Distâncias", ir_para_distancias)
+    menu.addAction("Temperatura", ir_para_temperatura)
+
     menu.exec(ui.toolButton_1.mapToGlobal(ui.toolButton_1.rect().bottomLeft()))
 
 
@@ -280,6 +330,12 @@ conversoes_distancia = {
     "Milímetros": 0.001
 }
 
+conversoes_temperatura = {
+    "Celsius": (1, 0),        
+    "Fahrenheit": (5/9, -32), 
+    "Kelvin": (1, -273.15),   
+}
+    
 def converter_distancia1():
     global convertendo
     if convertendo:  
@@ -428,7 +484,10 @@ def ir_para_calculadora():
     
 def ir_para_distancias():
     ui.stackedWidget.setCurrentIndex(1)
-    
+
+def ir_para_temperatura () :
+    ui.stackedWidget.setCurrentIndex(2)
+
 ui.botao_resultado.setDefault(True)
 
 
@@ -473,6 +532,7 @@ ui.botao_apagar_dist.clicked.connect(apagar_dist)
 ui.botao_apagar_tudo_dist.clicked.connect(apagar_tudo_dist)
 ui.toolButton_1.clicked.connect(abrir_menu)
 ui.toolButton_0.clicked.connect(abrir_menu)
+ui.toolButton_2.clicked.connect(abrir_menu)
 
 QShortcut(QKeySequence("1"), janela).activated.connect(lambda: numeros(1))
 QShortcut(QKeySequence("2"), janela).activated.connect(lambda: numeros(2))
