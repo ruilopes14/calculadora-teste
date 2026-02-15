@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="calculadora">
     <widget class="QPushButton" name="numero_6">
@@ -1014,28 +1014,10 @@ QPushButton:hover {
       </rect>
      </property>
      <property name="font">
-      <font>
-       <pointsize>-1</pointsize>
-      </font>
+      <font/>
      </property>
      <property name="styleSheet">
-      <string notr="true">QComboBox {
-    background-color: white;
-    color: #333;
-    font-size: 11px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 5px 10px;
-}
-QComboBox::drop-down {
-    border: none;
-    width: 25px;
-}
-QComboBox::down-arrow {
-    image: url(arrow.png);
-    width: 10px;
-    height: 10px;
-}</string>
+      <string notr="true"/>
      </property>
      <property name="currentText">
       <string>Metros</string>

@@ -479,23 +479,7 @@ class Ui_Dialog(object):
         self.combo_distancia_1.setGeometry(QRect(10, 130, 121, 31))
         font2 = QFont()
         self.combo_distancia_1.setFont(font2)
-        self.combo_distancia_1.setStyleSheet(u"QComboBox {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 11px;\n"
-"    border: 2px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    padding: 5px 10px;\n"
-"}\n"
-"QComboBox::drop-down {\n"
-"    border: none;\n"
-"    width: 25px;\n"
-"}\n"
-"QComboBox::down-arrow {\n"
-"    image: url(arrow.png);\n"
-"    width: 10px;\n"
-"    height: 10px;\n"
-"}")
+        self.combo_distancia_1.setStyleSheet(u"")
         self.distancia_1 = QLineEdit(self.temperaturas)
         self.distancia_1.setObjectName(u"distancia_1")
         self.distancia_1.setGeometry(QRect(10, 60, 281, 61))
@@ -1187,7 +1171,7 @@ class Ui_Dialog(object):
 
         self.retranslateUi(Dialog)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
         self.operador_multiplicar.setDefault(False)
 
 

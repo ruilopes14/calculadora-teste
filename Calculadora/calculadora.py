@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QApplication, QDialog, QMenu, QLineEdit
 from calculadora_ui import Ui_Dialog
-from PySide6.QtGui import QIcon, QShortcut, QKeySequence, QFont, QFontDatabase, QDoubleValidator
+from PySide6.QtGui import QIcon, QShortcut, QKeySequence, QFont, QFontDatabase, QDoubleValidator, QPixmap
 from PySide6.QtCore import Qt, QLocale, QEvent, QObject
 import sys
 import os
@@ -63,6 +63,9 @@ ui.combo_distancia_1.view().setStyleSheet("""
         color: white;
     }
 """)
+
+
+
 
 ui.combo_distancia_2.view().setStyleSheet("""
     QListView {
@@ -151,6 +154,36 @@ if getattr(sys, 'frozen', False):
 else:
     # Executando como script Python
     base_path = os.path.dirname(__file__)
+
+
+caminho_seta = resource_path("arrow.png").replace("\\", "/")
+
+estilo_combo = f"""
+    QComboBox {{
+        background-color: white;
+        color: #333;
+        font-size: 11px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 5px 10px;
+    }}
+    QComboBox::drop-down {{
+        border: none;
+        width: 25px;
+    }}
+    QComboBox::down-arrow {{
+        image: url({caminho_seta});
+        width: 10px;
+        height: 10px;
+    }}
+"""
+
+ui.combo_distancia_1.setStyleSheet(estilo_combo)
+ui.combo_distancia_2.setStyleSheet(estilo_combo)
+ui.combo_temp_1.setStyleSheet(estilo_combo)
+ui.combo_temp_2.setStyleSheet(estilo_combo)
+
+ui.label_2.setPixmap(QPixmap(resource_path("construcao.png")))
 
 janela.setWindowIcon(QIcon(resource_path("icon.ico")))
 

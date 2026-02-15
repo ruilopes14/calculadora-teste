@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['calculadora.py', 'Calculadora.py'],
+    ['calculadora.py'],
     pathex=[],
     binaries=[],
     datas=[('icon.ico', '.'), ('DS-Digit.ttf', '.'), ('arrow.png', '.'), ('construcao.png', '.')],
