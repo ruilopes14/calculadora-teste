@@ -906,12 +906,12 @@ class Ui_Dialog(object):
 "    width: 10px;\n"
 "    height: 10px;\n"
 "}")
-        self.numero_4_dist_4 = QPushButton(self.page)
-        self.numero_4_dist_4.setObjectName(u"numero_4_dist_4")
-        self.numero_4_dist_4.setGeometry(QRect(10, 330, 71, 51))
-        self.numero_4_dist_4.setFont(font)
-        self.numero_4_dist_4.setFocusPolicy(Qt.NoFocus)
-        self.numero_4_dist_4.setStyleSheet(u"QPushButton {\n"
+        self.numero_4_temp = QPushButton(self.page)
+        self.numero_4_temp.setObjectName(u"numero_4_temp")
+        self.numero_4_temp.setGeometry(QRect(10, 330, 71, 51))
+        self.numero_4_temp.setFont(font)
+        self.numero_4_temp.setFocusPolicy(Qt.NoFocus)
+        self.numero_4_temp.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -924,14 +924,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_4_dist_4.setCheckable(False)
-        self.numero_4_dist_4.setChecked(False)
-        self.numero_2_dist_4 = QPushButton(self.page)
-        self.numero_2_dist_4.setObjectName(u"numero_2_dist_4")
-        self.numero_2_dist_4.setGeometry(QRect(80, 280, 71, 51))
-        self.numero_2_dist_4.setFont(font)
-        self.numero_2_dist_4.setFocusPolicy(Qt.NoFocus)
-        self.numero_2_dist_4.setStyleSheet(u"QPushButton {\n"
+        self.numero_4_temp.setCheckable(False)
+        self.numero_4_temp.setChecked(False)
+        self.numero_2_temp = QPushButton(self.page)
+        self.numero_2_temp.setObjectName(u"numero_2_temp")
+        self.numero_2_temp.setGeometry(QRect(80, 280, 71, 51))
+        self.numero_2_temp.setFont(font)
+        self.numero_2_temp.setFocusPolicy(Qt.NoFocus)
+        self.numero_2_temp.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -944,14 +944,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_2_dist_4.setCheckable(False)
-        self.numero_2_dist_4.setChecked(False)
-        self.numero_6_dist_4 = QPushButton(self.page)
-        self.numero_6_dist_4.setObjectName(u"numero_6_dist_4")
-        self.numero_6_dist_4.setGeometry(QRect(150, 330, 71, 51))
-        self.numero_6_dist_4.setFont(font)
-        self.numero_6_dist_4.setFocusPolicy(Qt.NoFocus)
-        self.numero_6_dist_4.setStyleSheet(u"QPushButton {\n"
+        self.numero_2_temp.setCheckable(False)
+        self.numero_2_temp.setChecked(False)
+        self.numero_6_temp = QPushButton(self.page)
+        self.numero_6_temp.setObjectName(u"numero_6_temp")
+        self.numero_6_temp.setGeometry(QRect(150, 330, 71, 51))
+        self.numero_6_temp.setFont(font)
+        self.numero_6_temp.setFocusPolicy(Qt.NoFocus)
+        self.numero_6_temp.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -964,14 +964,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_6_dist_4.setCheckable(False)
-        self.numero_6_dist_4.setChecked(False)
-        self.numero_8_dist_4 = QPushButton(self.page)
-        self.numero_8_dist_4.setObjectName(u"numero_8_dist_4")
-        self.numero_8_dist_4.setGeometry(QRect(80, 380, 71, 51))
-        self.numero_8_dist_4.setFont(font)
-        self.numero_8_dist_4.setFocusPolicy(Qt.NoFocus)
-        self.numero_8_dist_4.setStyleSheet(u"QPushButton {\n"
+        self.numero_6_temp.setCheckable(False)
+        self.numero_6_temp.setChecked(False)
+        self.numero_8_temp = QPushButton(self.page)
+        self.numero_8_temp.setObjectName(u"numero_8_temp")
+        self.numero_8_temp.setGeometry(QRect(80, 380, 71, 51))
+        self.numero_8_temp.setFont(font)
+        self.numero_8_temp.setFocusPolicy(Qt.NoFocus)
+        self.numero_8_temp.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -984,14 +984,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_8_dist_4.setCheckable(False)
-        self.numero_8_dist_4.setChecked(False)
-        self.botao_apagar_tudo_dist_4 = QPushButton(self.page)
-        self.botao_apagar_tudo_dist_4.setObjectName(u"botao_apagar_tudo_dist_4")
-        self.botao_apagar_tudo_dist_4.setGeometry(QRect(220, 380, 71, 51))
-        self.botao_apagar_tudo_dist_4.setFont(font)
-        self.botao_apagar_tudo_dist_4.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_tudo_dist_4.setStyleSheet(u"\n"
+        self.numero_8_temp.setCheckable(False)
+        self.numero_8_temp.setChecked(False)
+        self.botao_apagar_tudo_temp = QPushButton(self.page)
+        self.botao_apagar_tudo_temp.setObjectName(u"botao_apagar_tudo_temp")
+        self.botao_apagar_tudo_temp.setGeometry(QRect(220, 380, 71, 51))
+        self.botao_apagar_tudo_temp.setFont(font)
+        self.botao_apagar_tudo_temp.setFocusPolicy(Qt.NoFocus)
+        self.botao_apagar_tudo_temp.setStyleSheet(u"\n"
 "QPushButton {\n"
 "    background-color: rgb(235, 50, 10);;\n"
 "    color: white;\n"
@@ -1004,14 +1004,14 @@ class Ui_Dialog(object):
 "QPushButton:hover {\n"
 "    background-color: #ff7052;\n"
 "}")
-        self.botao_apagar_tudo_dist_4.setCheckable(False)
-        self.botao_apagar_tudo_dist_4.setChecked(False)
-        self.numero_7_dist_4 = QPushButton(self.page)
-        self.numero_7_dist_4.setObjectName(u"numero_7_dist_4")
-        self.numero_7_dist_4.setGeometry(QRect(10, 380, 71, 51))
-        self.numero_7_dist_4.setFont(font)
-        self.numero_7_dist_4.setFocusPolicy(Qt.NoFocus)
-        self.numero_7_dist_4.setStyleSheet(u"QPushButton {\n"
+        self.botao_apagar_tudo_temp.setCheckable(False)
+        self.botao_apagar_tudo_temp.setChecked(False)
+        self.numero_7_temp = QPushButton(self.page)
+        self.numero_7_temp.setObjectName(u"numero_7_temp")
+        self.numero_7_temp.setGeometry(QRect(10, 380, 71, 51))
+        self.numero_7_temp.setFont(font)
+        self.numero_7_temp.setFocusPolicy(Qt.NoFocus)
+        self.numero_7_temp.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -1024,14 +1024,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_7_dist_4.setCheckable(False)
-        self.numero_7_dist_4.setChecked(False)
-        self.numero_1_dist_4 = QPushButton(self.page)
-        self.numero_1_dist_4.setObjectName(u"numero_1_dist_4")
-        self.numero_1_dist_4.setGeometry(QRect(10, 280, 71, 51))
-        self.numero_1_dist_4.setFont(font)
-        self.numero_1_dist_4.setFocusPolicy(Qt.NoFocus)
-        self.numero_1_dist_4.setStyleSheet(u"QPushButton {\n"
+        self.numero_7_temp.setCheckable(False)
+        self.numero_7_temp.setChecked(False)
+        self.numero_1_temp = QPushButton(self.page)
+        self.numero_1_temp.setObjectName(u"numero_1_temp")
+        self.numero_1_temp.setGeometry(QRect(10, 280, 71, 51))
+        self.numero_1_temp.setFont(font)
+        self.numero_1_temp.setFocusPolicy(Qt.NoFocus)
+        self.numero_1_temp.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -1044,14 +1044,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_1_dist_4.setCheckable(False)
-        self.numero_1_dist_4.setChecked(False)
-        self.numero_9_dist_4 = QPushButton(self.page)
-        self.numero_9_dist_4.setObjectName(u"numero_9_dist_4")
-        self.numero_9_dist_4.setGeometry(QRect(150, 380, 71, 51))
-        self.numero_9_dist_4.setFont(font)
-        self.numero_9_dist_4.setFocusPolicy(Qt.NoFocus)
-        self.numero_9_dist_4.setStyleSheet(u"QPushButton {\n"
+        self.numero_1_temp.setCheckable(False)
+        self.numero_1_temp.setChecked(False)
+        self.numero_9_temp = QPushButton(self.page)
+        self.numero_9_temp.setObjectName(u"numero_9_temp")
+        self.numero_9_temp.setGeometry(QRect(150, 380, 71, 51))
+        self.numero_9_temp.setFont(font)
+        self.numero_9_temp.setFocusPolicy(Qt.NoFocus)
+        self.numero_9_temp.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -1064,14 +1064,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_9_dist_4.setCheckable(False)
-        self.numero_9_dist_4.setChecked(False)
-        self.numero_0_dist_4 = QPushButton(self.page)
-        self.numero_0_dist_4.setObjectName(u"numero_0_dist_4")
-        self.numero_0_dist_4.setGeometry(QRect(220, 330, 71, 51))
-        self.numero_0_dist_4.setFont(font)
-        self.numero_0_dist_4.setFocusPolicy(Qt.NoFocus)
-        self.numero_0_dist_4.setStyleSheet(u"QPushButton {\n"
+        self.numero_9_temp.setCheckable(False)
+        self.numero_9_temp.setChecked(False)
+        self.numero_0_temp = QPushButton(self.page)
+        self.numero_0_temp.setObjectName(u"numero_0_temp")
+        self.numero_0_temp.setGeometry(QRect(220, 330, 71, 51))
+        self.numero_0_temp.setFont(font)
+        self.numero_0_temp.setFocusPolicy(Qt.NoFocus)
+        self.numero_0_temp.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -1084,14 +1084,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_0_dist_4.setCheckable(False)
-        self.numero_0_dist_4.setChecked(False)
-        self.botao_apagar_dist_4 = QPushButton(self.page)
-        self.botao_apagar_dist_4.setObjectName(u"botao_apagar_dist_4")
-        self.botao_apagar_dist_4.setGeometry(QRect(220, 280, 71, 51))
-        self.botao_apagar_dist_4.setFont(font)
-        self.botao_apagar_dist_4.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_dist_4.setStyleSheet(u"\n"
+        self.numero_0_temp.setCheckable(False)
+        self.numero_0_temp.setChecked(False)
+        self.botao_apagar_temp = QPushButton(self.page)
+        self.botao_apagar_temp.setObjectName(u"botao_apagar_temp")
+        self.botao_apagar_temp.setGeometry(QRect(220, 280, 71, 51))
+        self.botao_apagar_temp.setFont(font)
+        self.botao_apagar_temp.setFocusPolicy(Qt.NoFocus)
+        self.botao_apagar_temp.setStyleSheet(u"\n"
 "QPushButton {\n"
 "    background-color: #ff8a80;\n"
 "    color: white;\n"
@@ -1105,14 +1105,14 @@ class Ui_Dialog(object):
 "    background-color: #ff7052;\n"
 "}\n"
 "font-size: 24px !important;")
-        self.botao_apagar_dist_4.setCheckable(False)
-        self.botao_apagar_dist_4.setChecked(False)
-        self.numero_5_dist_4 = QPushButton(self.page)
-        self.numero_5_dist_4.setObjectName(u"numero_5_dist_4")
-        self.numero_5_dist_4.setGeometry(QRect(80, 330, 71, 51))
-        self.numero_5_dist_4.setFont(font)
-        self.numero_5_dist_4.setFocusPolicy(Qt.NoFocus)
-        self.numero_5_dist_4.setStyleSheet(u"QPushButton {\n"
+        self.botao_apagar_temp.setCheckable(False)
+        self.botao_apagar_temp.setChecked(False)
+        self.numero_5_temp = QPushButton(self.page)
+        self.numero_5_temp.setObjectName(u"numero_5_temp")
+        self.numero_5_temp.setGeometry(QRect(80, 330, 71, 51))
+        self.numero_5_temp.setFont(font)
+        self.numero_5_temp.setFocusPolicy(Qt.NoFocus)
+        self.numero_5_temp.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -1125,14 +1125,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_5_dist_4.setCheckable(False)
-        self.numero_5_dist_4.setChecked(False)
-        self.numero_3_dist_4 = QPushButton(self.page)
-        self.numero_3_dist_4.setObjectName(u"numero_3_dist_4")
-        self.numero_3_dist_4.setGeometry(QRect(150, 280, 71, 51))
-        self.numero_3_dist_4.setFont(font)
-        self.numero_3_dist_4.setFocusPolicy(Qt.NoFocus)
-        self.numero_3_dist_4.setStyleSheet(u"QPushButton {\n"
+        self.numero_5_temp.setCheckable(False)
+        self.numero_5_temp.setChecked(False)
+        self.numero_3_temp = QPushButton(self.page)
+        self.numero_3_temp.setObjectName(u"numero_3_temp")
+        self.numero_3_temp.setGeometry(QRect(150, 280, 71, 51))
+        self.numero_3_temp.setFont(font)
+        self.numero_3_temp.setFocusPolicy(Qt.NoFocus)
+        self.numero_3_temp.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -1145,8 +1145,8 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_3_dist_4.setCheckable(False)
-        self.numero_3_dist_4.setChecked(False)
+        self.numero_3_temp.setCheckable(False)
+        self.numero_3_temp.setChecked(False)
         self.stackedWidget.addWidget(self.page)
 
         self.retranslateUi(Dialog)
@@ -1218,9 +1218,9 @@ class Ui_Dialog(object):
         self.toolButton_1.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
         self.toolButton_2.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
         self.label_distancias_2.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Temperatura</span></p></body></html>", None))
-        self.combo_temp_2.setItemText(0, QCoreApplication.translate("Dialog", u"Celsius", None))
-        self.combo_temp_2.setItemText(1, QCoreApplication.translate("Dialog", u"Kelvin", None))
-        self.combo_temp_2.setItemText(2, QCoreApplication.translate("Dialog", u"Fahrenheit", None))
+        self.combo_temp_2.setItemText(0, QCoreApplication.translate("Dialog", u"Fahrenheit", None))
+        self.combo_temp_2.setItemText(1, QCoreApplication.translate("Dialog", u"Celsius", None))
+        self.combo_temp_2.setItemText(2, QCoreApplication.translate("Dialog", u"Kelvin", None))
 
         self.temperatura_2.setText(QCoreApplication.translate("Dialog", u"0", None))
         self.temperatura_1.setText(QCoreApplication.translate("Dialog", u"0", None))
@@ -1229,17 +1229,17 @@ class Ui_Dialog(object):
         self.combo_temp_1.setItemText(2, QCoreApplication.translate("Dialog", u"Fahrenheit", None))
 
         self.combo_temp_1.setCurrentText(QCoreApplication.translate("Dialog", u"Celsius ", None))
-        self.numero_4_dist_4.setText(QCoreApplication.translate("Dialog", u"4", None))
-        self.numero_2_dist_4.setText(QCoreApplication.translate("Dialog", u"2", None))
-        self.numero_6_dist_4.setText(QCoreApplication.translate("Dialog", u"6", None))
-        self.numero_8_dist_4.setText(QCoreApplication.translate("Dialog", u"8", None))
-        self.botao_apagar_tudo_dist_4.setText(QCoreApplication.translate("Dialog", u"CE", None))
-        self.numero_7_dist_4.setText(QCoreApplication.translate("Dialog", u"7", None))
-        self.numero_1_dist_4.setText(QCoreApplication.translate("Dialog", u"1", None))
-        self.numero_9_dist_4.setText(QCoreApplication.translate("Dialog", u"9", None))
-        self.numero_0_dist_4.setText(QCoreApplication.translate("Dialog", u"0", None))
-        self.botao_apagar_dist_4.setText(QCoreApplication.translate("Dialog", u"\u27f5", None))
-        self.numero_5_dist_4.setText(QCoreApplication.translate("Dialog", u"5", None))
-        self.numero_3_dist_4.setText(QCoreApplication.translate("Dialog", u"3", None))
+        self.numero_4_temp.setText(QCoreApplication.translate("Dialog", u"4", None))
+        self.numero_2_temp.setText(QCoreApplication.translate("Dialog", u"2", None))
+        self.numero_6_temp.setText(QCoreApplication.translate("Dialog", u"6", None))
+        self.numero_8_temp.setText(QCoreApplication.translate("Dialog", u"8", None))
+        self.botao_apagar_tudo_temp.setText(QCoreApplication.translate("Dialog", u"CE", None))
+        self.numero_7_temp.setText(QCoreApplication.translate("Dialog", u"7", None))
+        self.numero_1_temp.setText(QCoreApplication.translate("Dialog", u"1", None))
+        self.numero_9_temp.setText(QCoreApplication.translate("Dialog", u"9", None))
+        self.numero_0_temp.setText(QCoreApplication.translate("Dialog", u"0", None))
+        self.botao_apagar_temp.setText(QCoreApplication.translate("Dialog", u"\u27f5", None))
+        self.numero_5_temp.setText(QCoreApplication.translate("Dialog", u"5", None))
+        self.numero_3_temp.setText(QCoreApplication.translate("Dialog", u"3", None))
     # retranslateUi
 

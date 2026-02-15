@@ -1849,17 +1849,17 @@ QPushButton:hover {
      </property>
      <item>
       <property name="text">
+       <string>Fahrenheit</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
        <string>Celsius</string>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Kelvin</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Fahrenheit</string>
       </property>
      </item>
     </widget>
@@ -1983,7 +1983,7 @@ QComboBox::down-arrow {
       </property>
      </item>
     </widget>
-    <widget class="QPushButton" name="numero_4_dist_4">
+    <widget class="QPushButton" name="numero_4_temp">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2027,7 +2027,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_2_dist_4">
+    <widget class="QPushButton" name="numero_2_temp">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -2071,7 +2071,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_6_dist_4">
+    <widget class="QPushButton" name="numero_6_temp">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2115,7 +2115,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_8_dist_4">
+    <widget class="QPushButton" name="numero_8_temp">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -2159,7 +2159,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="botao_apagar_tudo_dist_4">
+    <widget class="QPushButton" name="botao_apagar_tudo_temp">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -2203,7 +2203,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_7_dist_4">
+    <widget class="QPushButton" name="numero_7_temp">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2247,7 +2247,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_1_dist_4">
+    <widget class="QPushButton" name="numero_1_temp">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2291,7 +2291,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_9_dist_4">
+    <widget class="QPushButton" name="numero_9_temp">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2335,7 +2335,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_0_dist_4">
+    <widget class="QPushButton" name="numero_0_temp">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -2379,7 +2379,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="botao_apagar_dist_4">
+    <widget class="QPushButton" name="botao_apagar_temp">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -2424,7 +2424,7 @@ font-size: 24px !important;</string>
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_5_dist_4">
+    <widget class="QPushButton" name="numero_5_temp">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -2468,7 +2468,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_3_dist_4">
+    <widget class="QPushButton" name="numero_3_temp">
      <property name="geometry">
       <rect>
        <x>150</x>

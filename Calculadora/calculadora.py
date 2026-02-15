@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QApplication, QDialog, QMenu, QLineEdit
 from calculadora_ui import Ui_Dialog
 from PySide6.QtGui import QIcon, QShortcut, QKeySequence, QFont, QFontDatabase, QDoubleValidator
-from PySide6.QtCore import Qt, QLocale, QTimer
+from PySide6.QtCore import Qt, QLocale, QEvent, QObject
 import sys
 import os
 
@@ -15,6 +15,26 @@ ui.setupUi(janela)
 janela.setWindowTitle("Calculadora")
 janela.setWindowIcon(QIcon("icon.ico"))
 janela.setStyleSheet("background-color: #f0f0f0;") 
+
+class FiltroVirgula(QObject):
+    def __init__(self, campo):
+        super().__init__(campo)
+        self.campo = campo
+    
+    def eventFilter(self, obj, event):
+        if event.type() == QEvent.KeyPress and event.key() == Qt.Key_Period:
+            # Se já tem vírgula, não adiciona outra
+            if "," in self.campo.text():
+                return True
+            # Insere vírgula em vez de ponto
+            self.campo.insert(",")
+            return True
+        return False
+    
+filtro1 = FiltroVirgula(ui.distancia_1)
+ui.distancia_1.installEventFilter(filtro1)
+filtro2 = FiltroVirgula(ui.distancia_2)
+ui.distancia_2.installEventFilter(filtro2)
 
 ui.combo_distancia_1.view().window().setStyleSheet("""
     QWidget {
@@ -401,6 +421,34 @@ def converter_distancia2():
     
     convertendo = False
 
+def converter_temperatura1():
+    global convertendo
+    if convertendo:  
+        return
+    texto_temperatura1 = ui.temperatura_1.text()
+
+    if texto_temperatura1.startswith("0") and len(texto_temperatura1) > 1 and texto_temperatura1[1] not in [".", ","]:
+        texto = texto_temperatura1.lstrip("0") 
+        ui.temperatura_1.setText(texto)
+        texto_temperatura1 = texto
+
+    texto_limpo = texto_temperatura1.replace(" ", "").replace(",", ".")
+    try:
+        valor_temperatura1 = float(texto_limpo)
+    except:
+        return
+    unidade1 = ui.combo_temp_1.currentText()
+    unidade2 = ui.combo_temp_2.currentText()
+    convertendo = True
+    em_celsius = (valor_temperatura1 + conversoes_temperatura[unidade1][1] ) * conversoes_temperatura[unidade1][0]
+    resultado = (em_celsius / conversoes_temperatura[unidade2][0]) - conversoes_temperatura[unidade2][1]    
+    resultado = round(resultado, 4)
+
+    texto_formatado = formatar_numero(resultado)
+    ui.temperatura_2.setText(texto_formatado)
+    
+    convertendo = False
+
 
 def formatar_numero(numero):
     numero = round(numero, 4)
@@ -409,9 +457,9 @@ def formatar_numero(numero):
         return f"{int(numero):,}".replace(",", " ")
     else:
         texto = f"{numero:,.4f}"  
-        texto = texto.replace(",", " ")    # milhares com espaço
-        texto = texto.replace(".", ",")     # decimal com vírgula
-        return texto.rstrip("0").rstrip(",")  # remove zeros à direita
+        texto = texto.replace(",", " ")    
+        texto = texto.replace(".", ",")     
+        return texto.rstrip("0").rstrip(",")  
 
 
 def substituir_ponto_1():
@@ -466,15 +514,17 @@ def numeros_distancia(num):
     else:
         campo_ativo.setText(texto_atual + str(num))
 
-def apagar_tudo_dist ():
+def apagar_tudo_foco ():
     global convertendo, ajustando_texto
     ui.distancia_1.setText("0")
     ui.distancia_2.setText("0")
+    ui.temperatura_1.setText("0")
+    ui.temperatura_2.setText("0")
+
     convertendo = False
     ajustando_texto = False
 
-
-def apagar_dist():
+def apagar_foco():
     campo_ativo = app.focusWidget()
     texto_atual = campo_ativo.text()
     campo_ativo.setText(texto_atual [:-1] )
@@ -512,12 +562,20 @@ ui.botao_resultado.clicked.connect(resultado)
 ui.botao_apagar_tudo.clicked.connect(limpar_tudo)
 ui.operador_percentagem.clicked.connect(percentagem) 
 ui.botao_sinal.clicked.connect(sinal)
+
 ui.distancia_1.textChanged.connect(converter_distancia1)
 ui.distancia_1.textChanged.connect(substituir_ponto_1)
 ui.distancia_2.textChanged.connect(converter_distancia2)
 ui.distancia_2.textChanged.connect(substituir_ponto_2)
+
+ui.temperatura_1.textChanged.connect(converter_temperatura1)
+
+
+
 ui.combo_distancia_1.currentIndexChanged.connect(converter_distancia1)
 ui.combo_distancia_2.currentIndexChanged.connect(converter_distancia1)
+
+
 ui.numero_1_dist.clicked.connect(lambda: numeros_distancia(1))
 ui.numero_2_dist.clicked.connect(lambda: numeros_distancia(2))
 ui.numero_3_dist.clicked.connect(lambda: numeros_distancia(3))
@@ -528,8 +586,21 @@ ui.numero_7_dist.clicked.connect(lambda: numeros_distancia(7))
 ui.numero_8_dist.clicked.connect(lambda: numeros_distancia(8))
 ui.numero_9_dist.clicked.connect(lambda: numeros_distancia(9))
 ui.numero_0_dist.clicked.connect(lambda: numeros_distancia(0))
-ui.botao_apagar_dist.clicked.connect(apagar_dist)
-ui.botao_apagar_tudo_dist.clicked.connect(apagar_tudo_dist)
+ui.numero_1_temp.clicked.connect(lambda: numeros_distancia(1))
+ui.numero_2_temp.clicked.connect(lambda: numeros_distancia(2))
+ui.numero_3_temp.clicked.connect(lambda: numeros_distancia(3))
+ui.numero_4_temp.clicked.connect(lambda: numeros_distancia(4))
+ui.numero_5_temp.clicked.connect(lambda: numeros_distancia(5))
+ui.numero_6_temp.clicked.connect(lambda: numeros_distancia(6))
+ui.numero_7_temp.clicked.connect(lambda: numeros_distancia(7))
+ui.numero_8_temp.clicked.connect(lambda: numeros_distancia(8))
+ui.numero_9_temp.clicked.connect(lambda: numeros_distancia(9))
+ui.numero_0_temp.clicked.connect(lambda: numeros_distancia(0))
+
+ui.botao_apagar_dist.clicked.connect(apagar_foco)
+ui.botao_apagar_temp.clicked.connect(apagar_foco)
+ui.botao_apagar_tudo_dist.clicked.connect(apagar_tudo_foco)
+ui.botao_apagar_tudo_temp.clicked.connect(apagar_tudo_foco)
 ui.toolButton_1.clicked.connect(abrir_menu)
 ui.toolButton_0.clicked.connect(abrir_menu)
 ui.toolButton_2.clicked.connect(abrir_menu)
@@ -551,7 +622,7 @@ QShortcut(QKeySequence("*"), janela).activated.connect(lambda:operacao("*"))
 QShortcut(QKeySequence("backspace"), janela).activated.connect(apagar)
 QShortcut(QKeySequence("."), janela).activated.connect(decimal)
 QShortcut(QKeySequence("Delete"), janela).activated.connect(limpar_tudo)
-QShortcut(QKeySequence("Delete"), janela).activated.connect(apagar_tudo_dist)
+QShortcut(QKeySequence("Delete"), janela).activated.connect(apagar_tudo_foco)
 
 janela.show()
 app.exec()
