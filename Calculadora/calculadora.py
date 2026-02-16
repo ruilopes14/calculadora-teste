@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QApplication, QDialog, QMenu, QLineEdit
 from calculadora_ui import Ui_Dialog
 from PySide6.QtGui import QIcon, QShortcut, QKeySequence, QFont, QFontDatabase, QDoubleValidator, QPixmap
-from PySide6.QtCore import Qt, QLocale, QEvent, QObject
+from PySide6.QtCore import Qt, QLocale, QEvent, QObject, QDate
 import sys
 import os
 
@@ -40,6 +40,11 @@ filtro3 = FiltroVirgula(ui.temperatura_1)
 ui.temperatura_1.installEventFilter(filtro3)
 filtro4 = FiltroVirgula(ui.temperatura_2)
 ui.temperatura_2.installEventFilter(filtro4)
+
+filtro5 = FiltroVirgula(ui.tempo_1)
+ui.tempo_1.installEventFilter(filtro5)
+filtro6 = FiltroVirgula(ui.tempo_2)
+ui.tempo_2.installEventFilter(filtro6)
 
 ui.combo_distancia_1.view().window().setStyleSheet("""
     QWidget {
@@ -181,6 +186,30 @@ ui.combo_tempo_2.view().setStyleSheet("""
 """)
 
 
+ui.combo_datas_1.view().window().setStyleSheet("""
+    QWidget {
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+    }
+""")
+ui.combo_datas_1.view().setStyleSheet("""
+    QListView {
+        background-color: white;
+        border: 1px solid #ddd;
+        outline: 0;
+    }
+    QListView::item {
+        padding: 5px;
+        outline: 0 ;                                  
+    }
+    QListView::item:selected {
+        background-color: #ff7052;
+        color: white;
+    }
+""")
+
+
 validator = QDoubleValidator()
 validator.setLocale(QLocale(QLocale.Portuguese, QLocale.Portugal))
 ui.distancia_1.setValidator(validator)
@@ -225,12 +254,123 @@ estilo_combo = f"""
     }}
 """
 
+estilo_dateedit = f"""
+    QDateEdit {{
+        background-color: white;
+        color: black;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 5px 8px;
+        font-size: 14px;
+        height: 35px;
+    }}
+    
+    QDateEdit:hover {{
+        border: 2px solid #ff8c42;
+    }}
+    
+    QDateEdit:focus {{
+        border: 2px solid #ff8c42;
+    }}
+    
+    QDateEdit::drop-down {{
+        subcontrol-origin: padding;
+        subcontrol-position: right center;
+        width: 25px;
+        border: none;
+    }}
+    
+    QDateEdit::down-arrow {{
+        image: url({caminho_seta});
+        width: 10px;
+        height: 10px;
+    }}
+"""
+
 ui.combo_distancia_1.setStyleSheet(estilo_combo)
 ui.combo_distancia_2.setStyleSheet(estilo_combo)
 ui.combo_temp_1.setStyleSheet(estilo_combo)
 ui.combo_temp_2.setStyleSheet(estilo_combo)
 ui.combo_tempo_1.setStyleSheet(estilo_combo)
 ui.combo_tempo_2.setStyleSheet(estilo_combo)
+ui.combo_datas_1.setStyleSheet(estilo_combo)
+ui.dateEdit_1.setStyleSheet(estilo_dateedit)
+ui.dateEdit_2.setStyleSheet(estilo_dateedit)
+
+
+def estilizar_calendario_dateedit(date_edit):
+    """Aplica estilo BRANCO/LARANJA ao calendário popup"""
+    calendario = date_edit.calendarWidget()
+    
+    calendario.setStyleSheet("""
+        QCalendarWidget {
+            background-color: white;
+        }
+        
+        /* Navegação (topo com mês/ano) */
+        QCalendarWidget QToolButton {
+            color: black;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 4px;
+            padding: 5px;
+            margin: 2px;
+        }
+        
+        QCalendarWidget QToolButton:hover {
+            background-color: #ff8c42;
+            color: white;
+        }
+        
+        /* Spinbox do ano */
+        QCalendarWidget QSpinBox {
+            background-color: #f0f0f0;
+            color: black;
+            selection-background-color: #ff8c42;
+            selection-color: white;
+            border: 1px solid #ddd;
+        }
+        
+        /* Menu dropdown */
+        QCalendarWidget QMenu {
+            background-color: white;
+            color: black;
+        }
+        
+        /* Grid dos dias */
+        QCalendarWidget QTableView {
+            background-color: white;
+            color: black;
+            selection-background-color: #ff8c42;
+            selection-color: white;
+            border: none;
+            gridline-color: #e0e0e0;
+        }
+        
+        /* Header dias da semana */
+        QCalendarWidget QWidget#qt_calendar_navigationbar {
+            background-color: #f5f5f5;
+        }
+        
+        /* Dias do mês atual */
+        QCalendarWidget QAbstractItemView:enabled {
+            color: black;
+        }
+        
+        /* Dias de outros meses */
+        QCalendarWidget QAbstractItemView:disabled {
+            color: #cccccc;
+        }
+    """)
+
+estilizar_calendario_dateedit(ui.dateEdit_1) 
+estilizar_calendario_dateedit(ui.dateEdit_2)
+
+
+
+
+ui.dateEdit_1.setDate(QDate.currentDate())
+ui.dateEdit_2.setDate(QDate.currentDate())
 
 ui.label_2.setPixmap(QPixmap(resource_path("construcao.png")))
 
@@ -430,7 +570,7 @@ def abrir_menu():
     menu.addAction("Acerca de", ir_para_acerca_de)
     menu.exec(ui.toolButton_1.mapToGlobal(ui.toolButton_1.rect().bottomLeft()))
 
-
+#Dicionarios
 conversoes_distancia = {
     "Metros": 1,
     "Quilómetros": 1000,
@@ -459,7 +599,7 @@ conversoes_tempo = {
     "Anos": 8_760                         # 1 ano = 8760 horas (365 dias)
 }
 
-
+#Operações conversão
 def converter_distancia1():
     global convertendo
     if convertendo:  
@@ -487,10 +627,9 @@ def converter_distancia1():
     resultado = em_metros / conversoes_distancia[unidade2]
     resultado = round(resultado, 4)
     
-    texto_base_formatado = formatar_numero(valor_distancia1)
     texto_formatado = formatar_numero(resultado)
     ui.distancia_2.setText(texto_formatado)
-    ui.distancia_1.setText(texto_base_formatado)
+
     convertendo = False 
    
 def converter_distancia2():
@@ -520,10 +659,8 @@ def converter_distancia2():
     resultado = em_metros / conversoes_distancia[unidade1]
     resultado = round(resultado, 4)
     
-    texto_base_formatado = formatar_numero(valor_distancia2)
     texto_formatado = formatar_numero(resultado)
     ui.distancia_1.setText(texto_formatado)
-    ui.distancia_2.setText(texto_base_formatado)
 
     convertendo = False
 
@@ -552,10 +689,9 @@ def converter_temperatura1():
     resultado = (em_celsius / conversoes_temperatura[unidade2][0]) - conversoes_temperatura[unidade2][1]    
     resultado = round(resultado, 4)
 
-    texto_base_formatado = formatar_numero(valor_temperatura1)
     texto_formatado = formatar_numero(resultado)
     ui.temperatura_2.setText(texto_formatado)
-    ui.temperatura_1.setText(texto_base_formatado)
+
     convertendo = False
 
 def converter_temperatura2():
@@ -582,11 +718,11 @@ def converter_temperatura2():
     resultado = (em_celsius / conversoes_temperatura[unidade1][0]) - conversoes_temperatura[unidade1][1]    
     resultado = round(resultado, 4)
 
-    texto_base_formatado = formatar_numero(valor_temperatura2)
     texto_formatado = formatar_numero(resultado)
     ui.temperatura_1.setText(texto_formatado)
-    ui.temperatura_2.setText(texto_base_formatado)
+    
     convertendo = False
+
 
 def converter_tempo1():
     global convertendo      
@@ -612,10 +748,10 @@ def converter_tempo1():
     resultado = em_horas / conversoes_tempo[unidade2]
     resultado = round(resultado, 4)
 
-    texto_base_formatado = formatar_numero(valor_tempo1)
+    #texto_base_formatado = formatar_numero(valor_tempo1)
     texto_formatado = formatar_numero(resultado)
     ui.tempo_2.setText(texto_formatado)
-    ui.tempo_1.setText(texto_base_formatado)
+    #ui.tempo_1.setText(texto_base_formatado)
 
     
     convertendo = False
@@ -644,12 +780,13 @@ def converter_tempo2():
     resultado = em_horas / conversoes_tempo[unidade1]
     resultado = round(resultado, 4)
 
-    texto_base_formatado = formatar_numero(valor_tempo2)
     texto_formatado = formatar_numero(resultado)
     ui.tempo_1.setText(texto_formatado)
-    ui.tempo_2.setText(texto_base_formatado)
+    
     
     convertendo = False
+
+
 def formatar_numero(numero):
     numero = round(numero, 4)
     
@@ -751,19 +888,19 @@ def ir_para_datas () :
 
 def ir_para_velocidades () :
     apagar_tudo_foco ()
-    ui.stackedWidget.setCurrentIndex(4)
+    ui.stackedWidget.setCurrentIndex(5)
 
 def ir_para_moedas () :
     apagar_tudo_foco ()
-    ui.stackedWidget.setCurrentIndex(4)
+    ui.stackedWidget.setCurrentIndex(5)
 
 def ir_para_defenicoes () :
     apagar_tudo_foco ()
-    ui.stackedWidget.setCurrentIndex(4)
+    ui.stackedWidget.setCurrentIndex(5)
 
 def ir_para_acerca_de () :
     apagar_tudo_foco ()
-    ui.stackedWidget.setCurrentIndex(4)
+    ui.stackedWidget.setCurrentIndex(5)
 
 ui.botao_resultado.setDefault(True)
 
@@ -846,6 +983,8 @@ ui.toolButton_0.clicked.connect(abrir_menu)
 ui.toolButton_2.clicked.connect(abrir_menu)
 ui.toolButton_3.clicked.connect(abrir_menu)
 ui.toolButton_4.clicked.connect(abrir_menu)
+ui.toolButton_5.clicked.connect(abrir_menu)
+
 
 QShortcut(QKeySequence("1"), janela).activated.connect(lambda: numeros(1))
 QShortcut(QKeySequence("2"), janela).activated.connect(lambda: numeros(2))

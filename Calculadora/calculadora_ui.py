@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QDialog, QLabel,
-    QLineEdit, QPushButton, QSizePolicy, QStackedWidget,
-    QToolButton, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QDialog,
+    QLabel, QLineEdit, QPushButton, QSizePolicy,
+    QStackedWidget, QToolButton, QWidget)
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -1539,6 +1539,51 @@ class Ui_Dialog(object):
         self.combo_tempo_2.setFont(font2)
         self.combo_tempo_2.setStyleSheet(u"")
         self.stackedWidget.addWidget(self.Tempo)
+        self.page_3 = QWidget()
+        self.page_3.setObjectName(u"page_3")
+        self.toolButton_5 = QToolButton(self.page_3)
+        self.toolButton_5.setObjectName(u"toolButton_5")
+        self.toolButton_5.setGeometry(QRect(10, 10, 21, 31))
+        self.toolButton_5.setFont(font2)
+        self.toolButton_5.setTabletTracking(False)
+        self.toolButton_5.setStyleSheet(u"QToolButton:hover {\n"
+"        color: #000;\n"
+"        background-color: #e0e0e0;\n"
+"        border-radius: 5px;\n"
+"    }\n"
+" ")
+        self.label_distancias_4 = QLabel(self.page_3)
+        self.label_distancias_4.setObjectName(u"label_distancias_4")
+        self.label_distancias_4.setGeometry(QRect(40, 5, 191, 41))
+        self.combo_datas_1 = QComboBox(self.page_3)
+        self.combo_datas_1.addItem("")
+        self.combo_datas_1.addItem("")
+        self.combo_datas_1.setObjectName(u"combo_datas_1")
+        self.combo_datas_1.setGeometry(QRect(10, 60, 201, 31))
+        self.combo_datas_1.setFont(font2)
+        self.combo_datas_1.setStyleSheet(u"")
+        self.dateEdit_2 = QDateEdit(self.page_3)
+        self.dateEdit_2.setObjectName(u"dateEdit_2")
+        self.dateEdit_2.setGeometry(QRect(10, 200, 121, 31))
+        self.dateEdit_2.setStyleSheet(u"")
+        self.dateEdit_2.setCalendarPopup(True)
+        self.dateEdit_2.setDate(QDate(2026, 2, 16))
+        self.label_3 = QLabel(self.page_3)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setGeometry(QRect(10, 110, 47, 13))
+        self.label_4 = QLabel(self.page_3)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setGeometry(QRect(10, 180, 47, 13))
+        self.label_5 = QLabel(self.page_3)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setGeometry(QRect(10, 290, 91, 81))
+        self.dateEdit_1 = QDateEdit(self.page_3)
+        self.dateEdit_1.setObjectName(u"dateEdit_1")
+        self.dateEdit_1.setGeometry(QRect(10, 130, 121, 31))
+        self.dateEdit_1.setStyleSheet(u"")
+        self.dateEdit_1.setCalendarPopup(True)
+        self.dateEdit_1.setDate(QDate(2026, 2, 1))
+        self.stackedWidget.addWidget(self.page_3)
         self.page_5 = QWidget()
         self.page_5.setObjectName(u"page_5")
         self.label = QLabel(self.page_5)
@@ -1561,10 +1606,13 @@ class Ui_Dialog(object):
 "    }\n"
 " ")
         self.stackedWidget.addWidget(self.page_5)
+        self.page_2 = QWidget()
+        self.page_2.setObjectName(u"page_2")
+        self.stackedWidget.addWidget(self.page_2)
 
         self.retranslateUi(Dialog)
 
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(4)
         self.operador_multiplicar.setDefault(False)
 
 
@@ -1696,6 +1744,15 @@ class Ui_Dialog(object):
         self.combo_tempo_2.setItemText(7, QCoreApplication.translate("Dialog", u"Anos", None))
 
         self.combo_tempo_2.setCurrentText(QCoreApplication.translate("Dialog", u"Milissegundos", None))
+        self.toolButton_5.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
+        self.label_distancias_4.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Datas</span></p></body></html>", None))
+        self.combo_datas_1.setItemText(0, QCoreApplication.translate("Dialog", u"Diferen\u00e7a entre dias", None))
+        self.combo_datas_1.setItemText(1, QCoreApplication.translate("Dialog", u"Adionar/substrair dias", None))
+
+        self.combo_datas_1.setCurrentText(QCoreApplication.translate("Dialog", u"Diferen\u00e7a entre dias", None))
+        self.label_3.setText(QCoreApplication.translate("Dialog", u"De:", None))
+        self.label_4.setText(QCoreApplication.translate("Dialog", u"A:", None))
+        self.label_5.setText(QCoreApplication.translate("Dialog", u".", None))
         self.label.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">Em </span></p><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">constru\u00e7\u00e3o</span></p></body></html>", None))
         self.label_2.setText("")
         self.toolButton_4.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
