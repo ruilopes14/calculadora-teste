@@ -64,9 +64,6 @@ ui.combo_distancia_1.view().setStyleSheet("""
     }
 """)
 
-
-
-
 ui.combo_distancia_2.view().setStyleSheet("""
     QListView {
         background-color: white;
@@ -136,12 +133,62 @@ ui.combo_temp_2.view().setStyleSheet("""
     }
 """)
 
+
+ui.combo_tempo_1.view().window().setStyleSheet("""
+    QWidget {
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+    }
+""")
+ui.combo_tempo_1.view().setStyleSheet("""
+    QListView {
+        background-color: white;
+        border: 1px solid #ddd;
+        outline: 0;
+    }
+    QListView::item {
+        padding: 5px;
+        outline: 0 ;                                  
+    }
+    QListView::item:selected {
+        background-color: #ff7052;
+        color: white;
+    }
+""")
+
+ui.combo_tempo_2.view().window().setStyleSheet("""
+    QWidget {
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+    }
+""")
+ui.combo_tempo_2.view().setStyleSheet("""
+    QListView {
+        background-color: white;
+        border: 1px solid #ddd;
+        outline: 0;
+    }
+    QListView::item {
+        padding: 5px;
+        outline: 0 ;                                  
+    }
+    QListView::item:selected {
+        background-color: #ff7052;
+        color: white;
+    }
+""")
+
+
 validator = QDoubleValidator()
 validator.setLocale(QLocale(QLocale.Portuguese, QLocale.Portugal))
 ui.distancia_1.setValidator(validator)
 ui.distancia_2.setValidator(validator)
 ui.temperatura_1.setValidator(validator)
 ui.temperatura_2.setValidator(validator)
+ui.tempo_1.setValidator(validator)
+ui.tempo_2.setValidator(validator)
 
 def resource_path(path):
     if hasattr(sys, '_MEIPASS'):
@@ -182,6 +229,8 @@ ui.combo_distancia_1.setStyleSheet(estilo_combo)
 ui.combo_distancia_2.setStyleSheet(estilo_combo)
 ui.combo_temp_1.setStyleSheet(estilo_combo)
 ui.combo_temp_2.setStyleSheet(estilo_combo)
+ui.combo_tempo_1.setStyleSheet(estilo_combo)
+ui.combo_tempo_2.setStyleSheet(estilo_combo)
 
 ui.label_2.setPixmap(QPixmap(resource_path("construcao.png")))
 
@@ -399,6 +448,17 @@ conversoes_temperatura = {
     "Kelvin": (1, -273.15),   
 }
 
+conversoes_tempo = {
+    "Milissegundos": 1 / 3_600_000,      # 1 milissegundo = 0.00000027778 horas
+    "Microssegundos": 1 / 3_600_000_000, # 1 microssegundo = 0.00000000027778 horas
+    "Segundos": 1 / 3_600,                # 1 segundo = 0.00027778 horas
+    "Minutos": 1 / 60,                    # 1 minuto = 0.01667 horas
+    "Horas": 1,                           # 1 hora = 1 hora
+    "Dias": 24,                           # 1 dia = 24 horas
+    "Semanas": 168,                       # 1 semana = 168 horas
+    "Anos": 8_760                         # 1 ano = 8760 horas (365 dias)
+}
+
 
 def converter_distancia1():
     global convertendo
@@ -427,9 +487,10 @@ def converter_distancia1():
     resultado = em_metros / conversoes_distancia[unidade2]
     resultado = round(resultado, 4)
     
+    texto_base_formatado = formatar_numero(valor_distancia1)
     texto_formatado = formatar_numero(resultado)
     ui.distancia_2.setText(texto_formatado)
-    
+    ui.distancia_1.setText(texto_base_formatado)
     convertendo = False 
    
 def converter_distancia2():
@@ -459,9 +520,11 @@ def converter_distancia2():
     resultado = em_metros / conversoes_distancia[unidade1]
     resultado = round(resultado, 4)
     
+    texto_base_formatado = formatar_numero(valor_distancia2)
     texto_formatado = formatar_numero(resultado)
     ui.distancia_1.setText(texto_formatado)
-    
+    ui.distancia_2.setText(texto_base_formatado)
+
     convertendo = False
 
 
@@ -489,9 +552,10 @@ def converter_temperatura1():
     resultado = (em_celsius / conversoes_temperatura[unidade2][0]) - conversoes_temperatura[unidade2][1]    
     resultado = round(resultado, 4)
 
+    texto_base_formatado = formatar_numero(valor_temperatura1)
     texto_formatado = formatar_numero(resultado)
     ui.temperatura_2.setText(texto_formatado)
-    
+    ui.temperatura_1.setText(texto_base_formatado)
     convertendo = False
 
 def converter_temperatura2():
@@ -518,12 +582,74 @@ def converter_temperatura2():
     resultado = (em_celsius / conversoes_temperatura[unidade1][0]) - conversoes_temperatura[unidade1][1]    
     resultado = round(resultado, 4)
 
+    texto_base_formatado = formatar_numero(valor_temperatura2)
     texto_formatado = formatar_numero(resultado)
     ui.temperatura_1.setText(texto_formatado)
+    ui.temperatura_2.setText(texto_base_formatado)
+    convertendo = False
+
+def converter_tempo1():
+    global convertendo      
+    if convertendo :
+        return
+
+    texto_tempo1 = ui.tempo_1.text()
+
+    if texto_tempo1.startswith("0") and len(texto_tempo1) > 1 and texto_tempo1[1] not in [".", ","]:
+        texto = texto_tempo1.lstrip("0") 
+        ui.tempo_1.setText(texto)
+        texto_tempo1 = texto
+
+    texto_limpo = texto_tempo1.replace(" ", "").replace(",", ".")
+    try:
+        valor_tempo1 = float(texto_limpo)
+    except:
+        return
+    unidade1 = ui.combo_tempo_1.currentText()
+    unidade2 = ui.combo_tempo_2.currentText()
+    convertendo = True
+    em_horas = valor_tempo1 * conversoes_tempo[unidade1]
+    resultado = em_horas / conversoes_tempo[unidade2]
+    resultado = round(resultado, 4)
+
+    texto_base_formatado = formatar_numero(valor_tempo1)
+    texto_formatado = formatar_numero(resultado)
+    ui.tempo_2.setText(texto_formatado)
+    ui.tempo_1.setText(texto_base_formatado)
+
     
     convertendo = False
 
+def converter_tempo2():
+    global convertendo      
+    if convertendo :
+        return
 
+    texto_tempo2 = ui.tempo_2.text()
+
+    if texto_tempo2.startswith("0") and len(texto_tempo2) > 1 and texto_tempo2[1] not in [".", ","]:
+        texto = texto_tempo2.lstrip("0") 
+        ui.tempo_2.setText(texto)
+        texto_tempo2 = texto
+
+    texto_limpo = texto_tempo2.replace(" ", "").replace(",", ".")
+    try:
+        valor_tempo2 = float(texto_limpo)
+    except:
+        return
+    unidade1 = ui.combo_tempo_1.currentText()
+    unidade2 = ui.combo_tempo_2.currentText()
+    convertendo = True
+    em_horas = valor_tempo2 * conversoes_tempo[unidade2]
+    resultado = em_horas / conversoes_tempo[unidade1]
+    resultado = round(resultado, 4)
+
+    texto_base_formatado = formatar_numero(valor_tempo2)
+    texto_formatado = formatar_numero(resultado)
+    ui.tempo_1.setText(texto_formatado)
+    ui.tempo_2.setText(texto_base_formatado)
+    
+    convertendo = False
 def formatar_numero(numero):
     numero = round(numero, 4)
     
@@ -617,7 +743,7 @@ def ir_para_temperatura () :
 
 def ir_para_tempo () :
     apagar_tudo_foco ()
-    ui.stackedWidget.setCurrentIndex(4)
+    ui.stackedWidget.setCurrentIndex(3)
 
 def ir_para_datas () :
     apagar_tudo_foco ()
@@ -695,6 +821,21 @@ ui.temperatura_1.textChanged.connect(converter_temperatura1)
 ui.combo_temp_1.currentIndexChanged.connect(converter_temperatura1)
 ui.temperatura_2.textChanged.connect(converter_temperatura2)
 ui.combo_temp_2.currentIndexChanged.connect(converter_temperatura2)
+
+ui.numero_1_tempo.clicked.connect(lambda: numeros_distancia(1))
+ui.numero_2_tempo.clicked.connect(lambda: numeros_distancia(2))
+ui.numero_3_tempo.clicked.connect(lambda: numeros_distancia(3))
+ui.numero_4_tempo.clicked.connect(lambda: numeros_distancia(4))
+ui.numero_5_tempo.clicked.connect(lambda: numeros_distancia(5))
+ui.numero_6_tempo.clicked.connect(lambda: numeros_distancia(6))
+ui.numero_7_tempo.clicked.connect(lambda: numeros_distancia(7))
+ui.numero_8_tempo.clicked.connect(lambda: numeros_distancia(8))
+ui.numero_9_tempo.clicked.connect(lambda: numeros_distancia(9))
+ui.numero_0_tempo.clicked.connect(lambda: numeros_distancia(0))
+ui.tempo_1.textChanged.connect(converter_tempo1)
+ui.combo_tempo_1.currentIndexChanged.connect(converter_tempo1)
+ui.tempo_2.textChanged.connect(converter_tempo2)
+ui.combo_tempo_2.currentIndexChanged.connect(converter_tempo2)
 
 ui.botao_apagar_dist.clicked.connect(apagar_foco)
 ui.botao_apagar_temp.clicked.connect(apagar_foco)

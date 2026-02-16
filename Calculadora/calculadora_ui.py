@@ -23,7 +23,7 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
-        Dialog.resize(304, 439)
+        Dialog.resize(301, 438)
         self.stackedWidget = QStackedWidget(Dialog)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setGeometry(QRect(0, 0, 301, 431))
@@ -525,23 +525,7 @@ class Ui_Dialog(object):
         self.combo_distancia_2.addItem("")
         self.combo_distancia_2.setObjectName(u"combo_distancia_2")
         self.combo_distancia_2.setGeometry(QRect(10, 240, 121, 31))
-        self.combo_distancia_2.setStyleSheet(u"QComboBox {\n"
-"        background-color: white;\n"
-"        color: #333;\n"
-"        font-size: 11px;\n"
-"        border: 2px solid #ddd;\n"
-"        border-radius: 8px;\n"
-"        padding: 5px 10px;\n"
-"    }\n"
-"    QComboBox::drop-down {\n"
-"        border: none;\n"
-"        width: 25px;\n"
-"    }\n"
-"    QComboBox::down-arrow {\n"
-"        image: url(arrow.png);\n"
-"        width: 10px;\n"
-"        height: 10px;\n"
-"    }")
+        self.combo_distancia_2.setStyleSheet(u"")
         self.numero_0_dist = QPushButton(self.temperaturas)
         self.numero_0_dist.setObjectName(u"numero_0_dist")
         self.numero_0_dist.setGeometry(QRect(220, 330, 71, 51))
@@ -817,23 +801,7 @@ class Ui_Dialog(object):
         self.combo_temp_2.addItem("")
         self.combo_temp_2.setObjectName(u"combo_temp_2")
         self.combo_temp_2.setGeometry(QRect(10, 240, 121, 31))
-        self.combo_temp_2.setStyleSheet(u"QComboBox {\n"
-"        background-color: white;\n"
-"        color: #333;\n"
-"        font-size: 11px;\n"
-"        border: 2px solid #ddd;\n"
-"        border-radius: 8px;\n"
-"        padding: 5px 10px;\n"
-"    }\n"
-"    QComboBox::drop-down {\n"
-"        border: none;\n"
-"        width: 25px;\n"
-"    }\n"
-"    QComboBox::down-arrow {\n"
-"        image: url(arrow.png);\n"
-"        width: 10px;\n"
-"        height: 10px;\n"
-"    }")
+        self.combo_temp_2.setStyleSheet(u"")
         self.temperatura_2 = QLineEdit(self.page)
         self.temperatura_2.setObjectName(u"temperatura_2")
         self.temperatura_2.setGeometry(QRect(10, 170, 281, 61))
@@ -873,23 +841,7 @@ class Ui_Dialog(object):
         self.combo_temp_1.setObjectName(u"combo_temp_1")
         self.combo_temp_1.setGeometry(QRect(10, 130, 121, 31))
         self.combo_temp_1.setFont(font2)
-        self.combo_temp_1.setStyleSheet(u"QComboBox {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 11px;\n"
-"    border: 2px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    padding: 5px 10px;\n"
-"}\n"
-"QComboBox::drop-down {\n"
-"    border: none;\n"
-"    width: 25px;\n"
-"}\n"
-"QComboBox::down-arrow {\n"
-"    image: url(arrow.png);\n"
-"    width: 10px;\n"
-"    height: 10px;\n"
-"}")
+        self.combo_temp_1.setStyleSheet(u"")
         self.numero_4_temp = QPushButton(self.page)
         self.numero_4_temp.setObjectName(u"numero_4_temp")
         self.numero_4_temp.setGeometry(QRect(10, 330, 71, 51))
@@ -1132,9 +1084,27 @@ class Ui_Dialog(object):
         self.numero_3_temp.setCheckable(False)
         self.numero_3_temp.setChecked(False)
         self.stackedWidget.addWidget(self.page)
-        self.page_4 = QWidget()
-        self.page_4.setObjectName(u"page_4")
-        self.toolButton_3 = QToolButton(self.page_4)
+        self.temperatura_2.raise_()
+        self.toolButton_2.raise_()
+        self.label_distancias_2.raise_()
+        self.combo_temp_2.raise_()
+        self.temperatura_1.raise_()
+        self.combo_temp_1.raise_()
+        self.numero_4_temp.raise_()
+        self.numero_2_temp.raise_()
+        self.numero_6_temp.raise_()
+        self.numero_8_temp.raise_()
+        self.botao_apagar_tudo_temp.raise_()
+        self.numero_7_temp.raise_()
+        self.numero_1_temp.raise_()
+        self.numero_9_temp.raise_()
+        self.numero_0_temp.raise_()
+        self.botao_apagar_temp.raise_()
+        self.numero_5_temp.raise_()
+        self.numero_3_temp.raise_()
+        self.Tempo = QWidget()
+        self.Tempo.setObjectName(u"Tempo")
+        self.toolButton_3 = QToolButton(self.Tempo)
         self.toolButton_3.setObjectName(u"toolButton_3")
         self.toolButton_3.setGeometry(QRect(10, 10, 21, 31))
         self.toolButton_3.setFont(font2)
@@ -1145,7 +1115,430 @@ class Ui_Dialog(object):
 "        border-radius: 5px;\n"
 "    }\n"
 " ")
-        self.stackedWidget.addWidget(self.page_4)
+        self.label_distancias_3 = QLabel(self.Tempo)
+        self.label_distancias_3.setObjectName(u"label_distancias_3")
+        self.label_distancias_3.setGeometry(QRect(40, 13, 191, 41))
+        self.tempo_1 = QLineEdit(self.Tempo)
+        self.tempo_1.setObjectName(u"tempo_1")
+        self.tempo_1.setGeometry(QRect(10, 60, 281, 61))
+        self.tempo_1.setFont(font)
+        self.tempo_1.setStyleSheet(u"QLineEdit {\n"
+"    background-color: white;\n"
+"    color: #000;\n"
+"    font-size: 42px;\n"
+"    font-weight: bold;\n"
+"    border: 2px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    padding: 10px;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid #ff7052;\n"
+"}")
+        self.combo_tempo_1 = QComboBox(self.Tempo)
+        self.combo_tempo_1.addItem("")
+        self.combo_tempo_1.addItem("")
+        self.combo_tempo_1.addItem("")
+        self.combo_tempo_1.addItem("")
+        self.combo_tempo_1.addItem("")
+        self.combo_tempo_1.addItem("")
+        self.combo_tempo_1.addItem("")
+        self.combo_tempo_1.addItem("")
+        self.combo_tempo_1.setObjectName(u"combo_tempo_1")
+        self.combo_tempo_1.setGeometry(QRect(10, 130, 141, 31))
+        self.combo_tempo_1.setFont(font2)
+        self.combo_tempo_1.setStyleSheet(u"")
+        self.tempo_2 = QLineEdit(self.Tempo)
+        self.tempo_2.setObjectName(u"tempo_2")
+        self.tempo_2.setGeometry(QRect(10, 170, 281, 61))
+        self.tempo_2.setFont(font)
+        self.tempo_2.setStyleSheet(u"QLineEdit {\n"
+"    background-color: white;\n"
+"    color: #000;\n"
+"    font-size: 42px;\n"
+"    font-weight: bold;\n"
+"    border: 2px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    padding: 10px;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid #ff7052;\n"
+"}")
+        self.botao_apagar_temp_9 = QPushButton(self.Tempo)
+        self.botao_apagar_temp_9.setObjectName(u"botao_apagar_temp_9")
+        self.botao_apagar_temp_9.setGeometry(QRect(350, 340, 71, 51))
+        self.botao_apagar_temp_9.setFont(font)
+        self.botao_apagar_temp_9.setFocusPolicy(Qt.NoFocus)
+        self.botao_apagar_temp_9.setStyleSheet(u"\n"
+"QPushButton {\n"
+"    background-color: #ff8a80;\n"
+"    color: white;\n"
+"    font-size: 18px;\n"
+"    font-weight: bold;\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;  /* \u2190 adiciona isto */\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #ff7052;\n"
+"}\n"
+"font-size: 24px !important;")
+        self.botao_apagar_temp_9.setCheckable(False)
+        self.botao_apagar_temp_9.setChecked(False)
+        self.botao_apagar_tudo_temp_9 = QPushButton(self.Tempo)
+        self.botao_apagar_tudo_temp_9.setObjectName(u"botao_apagar_tudo_temp_9")
+        self.botao_apagar_tudo_temp_9.setGeometry(QRect(350, 440, 71, 51))
+        self.botao_apagar_tudo_temp_9.setFont(font)
+        self.botao_apagar_tudo_temp_9.setFocusPolicy(Qt.NoFocus)
+        self.botao_apagar_tudo_temp_9.setStyleSheet(u"\n"
+"QPushButton {\n"
+"    background-color: rgb(235, 50, 10);;\n"
+"    color: white;\n"
+"    font-size: 18px;\n"
+"    font-weight: bold;\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;  /* \u2190 adiciona isto */\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #ff7052;\n"
+"}")
+        self.botao_apagar_tudo_temp_9.setCheckable(False)
+        self.botao_apagar_tudo_temp_9.setChecked(False)
+        self.numero_0_temp_9 = QPushButton(self.Tempo)
+        self.numero_0_temp_9.setObjectName(u"numero_0_temp_9")
+        self.numero_0_temp_9.setGeometry(QRect(350, 390, 71, 51))
+        self.numero_0_temp_9.setFont(font)
+        self.numero_0_temp_9.setFocusPolicy(Qt.NoFocus)
+        self.numero_0_temp_9.setStyleSheet(u"QPushButton {\n"
+"    background-color: white;\n"
+"    color: #333;\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #ccc;\n"
+"}")
+        self.numero_0_temp_9.setCheckable(False)
+        self.numero_0_temp_9.setChecked(False)
+        self.numero_9_temp_9 = QPushButton(self.Tempo)
+        self.numero_9_temp_9.setObjectName(u"numero_9_temp_9")
+        self.numero_9_temp_9.setGeometry(QRect(280, 440, 71, 51))
+        self.numero_9_temp_9.setFont(font)
+        self.numero_9_temp_9.setFocusPolicy(Qt.NoFocus)
+        self.numero_9_temp_9.setStyleSheet(u"QPushButton {\n"
+"    background-color: white;\n"
+"    color: #333;\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #ccc;\n"
+"}")
+        self.numero_9_temp_9.setCheckable(False)
+        self.numero_9_temp_9.setChecked(False)
+        self.numero_7_temp_9 = QPushButton(self.Tempo)
+        self.numero_7_temp_9.setObjectName(u"numero_7_temp_9")
+        self.numero_7_temp_9.setGeometry(QRect(140, 440, 71, 51))
+        self.numero_7_temp_9.setFont(font)
+        self.numero_7_temp_9.setFocusPolicy(Qt.NoFocus)
+        self.numero_7_temp_9.setStyleSheet(u"QPushButton {\n"
+"    background-color: white;\n"
+"    color: #333;\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #ccc;\n"
+"}")
+        self.numero_7_temp_9.setCheckable(False)
+        self.numero_7_temp_9.setChecked(False)
+        self.numero_8_temp_9 = QPushButton(self.Tempo)
+        self.numero_8_temp_9.setObjectName(u"numero_8_temp_9")
+        self.numero_8_temp_9.setGeometry(QRect(210, 440, 71, 51))
+        self.numero_8_temp_9.setFont(font)
+        self.numero_8_temp_9.setFocusPolicy(Qt.NoFocus)
+        self.numero_8_temp_9.setStyleSheet(u"QPushButton {\n"
+"    background-color: white;\n"
+"    color: #333;\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #ccc;\n"
+"}")
+        self.numero_8_temp_9.setCheckable(False)
+        self.numero_8_temp_9.setChecked(False)
+        self.numero_8_tempo = QPushButton(self.Tempo)
+        self.numero_8_tempo.setObjectName(u"numero_8_tempo")
+        self.numero_8_tempo.setGeometry(QRect(80, 380, 71, 51))
+        self.numero_8_tempo.setFont(font)
+        self.numero_8_tempo.setFocusPolicy(Qt.NoFocus)
+        self.numero_8_tempo.setStyleSheet(u"QPushButton {\n"
+"    background-color: white;\n"
+"    color: #333;\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #ccc;\n"
+"}")
+        self.numero_8_tempo.setCheckable(False)
+        self.numero_8_tempo.setChecked(False)
+        self.numero_9_tempo = QPushButton(self.Tempo)
+        self.numero_9_tempo.setObjectName(u"numero_9_tempo")
+        self.numero_9_tempo.setGeometry(QRect(150, 380, 71, 51))
+        self.numero_9_tempo.setFont(font)
+        self.numero_9_tempo.setFocusPolicy(Qt.NoFocus)
+        self.numero_9_tempo.setStyleSheet(u"QPushButton {\n"
+"    background-color: white;\n"
+"    color: #333;\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #ccc;\n"
+"}")
+        self.numero_9_tempo.setCheckable(False)
+        self.numero_9_tempo.setChecked(False)
+        self.numero_2_tempo = QPushButton(self.Tempo)
+        self.numero_2_tempo.setObjectName(u"numero_2_tempo")
+        self.numero_2_tempo.setGeometry(QRect(80, 280, 71, 51))
+        self.numero_2_tempo.setFont(font)
+        self.numero_2_tempo.setFocusPolicy(Qt.NoFocus)
+        self.numero_2_tempo.setStyleSheet(u"QPushButton {\n"
+"    background-color: white;\n"
+"    color: #333;\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #ccc;\n"
+"}")
+        self.numero_2_tempo.setCheckable(False)
+        self.numero_2_tempo.setChecked(False)
+        self.numero_5_tempo = QPushButton(self.Tempo)
+        self.numero_5_tempo.setObjectName(u"numero_5_tempo")
+        self.numero_5_tempo.setGeometry(QRect(80, 330, 71, 51))
+        self.numero_5_tempo.setFont(font)
+        self.numero_5_tempo.setFocusPolicy(Qt.NoFocus)
+        self.numero_5_tempo.setStyleSheet(u"QPushButton {\n"
+"    background-color: white;\n"
+"    color: #333;\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #ccc;\n"
+"}")
+        self.numero_5_tempo.setCheckable(False)
+        self.numero_5_tempo.setChecked(False)
+        self.numero_0_tempo = QPushButton(self.Tempo)
+        self.numero_0_tempo.setObjectName(u"numero_0_tempo")
+        self.numero_0_tempo.setGeometry(QRect(220, 330, 71, 51))
+        self.numero_0_tempo.setFont(font)
+        self.numero_0_tempo.setFocusPolicy(Qt.NoFocus)
+        self.numero_0_tempo.setStyleSheet(u"QPushButton {\n"
+"    background-color: white;\n"
+"    color: #333;\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #ccc;\n"
+"}")
+        self.numero_0_tempo.setCheckable(False)
+        self.numero_0_tempo.setChecked(False)
+        self.botao_apagar_tempo = QPushButton(self.Tempo)
+        self.botao_apagar_tempo.setObjectName(u"botao_apagar_tempo")
+        self.botao_apagar_tempo.setGeometry(QRect(220, 280, 71, 51))
+        self.botao_apagar_tempo.setFont(font)
+        self.botao_apagar_tempo.setFocusPolicy(Qt.NoFocus)
+        self.botao_apagar_tempo.setStyleSheet(u"\n"
+"QPushButton {\n"
+"    background-color: #ff8a80;\n"
+"    color: white;\n"
+"    font-size: 18px;\n"
+"    font-weight: bold;\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;  /* \u2190 adiciona isto */\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #ff7052;\n"
+"}\n"
+"font-size: 24px !important;")
+        self.botao_apagar_tempo.setCheckable(False)
+        self.botao_apagar_tempo.setChecked(False)
+        self.numero_4_tempo = QPushButton(self.Tempo)
+        self.numero_4_tempo.setObjectName(u"numero_4_tempo")
+        self.numero_4_tempo.setGeometry(QRect(10, 330, 71, 51))
+        self.numero_4_tempo.setFont(font)
+        self.numero_4_tempo.setFocusPolicy(Qt.NoFocus)
+        self.numero_4_tempo.setStyleSheet(u"QPushButton {\n"
+"    background-color: white;\n"
+"    color: #333;\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #ccc;\n"
+"}")
+        self.numero_4_tempo.setCheckable(False)
+        self.numero_4_tempo.setChecked(False)
+        self.numero_6_tempo = QPushButton(self.Tempo)
+        self.numero_6_tempo.setObjectName(u"numero_6_tempo")
+        self.numero_6_tempo.setGeometry(QRect(150, 330, 71, 51))
+        self.numero_6_tempo.setFont(font)
+        self.numero_6_tempo.setFocusPolicy(Qt.NoFocus)
+        self.numero_6_tempo.setStyleSheet(u"QPushButton {\n"
+"    background-color: white;\n"
+"    color: #333;\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #ccc;\n"
+"}")
+        self.numero_6_tempo.setCheckable(False)
+        self.numero_6_tempo.setChecked(False)
+        self.numero_3_tempo = QPushButton(self.Tempo)
+        self.numero_3_tempo.setObjectName(u"numero_3_tempo")
+        self.numero_3_tempo.setGeometry(QRect(150, 280, 71, 51))
+        self.numero_3_tempo.setFont(font)
+        self.numero_3_tempo.setFocusPolicy(Qt.NoFocus)
+        self.numero_3_tempo.setStyleSheet(u"QPushButton {\n"
+"    background-color: white;\n"
+"    color: #333;\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #ccc;\n"
+"}")
+        self.numero_3_tempo.setCheckable(False)
+        self.numero_3_tempo.setChecked(False)
+        self.botao_apagar_tudo_tempo = QPushButton(self.Tempo)
+        self.botao_apagar_tudo_tempo.setObjectName(u"botao_apagar_tudo_tempo")
+        self.botao_apagar_tudo_tempo.setGeometry(QRect(220, 380, 71, 51))
+        self.botao_apagar_tudo_tempo.setFont(font)
+        self.botao_apagar_tudo_tempo.setFocusPolicy(Qt.NoFocus)
+        self.botao_apagar_tudo_tempo.setStyleSheet(u"\n"
+"QPushButton {\n"
+"    background-color: rgb(235, 50, 10);;\n"
+"    color: white;\n"
+"    font-size: 18px;\n"
+"    font-weight: bold;\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;  /* \u2190 adiciona isto */\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #ff7052;\n"
+"}")
+        self.botao_apagar_tudo_tempo.setCheckable(False)
+        self.botao_apagar_tudo_tempo.setChecked(False)
+        self.numero_1_tempo = QPushButton(self.Tempo)
+        self.numero_1_tempo.setObjectName(u"numero_1_tempo")
+        self.numero_1_tempo.setGeometry(QRect(10, 280, 71, 51))
+        self.numero_1_tempo.setFont(font)
+        self.numero_1_tempo.setFocusPolicy(Qt.NoFocus)
+        self.numero_1_tempo.setStyleSheet(u"QPushButton {\n"
+"    background-color: white;\n"
+"    color: #333;\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #ccc;\n"
+"}")
+        self.numero_1_tempo.setCheckable(False)
+        self.numero_1_tempo.setChecked(False)
+        self.numero_7_tempo = QPushButton(self.Tempo)
+        self.numero_7_tempo.setObjectName(u"numero_7_tempo")
+        self.numero_7_tempo.setGeometry(QRect(10, 380, 71, 51))
+        self.numero_7_tempo.setFont(font)
+        self.numero_7_tempo.setFocusPolicy(Qt.NoFocus)
+        self.numero_7_tempo.setStyleSheet(u"QPushButton {\n"
+"    background-color: white;\n"
+"    color: #333;\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid #ddd;\n"
+"    border-radius: 8px;\n"
+"    margin: 2px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #f5f5f5;\n"
+"    border: 1px solid #ccc;\n"
+"}")
+        self.numero_7_tempo.setCheckable(False)
+        self.numero_7_tempo.setChecked(False)
+        self.combo_tempo_2 = QComboBox(self.Tempo)
+        self.combo_tempo_2.addItem("")
+        self.combo_tempo_2.addItem("")
+        self.combo_tempo_2.addItem("")
+        self.combo_tempo_2.addItem("")
+        self.combo_tempo_2.addItem("")
+        self.combo_tempo_2.addItem("")
+        self.combo_tempo_2.addItem("")
+        self.combo_tempo_2.addItem("")
+        self.combo_tempo_2.setObjectName(u"combo_tempo_2")
+        self.combo_tempo_2.setGeometry(QRect(10, 240, 141, 31))
+        self.combo_tempo_2.setFont(font2)
+        self.combo_tempo_2.setStyleSheet(u"")
+        self.stackedWidget.addWidget(self.Tempo)
         self.page_5 = QWidget()
         self.page_5.setObjectName(u"page_5")
         self.label = QLabel(self.page_5)
@@ -1171,7 +1564,7 @@ class Ui_Dialog(object):
 
         self.retranslateUi(Dialog)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(3)
         self.operador_multiplicar.setDefault(False)
 
 
@@ -1262,6 +1655,47 @@ class Ui_Dialog(object):
         self.numero_5_temp.setText(QCoreApplication.translate("Dialog", u"5", None))
         self.numero_3_temp.setText(QCoreApplication.translate("Dialog", u"3", None))
         self.toolButton_3.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
+        self.label_distancias_3.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Tempo</span></p><p><span style=\" font-size:16pt;\"><br/></span></p></body></html>", None))
+        self.tempo_1.setText(QCoreApplication.translate("Dialog", u"0", None))
+        self.combo_tempo_1.setItemText(0, QCoreApplication.translate("Dialog", u"Microssegundos", None))
+        self.combo_tempo_1.setItemText(1, QCoreApplication.translate("Dialog", u"Milissegundos", None))
+        self.combo_tempo_1.setItemText(2, QCoreApplication.translate("Dialog", u"Segundos", None))
+        self.combo_tempo_1.setItemText(3, QCoreApplication.translate("Dialog", u"Minutos", None))
+        self.combo_tempo_1.setItemText(4, QCoreApplication.translate("Dialog", u"Horas", None))
+        self.combo_tempo_1.setItemText(5, QCoreApplication.translate("Dialog", u"Dias", None))
+        self.combo_tempo_1.setItemText(6, QCoreApplication.translate("Dialog", u"Semanas", None))
+        self.combo_tempo_1.setItemText(7, QCoreApplication.translate("Dialog", u"Anos", None))
+
+        self.combo_tempo_1.setCurrentText(QCoreApplication.translate("Dialog", u"Microssegundos", None))
+        self.tempo_2.setText(QCoreApplication.translate("Dialog", u"0", None))
+        self.botao_apagar_temp_9.setText(QCoreApplication.translate("Dialog", u"\u27f5", None))
+        self.botao_apagar_tudo_temp_9.setText(QCoreApplication.translate("Dialog", u"CE", None))
+        self.numero_0_temp_9.setText(QCoreApplication.translate("Dialog", u"0", None))
+        self.numero_9_temp_9.setText(QCoreApplication.translate("Dialog", u"9", None))
+        self.numero_7_temp_9.setText(QCoreApplication.translate("Dialog", u"7", None))
+        self.numero_8_temp_9.setText(QCoreApplication.translate("Dialog", u"8", None))
+        self.numero_8_tempo.setText(QCoreApplication.translate("Dialog", u"8", None))
+        self.numero_9_tempo.setText(QCoreApplication.translate("Dialog", u"9", None))
+        self.numero_2_tempo.setText(QCoreApplication.translate("Dialog", u"2", None))
+        self.numero_5_tempo.setText(QCoreApplication.translate("Dialog", u"5", None))
+        self.numero_0_tempo.setText(QCoreApplication.translate("Dialog", u"0", None))
+        self.botao_apagar_tempo.setText(QCoreApplication.translate("Dialog", u"\u27f5", None))
+        self.numero_4_tempo.setText(QCoreApplication.translate("Dialog", u"4", None))
+        self.numero_6_tempo.setText(QCoreApplication.translate("Dialog", u"6", None))
+        self.numero_3_tempo.setText(QCoreApplication.translate("Dialog", u"3", None))
+        self.botao_apagar_tudo_tempo.setText(QCoreApplication.translate("Dialog", u"CE", None))
+        self.numero_1_tempo.setText(QCoreApplication.translate("Dialog", u"1", None))
+        self.numero_7_tempo.setText(QCoreApplication.translate("Dialog", u"7", None))
+        self.combo_tempo_2.setItemText(0, QCoreApplication.translate("Dialog", u"Milissegundos", None))
+        self.combo_tempo_2.setItemText(1, QCoreApplication.translate("Dialog", u"Microssegundos", None))
+        self.combo_tempo_2.setItemText(2, QCoreApplication.translate("Dialog", u"Segundos", None))
+        self.combo_tempo_2.setItemText(3, QCoreApplication.translate("Dialog", u"Minutos", None))
+        self.combo_tempo_2.setItemText(4, QCoreApplication.translate("Dialog", u"Horas", None))
+        self.combo_tempo_2.setItemText(5, QCoreApplication.translate("Dialog", u"Dias", None))
+        self.combo_tempo_2.setItemText(6, QCoreApplication.translate("Dialog", u"Semanas", None))
+        self.combo_tempo_2.setItemText(7, QCoreApplication.translate("Dialog", u"Anos", None))
+
+        self.combo_tempo_2.setCurrentText(QCoreApplication.translate("Dialog", u"Milissegundos", None))
         self.label.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">Em </span></p><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">constru\u00e7\u00e3o</span></p></body></html>", None))
         self.label_2.setText("")
         self.toolButton_4.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
