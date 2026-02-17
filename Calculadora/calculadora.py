@@ -19,6 +19,10 @@ janela.setStyleSheet("background-color: #f0f0f0;")
 
 ui.label_dias.setText("")
 ui.label_erro.setVisible(False)
+ui.label_resultado.setVisible(False)
+ui.label_dias.setVisible(False)
+ui.label_horas.setVisible(False)
+ui.label_semanas.setVisible(False)
 
 
 class FiltroVirgula(QObject):
@@ -214,6 +218,29 @@ ui.combo_datas_1.view().setStyleSheet("""
     }
 """)
 
+ui.combo_datas_2.view().window().setStyleSheet("""
+    QWidget {
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+    }
+""")
+ui.combo_datas_2.view().setStyleSheet("""
+    QListView {
+        background-color: white;
+        border: 1px solid #ddd;
+        outline: 0;
+    }
+    QListView::item {
+        padding: 5px;
+        outline: 0 ;                                  
+    }
+    QListView::item:selected {
+        background-color: #ff7052;
+        color: white;
+    }
+""")
+
 
 validator = QDoubleValidator()
 validator.setLocale(QLocale(QLocale.Portuguese, QLocale.Portugal))
@@ -299,6 +326,7 @@ ui.combo_temp_2.setStyleSheet(estilo_combo)
 ui.combo_tempo_1.setStyleSheet(estilo_combo)
 ui.combo_tempo_2.setStyleSheet(estilo_combo)
 ui.combo_datas_1.setStyleSheet(estilo_combo)
+ui.combo_datas_2.setStyleSheet(estilo_combo)
 ui.date_edit_1.setStyleSheet(estilo_dateedit)
 ui.date_edit_2.setStyleSheet(estilo_dateedit)
 
@@ -807,35 +835,89 @@ def calcular_datas():
         ui.label_erro.setText("⚠️ As datas selecionadas são idênticas")
         ui.label_erro.setVisible(True)
         QTimer.singleShot(3000, lambda: ui.label_erro.setVisible(False))
+        ui.label_resultado.setVisible(False)
+        ui.label_dias.setVisible(False)
+        ui.label_horas.setVisible(False)
+        ui.label_semanas.setVisible(False)
     elif dias < 0:
         ui.label_dias.setText("")
         ui.label_erro.setText("⚠️ A data final deve ser depois da inicial!")
         ui.label_erro.setVisible(True)
+        ui.label_resultado.setVisible(False)
+        ui.label_dias.setVisible(False)
+        ui.label_horas.setVisible(False)
+        ui.label_semanas.setVisible(False)
         QTimer.singleShot(3000, lambda: ui.label_erro.setVisible(False))
     elif dias == 1:
         ui.label_erro.setVisible(False)
-        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas} horas\n📆 {dias} dia")
+        ui.label_semanas.setVisible(False)
+        ui.label_resultado.setVisible(True)
+        ui.label_dias.setVisible(True)
+        ui.label_horas.setVisible(True)
+        ui.label_horas.setText(f"⏰ {horas} horas")
+        ui.label_dias.setText(f"📆 {dias} dia")
     elif dias < 7:
         ui.label_erro.setVisible(False)
-        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas:,} horas\n📆 {dias} dias")
+        ui.label_semanas.setVisible(False)
+        ui.label_resultado.setVisible(True)
+        ui.label_dias.setVisible(True)
+        ui.label_horas.setVisible(True)
+        ui.label_horas.setText(f"⏰ {horas} horas")
+        ui.label_dias.setText(f"📆 {dias} dias")
     elif semanas_completas == 1 and dias_restantes == 0:
         ui.label_erro.setVisible(False)
-        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas:,} horas\n📆 {dias} dias\n📊 {semanas_completas} semana")
+        ui.label_resultado.setVisible(True)
+        ui.label_dias.setVisible(True)
+        ui.label_horas.setVisible(True)
+        ui.label_semanas.setVisible(True)
+        ui.label_horas.setText(f"⏰ {horas} horas")
+        ui.label_dias.setText(f"📆 {dias} dias")
+        ui.label_semanas.setText(f"📊 {semanas_completas} semana")
     elif semanas_completas == 1 and dias_restantes == 1:
         ui.label_erro.setVisible(False)
-        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas:,} horas\n📆 {dias} dias\n📊 {semanas_completas} semana e {dias_restantes} dia")
+        ui.label_resultado.setVisible(True)
+        ui.label_dias.setVisible(True)
+        ui.label_horas.setVisible(True)
+        ui.label_semanas.setVisible(True)
+        ui.label_horas.setText(f"⏰ {horas} horas")
+        ui.label_dias.setText(f"📆 {dias} dias")
+        ui.label_semanas.setText(f"📊 {semanas_completas} semana e {dias_restantes} dia")
     elif semanas_completas == 1 and dias_restantes > 1:
         ui.label_erro.setVisible(False)
-        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas:,} horas\n📆 {dias} dias\n📊 {semanas_completas} semana e {dias_restantes} dias")
+        ui.label_resultado.setVisible(True)
+        ui.label_dias.setVisible(True)
+        ui.label_horas.setVisible(True)
+        ui.label_semanas.setVisible(True)
+        ui.label_horas.setText(f"⏰ {horas} horas")
+        ui.label_dias.setText(f"📆 {dias} dias")
+        ui.label_semanas.setText(f"📊 {semanas_completas} semana e {dias_restantes} dias")
     elif semanas_completas > 1 and dias_restantes == 0:
         ui.label_erro.setVisible(False)
-        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas:,} horas\n📆 {dias} dias\n📊 {semanas_completas} semanas")
+        ui.label_resultado.setVisible(True)
+        ui.label_dias.setVisible(True)
+        ui.label_horas.setVisible(True)
+        ui.label_semanas.setVisible(True)
+        ui.label_horas.setText(f"⏰ {horas} horas")
+        ui.label_dias.setText(f"📆 {dias} dias")
+        ui.label_semanas.setText(f"📊 {semanas_completas} semanas")
     elif semanas_completas > 1 and dias_restantes == 1:
         ui.label_erro.setVisible(False)
-        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas:,} horas\n📆 {dias} dias\n📊 {semanas_completas} semanas e {dias_restantes} dia")
-    else:  # semanas_completas > 1 and dias_restantes > 1
+        ui.label_resultado.setVisible(True)
+        ui.label_dias.setVisible(True)
+        ui.label_horas.setVisible(True)
+        ui.label_semanas.setVisible(True)
+        ui.label_horas.setText(f"⏰ {horas} horas")
+        ui.label_dias.setText(f"📆 {dias} dias")
+        ui.label_semanas.setText(f"📊 {semanas_completas} semanas e {dias_restantes} dia")
+    else: 
         ui.label_erro.setVisible(False)
-        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas:,} horas\n📆 {dias} dias\n📊 {semanas_completas} semanas e {dias_restantes} dias")
+        ui.label_resultado.setVisible(True)
+        ui.label_dias.setVisible(True)
+        ui.label_horas.setVisible(True)
+        ui.label_semanas.setVisible(True)
+        ui.label_horas.setText(f"⏰ {horas} horas")
+        ui.label_dias.setText(f"📆 {dias} dias")
+        ui.label_semanas.setText(f"📊 {semanas_completas} semanas e {dias_restantes} dias")
 
 def formatar_numero(numero):
     numero = round(numero, 4)
@@ -934,8 +1016,28 @@ def ir_para_tempo () :
 
 def ir_para_datas () :
     apagar_tudo_foco ()
+    
     ui.stackedWidget.setCurrentIndex(4)
 
+def ir_para_datas_2 () :
+    
+    if ui.combo_datas_1.currentIndex() == 0 :
+        return
+    else :
+        ui.combo_datas_2.blockSignals(True)
+        ui.combo_datas_2.setCurrentIndex(0)
+        ui.combo_datas_2.blockSignals(False)
+        ui.stackedWidget.setCurrentIndex(5)
+
+def ir_para_datas_2_1 () :
+    if ui.combo_datas_1.currentIndex() == 0 :
+        return
+       
+    else :
+        ui.combo_datas_1.blockSignals(True) 
+        ui.combo_datas_1.setCurrentIndex(0)
+        ui.combo_datas_1.blockSignals(False)
+        ui.stackedWidget.setCurrentIndex(4)
 def ir_para_velocidades () :
     apagar_tudo_foco ()
     ui.stackedWidget.setCurrentIndex(5)
@@ -951,6 +1053,7 @@ def ir_para_defenicoes () :
 def ir_para_acerca_de () :
     apagar_tudo_foco ()
     ui.stackedWidget.setCurrentIndex(5)
+
 
 ui.botao_resultado.setDefault(True)
 
@@ -1034,9 +1137,13 @@ ui.toolButton_2.clicked.connect(abrir_menu)
 ui.toolButton_3.clicked.connect(abrir_menu)
 ui.toolButton_4.clicked.connect(abrir_menu)
 ui.toolButton_5.clicked.connect(abrir_menu)
+ui.toolButton_6.clicked.connect(abrir_menu)
+
 
 ui.date_edit_1.dateChanged.connect(calcular_datas)
 ui.date_edit_2.dateChanged.connect(calcular_datas)
+ui.combo_datas_1.currentIndexChanged.connect(ir_para_datas_2)
+ui.combo_datas_2.currentIndexChanged.connect(ir_para_datas_2_1)
 
 
 

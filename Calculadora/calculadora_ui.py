@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QDialog,
-    QLabel, QLineEdit, QPushButton, QSizePolicy,
-    QStackedWidget, QToolButton, QWidget)
+    QLabel, QLineEdit, QPushButton, QRadioButton,
+    QSizePolicy, QStackedWidget, QToolButton, QWidget)
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -1559,35 +1559,30 @@ class Ui_Dialog(object):
         self.combo_datas_1.addItem("")
         self.combo_datas_1.addItem("")
         self.combo_datas_1.setObjectName(u"combo_datas_1")
-        self.combo_datas_1.setGeometry(QRect(10, 60, 201, 31))
+        self.combo_datas_1.setGeometry(QRect(10, 55, 201, 31))
         self.combo_datas_1.setFont(font2)
         self.combo_datas_1.setStyleSheet(u"")
         self.date_edit_2 = QDateEdit(self.page_3)
         self.date_edit_2.setObjectName(u"date_edit_2")
-        self.date_edit_2.setGeometry(QRect(10, 200, 141, 31))
+        self.date_edit_2.setGeometry(QRect(10, 190, 141, 31))
         self.date_edit_2.setStyleSheet(u"")
         self.date_edit_2.setCalendarPopup(True)
         self.date_edit_2.setDate(QDate(2026, 2, 16))
         self.label_3 = QLabel(self.page_3)
         self.label_3.setObjectName(u"label_3")
-        self.label_3.setGeometry(QRect(10, 110, 47, 13))
+        self.label_3.setGeometry(QRect(10, 100, 47, 13))
         self.label_4 = QLabel(self.page_3)
         self.label_4.setObjectName(u"label_4")
-        self.label_4.setGeometry(QRect(10, 180, 47, 13))
-        self.label_dias = QLabel(self.page_3)
-        self.label_dias.setObjectName(u"label_dias")
-        self.label_dias.setGeometry(QRect(10, 240, 261, 111))
-        self.label_dias.setStyleSheet(u" font-size: 14px")
-        self.label_dias.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.label_4.setGeometry(QRect(10, 170, 47, 13))
         self.date_edit_1 = QDateEdit(self.page_3)
         self.date_edit_1.setObjectName(u"date_edit_1")
-        self.date_edit_1.setGeometry(QRect(10, 130, 141, 31))
+        self.date_edit_1.setGeometry(QRect(10, 120, 141, 31))
         self.date_edit_1.setStyleSheet(u"")
         self.date_edit_1.setCalendarPopup(True)
         self.date_edit_1.setDate(QDate(2026, 2, 1))
         self.label_erro = QLabel(self.page_3)
         self.label_erro.setObjectName(u"label_erro")
-        self.label_erro.setGeometry(QRect(10, 240, 271, 41))
+        self.label_erro.setGeometry(QRect(10, 230, 271, 41))
         self.label_erro.setStyleSheet(u"QLabel#label_erro {\n"
 "    background-color: #ffe6e6;\n"
 "    color: #d32f2f;\n"
@@ -1597,7 +1592,110 @@ class Ui_Dialog(object):
 "    font-size: 11px;\n"
 "    font-weight: bold;\n"
 "}")
+        self.label_horas = QLabel(self.page_3)
+        self.label_horas.setObjectName(u"label_horas")
+        self.label_horas.setGeometry(QRect(10, 250, 191, 51))
+        self.label_horas.setStyleSheet(u"QLabel#label_horas {\n"
+"    background-color: transparent;\n"
+"    color: #555;\n"
+"    border-left: 3px solid #ff8c42;\n"
+"    padding: 5px 10px;\n"
+"    font-size: 12px;\n"
+"}")
+        self.label_dias = QLabel(self.page_3)
+        self.label_dias.setObjectName(u"label_dias")
+        self.label_dias.setGeometry(QRect(10, 310, 191, 51))
+        self.label_dias.setStyleSheet(u"\n"
+"\n"
+"QLabel#label_dias {\n"
+"    background-color: transparent;\n"
+"    color: #555;\n"
+"    border-left: 3px solid #ff8c42;\n"
+"    padding: 5px 10px;\n"
+"    font-size: 12px;\n"
+"}")
+        self.label_semanas = QLabel(self.page_3)
+        self.label_semanas.setObjectName(u"label_semanas")
+        self.label_semanas.setGeometry(QRect(10, 370, 191, 51))
+        self.label_semanas.setStyleSheet(u"QLabel#label_semanas {\n"
+"    background-color: transparent;\n"
+"    color: #555;\n"
+"    border-left: 3px solid #ff8c42;\n"
+"    padding: 5px 10px;\n"
+"    font-size: 12px;\n"
+"}")
+        self.label_resultado = QLabel(self.page_3)
+        self.label_resultado.setObjectName(u"label_resultado")
+        self.label_resultado.setGeometry(QRect(10, 220, 191, 31))
+        self.label_resultado.setStyleSheet(u"QLabel#label_resultado {\n"
+"    background-color: transparent;\n"
+"    color: #333;\n"
+"    border: none;\n"
+"    padding: 5px;\n"
+"    font-size: 13px;\n"
+"    font-weight: bold;\n"
+"}")
         self.stackedWidget.addWidget(self.page_3)
+        self.page_4 = QWidget()
+        self.page_4.setObjectName(u"page_4")
+        self.combo_datas_2 = QComboBox(self.page_4)
+        self.combo_datas_2.addItem("")
+        self.combo_datas_2.addItem("")
+        self.combo_datas_2.setObjectName(u"combo_datas_2")
+        self.combo_datas_2.setGeometry(QRect(10, 55, 201, 31))
+        self.combo_datas_2.setFont(font2)
+        self.combo_datas_2.setStyleSheet(u"")
+        self.label_distancias_5 = QLabel(self.page_4)
+        self.label_distancias_5.setObjectName(u"label_distancias_5")
+        self.label_distancias_5.setGeometry(QRect(40, 5, 191, 41))
+        self.toolButton_6 = QToolButton(self.page_4)
+        self.toolButton_6.setObjectName(u"toolButton_6")
+        self.toolButton_6.setGeometry(QRect(10, 10, 21, 31))
+        self.toolButton_6.setFont(font2)
+        self.toolButton_6.setTabletTracking(False)
+        self.toolButton_6.setStyleSheet(u"QToolButton:hover {\n"
+"        color: #000;\n"
+"        background-color: #e0e0e0;\n"
+"        border-radius: 5px;\n"
+"    }\n"
+" ")
+        self.label_5 = QLabel(self.page_4)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setGeometry(QRect(10, 100, 101, 16))
+        self.dateEdit = QDateEdit(self.page_4)
+        self.dateEdit.setObjectName(u"dateEdit")
+        self.dateEdit.setGeometry(QRect(10, 130, 110, 22))
+        self.radioButton = QRadioButton(self.page_4)
+        self.radioButton.setObjectName(u"radioButton")
+        self.radioButton.setGeometry(QRect(10, 180, 101, 21))
+        self.radioButton_2 = QRadioButton(self.page_4)
+        self.radioButton_2.setObjectName(u"radioButton_2")
+        self.radioButton_2.setGeometry(QRect(100, 180, 101, 21))
+        self.label_6 = QLabel(self.page_4)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setGeometry(QRect(20, 230, 47, 13))
+        self.label_7 = QLabel(self.page_4)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setGeometry(QRect(110, 230, 47, 13))
+        self.label_8 = QLabel(self.page_4)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setGeometry(QRect(200, 230, 47, 13))
+        self.comboBox = QComboBox(self.page_4)
+        self.comboBox.setObjectName(u"comboBox")
+        self.comboBox.setGeometry(QRect(10, 260, 69, 22))
+        self.comboBox_2 = QComboBox(self.page_4)
+        self.comboBox_2.setObjectName(u"comboBox_2")
+        self.comboBox_2.setGeometry(QRect(100, 260, 69, 22))
+        self.comboBox_3 = QComboBox(self.page_4)
+        self.comboBox_3.setObjectName(u"comboBox_3")
+        self.comboBox_3.setGeometry(QRect(200, 260, 69, 22))
+        self.label_9 = QLabel(self.page_4)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setGeometry(QRect(20, 320, 47, 13))
+        self.label_10 = QLabel(self.page_4)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setGeometry(QRect(20, 350, 141, 16))
+        self.stackedWidget.addWidget(self.page_4)
         self.page_5 = QWidget()
         self.page_5.setObjectName(u"page_5")
         self.label = QLabel(self.page_5)
@@ -1626,7 +1724,7 @@ class Ui_Dialog(object):
 
         self.retranslateUi(Dialog)
 
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(0)
         self.operador_multiplicar.setDefault(False)
 
 
@@ -1766,8 +1864,25 @@ class Ui_Dialog(object):
         self.combo_datas_1.setCurrentText(QCoreApplication.translate("Dialog", u"Diferen\u00e7a entre dias", None))
         self.label_3.setText(QCoreApplication.translate("Dialog", u"De:", None))
         self.label_4.setText(QCoreApplication.translate("Dialog", u"A:", None))
-        self.label_dias.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p>label_dias</p></body></html>", None))
         self.label_erro.setText(QCoreApplication.translate("Dialog", u"label_erro", None))
+        self.label_horas.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
+        self.label_dias.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
+        self.label_semanas.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
+        self.label_resultado.setText(QCoreApplication.translate("Dialog", u"Diferen\u00e7a :", None))
+        self.combo_datas_2.setItemText(0, QCoreApplication.translate("Dialog", u"Adionar/substrair dias", None))
+        self.combo_datas_2.setItemText(1, QCoreApplication.translate("Dialog", u"Diferen\u00e7a entre dias", None))
+
+        self.combo_datas_2.setCurrentText(QCoreApplication.translate("Dialog", u"Adionar/substrair dias", None))
+        self.label_distancias_5.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Datas</span></p></body></html>", None))
+        self.toolButton_6.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
+        self.label_5.setText(QCoreApplication.translate("Dialog", u"Data inicial", None))
+        self.radioButton.setText(QCoreApplication.translate("Dialog", u"Adiconar", None))
+        self.radioButton_2.setText(QCoreApplication.translate("Dialog", u"Substrair", None))
+        self.label_6.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
+        self.label_7.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
+        self.label_8.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
+        self.label_9.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
+        self.label_10.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
         self.label.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">Em </span></p><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">constru\u00e7\u00e3o</span></p></body></html>", None))
         self.label_2.setText("")
         self.toolButton_4.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
