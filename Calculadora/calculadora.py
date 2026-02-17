@@ -1,9 +1,10 @@
 from PySide6.QtWidgets import QApplication, QDialog, QMenu, QLineEdit
 from calculadora_ui import Ui_Dialog
 from PySide6.QtGui import QIcon, QShortcut, QKeySequence, QFont, QFontDatabase, QDoubleValidator, QPixmap
-from PySide6.QtCore import Qt, QLocale, QEvent, QObject, QDate
+from PySide6.QtCore import Qt, QLocale, QEvent, QObject, QDate, QTimer
 import sys
 import os
+from datetime import datetime
 
 
 
@@ -15,6 +16,10 @@ ui.setupUi(janela)
 janela.setWindowTitle("Calculadora")
 janela.setWindowIcon(QIcon("icon.ico"))
 janela.setStyleSheet("background-color: #f0f0f0;") 
+
+ui.label_dias.setText("")
+ui.label_erro.setVisible(False)
+
 
 class FiltroVirgula(QObject):
     def __init__(self, campo):
@@ -233,7 +238,7 @@ else:
 
 
 caminho_seta = resource_path("arrow.png").replace("\\", "/")
-
+caminho_calen = resource_path("calendar.png").replace("\\", "/")
 estilo_combo = f"""
     QComboBox {{
         background-color: white;
@@ -281,9 +286,9 @@ estilo_dateedit = f"""
     }}
     
     QDateEdit::down-arrow {{
-        image: url({caminho_seta});
-        width: 10px;
-        height: 10px;
+        image: url({caminho_calen});
+        width: 16px;
+        height: 16px;
     }}
 """
 
@@ -294,8 +299,8 @@ ui.combo_temp_2.setStyleSheet(estilo_combo)
 ui.combo_tempo_1.setStyleSheet(estilo_combo)
 ui.combo_tempo_2.setStyleSheet(estilo_combo)
 ui.combo_datas_1.setStyleSheet(estilo_combo)
-ui.dateEdit_1.setStyleSheet(estilo_dateedit)
-ui.dateEdit_2.setStyleSheet(estilo_dateedit)
+ui.date_edit_1.setStyleSheet(estilo_dateedit)
+ui.date_edit_2.setStyleSheet(estilo_dateedit)
 
 
 def estilizar_calendario_dateedit(date_edit):
@@ -363,14 +368,13 @@ def estilizar_calendario_dateedit(date_edit):
         }
     """)
 
-estilizar_calendario_dateedit(ui.dateEdit_1) 
-estilizar_calendario_dateedit(ui.dateEdit_2)
+estilizar_calendario_dateedit(ui.date_edit_2) 
+estilizar_calendario_dateedit(ui.date_edit_1)
 
 
 
-
-ui.dateEdit_1.setDate(QDate.currentDate())
-ui.dateEdit_2.setDate(QDate.currentDate())
+ui.date_edit_2.setDate(QDate.currentDate())
+ui.date_edit_1.setDate(QDate.currentDate())
 
 ui.label_2.setPixmap(QPixmap(resource_path("construcao.png")))
 
@@ -786,6 +790,52 @@ def converter_tempo2():
     
     convertendo = False
 
+def calcular_datas():
+    qdata_inicial = ui.date_edit_1.date()
+    qdata_final = ui.date_edit_2.date()
+    pdata_inicial = qdata_inicial.toPython()
+    pdata_final = qdata_final.toPython()
+
+    diferenca = pdata_final - pdata_inicial
+    dias = diferenca.days
+    semanas_completas = dias // 7
+    dias_restantes = dias % 7
+    horas = dias * 24
+
+    if dias == 0:
+        ui.label_dias.setText("")
+        ui.label_erro.setText("⚠️ As datas selecionadas são idênticas")
+        ui.label_erro.setVisible(True)
+        QTimer.singleShot(3000, lambda: ui.label_erro.setVisible(False))
+    elif dias < 0:
+        ui.label_dias.setText("")
+        ui.label_erro.setText("⚠️ A data final deve ser depois da inicial!")
+        ui.label_erro.setVisible(True)
+        QTimer.singleShot(3000, lambda: ui.label_erro.setVisible(False))
+    elif dias == 1:
+        ui.label_erro.setVisible(False)
+        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas} horas\n📆 {dias} dia")
+    elif dias < 7:
+        ui.label_erro.setVisible(False)
+        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas:,} horas\n📆 {dias} dias")
+    elif semanas_completas == 1 and dias_restantes == 0:
+        ui.label_erro.setVisible(False)
+        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas:,} horas\n📆 {dias} dias\n📊 {semanas_completas} semana")
+    elif semanas_completas == 1 and dias_restantes == 1:
+        ui.label_erro.setVisible(False)
+        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas:,} horas\n📆 {dias} dias\n📊 {semanas_completas} semana e {dias_restantes} dia")
+    elif semanas_completas == 1 and dias_restantes > 1:
+        ui.label_erro.setVisible(False)
+        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas:,} horas\n📆 {dias} dias\n📊 {semanas_completas} semana e {dias_restantes} dias")
+    elif semanas_completas > 1 and dias_restantes == 0:
+        ui.label_erro.setVisible(False)
+        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas:,} horas\n📆 {dias} dias\n📊 {semanas_completas} semanas")
+    elif semanas_completas > 1 and dias_restantes == 1:
+        ui.label_erro.setVisible(False)
+        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas:,} horas\n📆 {dias} dias\n📊 {semanas_completas} semanas e {dias_restantes} dia")
+    else:  # semanas_completas > 1 and dias_restantes > 1
+        ui.label_erro.setVisible(False)
+        ui.label_dias.setText(f"📅 Diferença:\n\n⏰ {horas:,} horas\n📆 {dias} dias\n📊 {semanas_completas} semanas e {dias_restantes} dias")
 
 def formatar_numero(numero):
     numero = round(numero, 4)
@@ -984,6 +1034,10 @@ ui.toolButton_2.clicked.connect(abrir_menu)
 ui.toolButton_3.clicked.connect(abrir_menu)
 ui.toolButton_4.clicked.connect(abrir_menu)
 ui.toolButton_5.clicked.connect(abrir_menu)
+
+ui.date_edit_1.dateChanged.connect(calcular_datas)
+ui.date_edit_2.dateChanged.connect(calcular_datas)
+
 
 
 QShortcut(QKeySequence("1"), janela).activated.connect(lambda: numeros(1))
