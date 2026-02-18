@@ -4,7 +4,10 @@ from PySide6.QtGui import QIcon, QShortcut, QKeySequence, QFont, QFontDatabase, 
 from PySide6.QtCore import Qt, QLocale, QEvent, QObject, QDate, QTimer
 import sys
 import os
-from datetime import datetime
+from datetime import datetime,timedelta
+from dateutil.relativedelta import relativedelta
+import locale
+
 
 
 
@@ -242,6 +245,7 @@ ui.combo_datas_2.view().setStyleSheet("""
 """)
 
 
+
 validator = QDoubleValidator()
 validator.setLocale(QLocale(QLocale.Portuguese, QLocale.Portugal))
 ui.distancia_1.setValidator(validator)
@@ -329,6 +333,8 @@ ui.combo_datas_1.setStyleSheet(estilo_combo)
 ui.combo_datas_2.setStyleSheet(estilo_combo)
 ui.date_edit_1.setStyleSheet(estilo_dateedit)
 ui.date_edit_2.setStyleSheet(estilo_dateedit)
+ui.date_edit_3.setStyleSheet(estilo_dateedit)
+
 
 
 def estilizar_calendario_dateedit(date_edit):
@@ -432,6 +438,46 @@ texto_atual = ""
 convertendo = False
 ajustando_texto = False
 menu = ""
+
+ui.radio_adicionar.setChecked(True)
+
+estilo_spinbox = """
+    QSpinBox {
+        background-color: white;
+        color: #333;
+        font-size: 14px;
+        selection-background-color: #ff8c42;
+        selection-color: white;
+    }  
+"""
+estilo_radiobutton = """
+    QRadioButton::indicator {
+        width: 11px;
+        height: 11px;
+        border-radius: 7px;  /* Círculo perfeito! */
+    }
+
+    QRadioButton::indicator:checked {
+        background-color: #ff8c42;
+        border: 2px solid #ff8c42;
+    }
+
+    QRadioButton::indicator:unchecked {
+        background-color: white;
+        border: 2px solid #ccc;
+    }
+"""
+
+ui.radio_adicionar.setStyleSheet(estilo_radiobutton)
+ui.radio_subtrair.setStyleSheet(estilo_radiobutton)
+
+
+ui.radio_adicionar.setStyleSheet(estilo_radiobutton)
+ui.radio_subtrair.setStyleSheet(estilo_radiobutton)
+ui.spinbox_meses.setStyleSheet(estilo_spinbox)
+ui.spinbox_dias.setStyleSheet(estilo_spinbox)
+ui.spinbox_anos.setStyleSheet(estilo_spinbox)
+
 
 #Operacoes
 
@@ -919,6 +965,34 @@ def calcular_datas():
         ui.label_dias.setText(f"📆 {dias} dias")
         ui.label_semanas.setText(f"📊 {semanas_completas} semanas e {dias_restantes} dias")
 
+def diferenca_datas () :
+
+    try:
+        locale.setlocale(locale.LC_TIME, 'pt_PT.UTF-8')  # Linux/Mac
+    except:
+        try:
+            locale.setlocale(locale.LC_TIME, 'pt_PT')  # Windows
+        except:
+            locale.setlocale(locale.LC_TIME, 'Portuguese_Portugal')  # Windows alternativo
+    qdata_inicial = ui.date_edit_3.date()
+    pdata_edit = qdata_inicial.toPython()
+
+    anos = ui.spinbox_anos.value()
+    meses = ui.spinbox_meses.value()
+    dias = ui.spinbox_dias.value()
+
+    if ui.radio_adicionar.isChecked() :
+        nova_data = pdata_edit + relativedelta(years=anos, months=meses, days=dias)
+        print(nova_data)
+    else :
+        nova_data = pdata_edit - relativedelta(years=anos, months=meses, days=dias)
+
+    data = nova_data.strftime("%A, %d de %B de %Y")
+    ui.label_10.setText(f"📅 {data}")
+
+
+
+
 def formatar_numero(numero):
     numero = round(numero, 4)
     
@@ -1038,6 +1112,7 @@ def ir_para_datas_2_1 () :
         ui.combo_datas_1.setCurrentIndex(0)
         ui.combo_datas_1.blockSignals(False)
         ui.stackedWidget.setCurrentIndex(4)
+
 def ir_para_velocidades () :
     apagar_tudo_foco ()
     ui.stackedWidget.setCurrentIndex(5)
@@ -1107,10 +1182,6 @@ ui.numero_7_temp.clicked.connect(lambda: numeros_distancia(7))
 ui.numero_8_temp.clicked.connect(lambda: numeros_distancia(8))
 ui.numero_9_temp.clicked.connect(lambda: numeros_distancia(9))
 ui.numero_0_temp.clicked.connect(lambda: numeros_distancia(0))
-ui.temperatura_1.textChanged.connect(converter_temperatura1)
-ui.combo_temp_1.currentIndexChanged.connect(converter_temperatura1)
-ui.temperatura_2.textChanged.connect(converter_temperatura2)
-ui.combo_temp_2.currentIndexChanged.connect(converter_temperatura2)
 
 ui.numero_1_tempo.clicked.connect(lambda: numeros_distancia(1))
 ui.numero_2_tempo.clicked.connect(lambda: numeros_distancia(2))
@@ -1144,7 +1215,12 @@ ui.date_edit_1.dateChanged.connect(calcular_datas)
 ui.date_edit_2.dateChanged.connect(calcular_datas)
 ui.combo_datas_1.currentIndexChanged.connect(ir_para_datas_2)
 ui.combo_datas_2.currentIndexChanged.connect(ir_para_datas_2_1)
-
+ui.date_edit_3.dateChanged.connect(diferenca_datas)
+ui.temperatura_1.textChanged.connect(converter_temperatura1)
+ui.combo_temp_1.currentIndexChanged.connect(converter_temperatura1)
+ui.temperatura_2.textChanged.connect(converter_temperatura2)
+ui.combo_temp_2.currentIndexChanged.connect(converter_temperatura2)
+ui.spinbox_dias.valueChanged.connect(diferenca_datas)
 
 
 QShortcut(QKeySequence("1"), janela).activated.connect(lambda: numeros(1))

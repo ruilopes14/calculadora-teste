@@ -16,8 +16,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QDialog,
-    QLabel, QLineEdit, QPushButton, QRadioButton,
-    QSizePolicy, QStackedWidget, QToolButton, QWidget)
+    QGroupBox, QLabel, QLineEdit, QPushButton,
+    QRadioButton, QSizePolicy, QSpinBox, QStackedWidget,
+    QToolButton, QWidget)
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -1662,39 +1663,62 @@ class Ui_Dialog(object):
         self.label_5 = QLabel(self.page_4)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setGeometry(QRect(10, 100, 101, 16))
-        self.dateEdit = QDateEdit(self.page_4)
-        self.dateEdit.setObjectName(u"dateEdit")
-        self.dateEdit.setGeometry(QRect(10, 130, 110, 22))
-        self.radioButton = QRadioButton(self.page_4)
-        self.radioButton.setObjectName(u"radioButton")
-        self.radioButton.setGeometry(QRect(10, 180, 101, 21))
-        self.radioButton_2 = QRadioButton(self.page_4)
-        self.radioButton_2.setObjectName(u"radioButton_2")
-        self.radioButton_2.setGeometry(QRect(100, 180, 101, 21))
+        self.date_edit_3 = QDateEdit(self.page_4)
+        self.date_edit_3.setObjectName(u"date_edit_3")
+        self.date_edit_3.setGeometry(QRect(10, 130, 131, 31))
+        self.date_edit_3.setCalendarPopup(True)
         self.label_6 = QLabel(self.page_4)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setGeometry(QRect(20, 230, 47, 13))
         self.label_7 = QLabel(self.page_4)
         self.label_7.setObjectName(u"label_7")
-        self.label_7.setGeometry(QRect(110, 230, 47, 13))
+        self.label_7.setGeometry(QRect(100, 230, 47, 13))
         self.label_8 = QLabel(self.page_4)
         self.label_8.setObjectName(u"label_8")
         self.label_8.setGeometry(QRect(200, 230, 47, 13))
-        self.comboBox = QComboBox(self.page_4)
-        self.comboBox.setObjectName(u"comboBox")
-        self.comboBox.setGeometry(QRect(10, 260, 69, 22))
-        self.comboBox_2 = QComboBox(self.page_4)
-        self.comboBox_2.setObjectName(u"comboBox_2")
-        self.comboBox_2.setGeometry(QRect(100, 260, 69, 22))
-        self.comboBox_3 = QComboBox(self.page_4)
-        self.comboBox_3.setObjectName(u"comboBox_3")
-        self.comboBox_3.setGeometry(QRect(200, 260, 69, 22))
         self.label_9 = QLabel(self.page_4)
         self.label_9.setObjectName(u"label_9")
         self.label_9.setGeometry(QRect(20, 320, 47, 13))
         self.label_10 = QLabel(self.page_4)
         self.label_10.setObjectName(u"label_10")
-        self.label_10.setGeometry(QRect(20, 350, 141, 16))
+        self.label_10.setGeometry(QRect(20, 350, 281, 31))
+        self.groupBox = QGroupBox(self.page_4)
+        self.groupBox.setObjectName(u"groupBox")
+        self.groupBox.setGeometry(QRect(0, 160, 241, 71))
+        self.groupBox.setStyleSheet(u"QGroupBox {\n"
+"    background-color: transparent;\n"
+"    border: none;\n"
+"}")
+        self.radio_adicionar = QRadioButton(self.groupBox)
+        self.radio_adicionar.setObjectName(u"radio_adicionar")
+        self.radio_adicionar.setGeometry(QRect(10, 30, 101, 21))
+        self.radio_adicionar.setStyleSheet(u"estilo_radiobutton = \"\"\"\n"
+"    QRadioButton::indicator:checked {\n"
+"        background-color: #ff8c42;\n"
+"        border: 2px solid #ff8c42;\n"
+"    }\n"
+"\"\"\"\n"
+"\n"
+"ui.radio_adicionar.setStyleSheet(estilo_radiobutton)\n"
+"ui.radio_subtrair.setStyleSheet(estilo_radiobutton)")
+        self.radio_subtrair = QRadioButton(self.groupBox)
+        self.radio_subtrair.setObjectName(u"radio_subtrair")
+        self.radio_subtrair.setGeometry(QRect(100, 30, 101, 21))
+        self.spinbox_anos = QSpinBox(self.page_4)
+        self.spinbox_anos.setObjectName(u"spinbox_anos")
+        self.spinbox_anos.setGeometry(QRect(10, 260, 81, 21))
+        self.spinbox_anos.setStyleSheet(u"")
+        self.spinbox_anos.setMaximum(999)
+        self.spinbox_meses = QSpinBox(self.page_4)
+        self.spinbox_meses.setObjectName(u"spinbox_meses")
+        self.spinbox_meses.setGeometry(QRect(100, 260, 81, 21))
+        self.spinbox_meses.setStyleSheet(u"")
+        self.spinbox_meses.setMaximum(999)
+        self.spinbox_dias = QSpinBox(self.page_4)
+        self.spinbox_dias.setObjectName(u"spinbox_dias")
+        self.spinbox_dias.setGeometry(QRect(200, 260, 81, 21))
+        self.spinbox_dias.setStyleSheet(u"")
+        self.spinbox_dias.setMaximum(999)
         self.stackedWidget.addWidget(self.page_4)
         self.page_5 = QWidget()
         self.page_5.setObjectName(u"page_5")
@@ -1724,7 +1748,7 @@ class Ui_Dialog(object):
 
         self.retranslateUi(Dialog)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(5)
         self.operador_multiplicar.setDefault(False)
 
 
@@ -1859,7 +1883,7 @@ class Ui_Dialog(object):
         self.toolButton_5.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
         self.label_distancias_4.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Datas</span></p></body></html>", None))
         self.combo_datas_1.setItemText(0, QCoreApplication.translate("Dialog", u"Diferen\u00e7a entre dias", None))
-        self.combo_datas_1.setItemText(1, QCoreApplication.translate("Dialog", u"Adionar/substrair dias", None))
+        self.combo_datas_1.setItemText(1, QCoreApplication.translate("Dialog", u"Adicionar/substrair dias", None))
 
         self.combo_datas_1.setCurrentText(QCoreApplication.translate("Dialog", u"Diferen\u00e7a entre dias", None))
         self.label_3.setText(QCoreApplication.translate("Dialog", u"De:", None))
@@ -1869,20 +1893,21 @@ class Ui_Dialog(object):
         self.label_dias.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
         self.label_semanas.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
         self.label_resultado.setText(QCoreApplication.translate("Dialog", u"Diferen\u00e7a :", None))
-        self.combo_datas_2.setItemText(0, QCoreApplication.translate("Dialog", u"Adionar/substrair dias", None))
+        self.combo_datas_2.setItemText(0, QCoreApplication.translate("Dialog", u"Adicionar/substrair dias", None))
         self.combo_datas_2.setItemText(1, QCoreApplication.translate("Dialog", u"Diferen\u00e7a entre dias", None))
 
-        self.combo_datas_2.setCurrentText(QCoreApplication.translate("Dialog", u"Adionar/substrair dias", None))
+        self.combo_datas_2.setCurrentText(QCoreApplication.translate("Dialog", u"Adicionar/substrair dias", None))
         self.label_distancias_5.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Datas</span></p></body></html>", None))
         self.toolButton_6.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
         self.label_5.setText(QCoreApplication.translate("Dialog", u"Data inicial", None))
-        self.radioButton.setText(QCoreApplication.translate("Dialog", u"Adiconar", None))
-        self.radioButton_2.setText(QCoreApplication.translate("Dialog", u"Substrair", None))
-        self.label_6.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
-        self.label_7.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
-        self.label_8.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
-        self.label_9.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
+        self.label_6.setText(QCoreApplication.translate("Dialog", u"Anos", None))
+        self.label_7.setText(QCoreApplication.translate("Dialog", u"Meses", None))
+        self.label_8.setText(QCoreApplication.translate("Dialog", u"Dias", None))
+        self.label_9.setText(QCoreApplication.translate("Dialog", u"Data :", None))
         self.label_10.setText(QCoreApplication.translate("Dialog", u"TextLabel", None))
+        self.groupBox.setTitle("")
+        self.radio_adicionar.setText(QCoreApplication.translate("Dialog", u"Adicionar", None))
+        self.radio_subtrair.setText(QCoreApplication.translate("Dialog", u"Subtrair", None))
         self.label.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">Em </span></p><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">constru\u00e7\u00e3o</span></p></body></html>", None))
         self.label_2.setText("")
         self.toolButton_4.setText(QCoreApplication.translate("Dialog", u"\u2630", None))

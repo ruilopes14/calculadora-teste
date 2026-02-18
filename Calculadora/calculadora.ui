@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>5</number>
    </property>
    <widget class="QWidget" name="calculadora">
     <widget class="QPushButton" name="numero_6">
@@ -3551,7 +3551,7 @@ QPushButton:hover {
      </item>
      <item>
       <property name="text">
-       <string>Adionar/substrair dias</string>
+       <string>Adicionar/substrair dias</string>
       </property>
      </item>
     </widget>
@@ -3760,11 +3760,11 @@ QLabel#label_dias {
       <string notr="true"/>
      </property>
      <property name="currentText">
-      <string>Adionar/substrair dias</string>
+      <string>Adicionar/substrair dias</string>
      </property>
      <item>
       <property name="text">
-       <string>Adionar/substrair dias</string>
+       <string>Adicionar/substrair dias</string>
       </property>
      </item>
      <item>
@@ -3826,40 +3826,17 @@ QLabel#label_dias {
       <string>Data inicial</string>
      </property>
     </widget>
-    <widget class="QDateEdit" name="dateEdit">
+    <widget class="QDateEdit" name="date_edit_3">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>130</y>
-       <width>110</width>
-       <height>22</height>
+       <width>131</width>
+       <height>31</height>
       </rect>
      </property>
-    </widget>
-    <widget class="QRadioButton" name="radioButton">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>180</y>
-       <width>101</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Adiconar</string>
-     </property>
-    </widget>
-    <widget class="QRadioButton" name="radioButton_2">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
-       <y>180</y>
-       <width>101</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Substrair</string>
+     <property name="calendarPopup">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QLabel" name="label_6">
@@ -3872,20 +3849,20 @@ QLabel#label_dias {
       </rect>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>Anos</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>110</x>
+       <x>100</x>
        <y>230</y>
        <width>47</width>
        <height>13</height>
       </rect>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>Meses</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_8">
@@ -3898,37 +3875,7 @@ QLabel#label_dias {
       </rect>
      </property>
      <property name="text">
-      <string>TextLabel</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>260</y>
-       <width>69</width>
-       <height>22</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox_2">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
-       <y>260</y>
-       <width>69</width>
-       <height>22</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox_3">
-     <property name="geometry">
-      <rect>
-       <x>200</x>
-       <y>260</y>
-       <width>69</width>
-       <height>22</height>
-      </rect>
+      <string>Dias</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_9">
@@ -3941,7 +3888,7 @@ QLabel#label_dias {
       </rect>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>Data :</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_10">
@@ -3949,12 +3896,116 @@ QLabel#label_dias {
       <rect>
        <x>20</x>
        <y>350</y>
-       <width>141</width>
-       <height>16</height>
+       <width>281</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="text">
       <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>160</y>
+       <width>241</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {
+    background-color: transparent;
+    border: none;
+}</string>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QRadioButton" name="radio_adicionar">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">estilo_radiobutton = &quot;&quot;&quot;
+    QRadioButton::indicator:checked {
+        background-color: #ff8c42;
+        border: 2px solid #ff8c42;
+    }
+&quot;&quot;&quot;
+
+ui.radio_adicionar.setStyleSheet(estilo_radiobutton)
+ui.radio_subtrair.setStyleSheet(estilo_radiobutton)</string>
+      </property>
+      <property name="text">
+       <string>Adicionar</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radio_subtrair">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>30</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Subtrair</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QSpinBox" name="spinbox_anos">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>260</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="maximum">
+      <number>999</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinbox_meses">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>260</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="maximum">
+      <number>999</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinbox_dias">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>260</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="maximum">
+      <number>999</number>
      </property>
     </widget>
    </widget>
