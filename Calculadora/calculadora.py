@@ -7,7 +7,7 @@ import os
 from datetime import datetime,timedelta
 from dateutil.relativedelta import relativedelta
 import locale
-
+import requests
 
 
 
@@ -26,6 +26,8 @@ ui.label_resultado.setVisible(False)
 ui.label_dias.setVisible(False)
 ui.label_horas.setVisible(False)
 ui.label_semanas.setVisible(False)
+ui.label_final.setVisible(False)
+
 
 
 class FiltroVirgula(QObject):
@@ -245,6 +247,52 @@ ui.combo_datas_2.view().setStyleSheet("""
 """)
 
 
+ui.combo_moeda_2.view().window().setStyleSheet("""
+    QWidget {
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+    }
+""")
+ui.combo_moeda_2.view().setStyleSheet("""
+    QListView {
+        background-color: white;
+        border: 1px solid #ddd;
+        outline: 0;
+    }
+    QListView::item {
+        padding: 5px;
+        outline: 0 ;                                  
+    }
+    QListView::item:selected {
+        background-color: #ff7052;
+        color: white;
+    }
+""")
+
+ui.combo_moeda_1.view().window().setStyleSheet("""
+    QWidget {
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+    }
+""")
+ui.combo_moeda_1.view().setStyleSheet("""
+    QListView {
+        background-color: white;
+        border: 1px solid #ddd;
+        outline: 0;
+    }
+    QListView::item {
+        padding: 5px;
+        outline: 0 ;                                  
+    }
+    QListView::item:selected {
+        background-color: #ff7052;
+        color: white;
+    }
+""")
+
 
 validator = QDoubleValidator()
 validator.setLocale(QLocale(QLocale.Portuguese, QLocale.Portugal))
@@ -331,6 +379,8 @@ ui.combo_tempo_1.setStyleSheet(estilo_combo)
 ui.combo_tempo_2.setStyleSheet(estilo_combo)
 ui.combo_datas_1.setStyleSheet(estilo_combo)
 ui.combo_datas_2.setStyleSheet(estilo_combo)
+ui.combo_moeda_2.setStyleSheet(estilo_combo)
+ui.combo_moeda_1.setStyleSheet(estilo_combo)
 ui.date_edit_1.setStyleSheet(estilo_dateedit)
 ui.date_edit_2.setStyleSheet(estilo_dateedit)
 ui.date_edit_3.setStyleSheet(estilo_dateedit)
@@ -407,8 +457,7 @@ estilizar_calendario_dateedit(ui.date_edit_1)
 
 
 
-ui.date_edit_2.setDate(QDate.currentDate())
-ui.date_edit_1.setDate(QDate.currentDate())
+
 
 ui.label_2.setPixmap(QPixmap(resource_path("construcao.png")))
 
@@ -439,7 +488,6 @@ convertendo = False
 ajustando_texto = False
 menu = ""
 
-ui.radio_adicionar.setChecked(True)
 
 estilo_spinbox = """
     QSpinBox {
@@ -987,11 +1035,97 @@ def diferenca_datas () :
     else :
         nova_data = pdata_edit - relativedelta(years=anos, months=meses, days=dias)
 
+    ui.label_final.setVisible(True)
     data = nova_data.strftime("%A, %d de %B de %Y")
-    ui.label_10.setText(f"📅 {data}")
+    ui.label_final.setText(f"📅 {data}")
 
+#Moedas
 
+API_KEY = "rrfdfb941ee8c4bdd8b7591a28"
+url = f"https://v6.exchangerate-api.com/v6/{API_KEY}/latest/EUR"
 
+response = requests.get(url)
+dados = response.json()
+
+moedas = [
+    "EUR - Euro",
+    "USD - Dólar Americano",
+    "GBP - Libra Esterlina",
+    "BRL - Real Brasileiro",
+    "JPY - Iene Japonês",
+    "CHF - Franco Suíço",
+    "CAD - Dólar Canadiano",
+    "AUD - Dólar Australiano",
+    "NZD - Dólar Neozelandês",
+    "CNY - Yuan Chinês",
+    "INR - Rupia Indiana",
+    "RUB - Rublo Russo",
+    "KRW - Won Sul-Coreano",
+    "MXN - Peso Mexicano",
+    "ARS - Peso Argentino",
+    "CLP - Peso Chileno",
+    "COP - Peso Colombiano",
+    "PEN - Sol Peruano",
+    "UYU - Peso Uruguaio",
+    "PYG - Guarani Paraguaio",
+    "BOB - Boliviano",
+    "ZAR - Rand Sul-Africano",
+    "TRY - Lira Turca",
+    "SEK - Coroa Sueca",
+    "NOK - Coroa Norueguesa",
+    "DKK - Coroa Dinamarquesa",
+    "ISK - Coroa Islandesa",
+    "PLN - Zlóti Polaco",
+    "CZK - Coroa Checa",
+    "HUF - Florim Húngaro",
+    "RON - Leu Romeno",
+    "BGN - Lev Búlgaro",
+    "HRK - Kuna Croata",
+    "RSD - Dinar Sérvio",
+    "UAH - Hrívnia Ucraniana",
+    "ILS - Shekel Israelita",
+    "SAR - Rial Saudita",
+    "AED - Dirham dos Emirados Árabes",
+    "QAR - Rial do Catar",
+    "KWD - Dinar Kuwaitiano",
+    "BHD - Dinar do Bahrein",
+    "OMR - Rial Omanense",
+    "JOD - Dinar Jordano",
+    "EGP - Libra Egípcia",
+    "MAD - Dirham Marroquino",
+    "TND - Dinar Tunisino",
+    "DZD - Dinar Argelino",
+    "NGN - Naira Nigeriana",
+    "KES - Xelim Queniano",
+    "GHS - Cedi Ganês",
+    "THB - Baht Tailandês",
+    "MYR - Ringgit Malaio",
+    "SGD - Dólar de Singapura",
+    "IDR - Rupia Indonésia",
+    "PHP - Peso Filipino",
+    "VND - Dong Vietnamita",
+    "HKD - Dólar de Hong Kong",
+    "TWD - Novo Dólar Taiwanês",
+    "PKR - Rupia Paquistanesa",
+    "BDT - Taka de Bangladesh",
+    "LKR - Rupia do Sri Lanka",
+    "MMK - Kyat de Mianmar",
+    "KZT - Tenge Cazaque",
+    "GEL - Lari Georgiano",
+    "AMD - Dram Arménio",
+    "AZN - Manat Azerbaijano",
+    "BTC - Bitcoin",
+    "XAF - Franco CFA (BEAC)",
+    "XOF - Franco CFA (BCEAO)",
+    "CVE - Escudo Cabo-Verdiano",
+    "MZN - Metical Moçambicano",
+    "AOA - Kwanza Angolano",
+]
+
+ui.combo_moeda_1.addItems(moedas)
+ui.combo_moeda_2.addItems(moedas)
+
+print(response)
 
 def formatar_numero(numero):
     numero = round(numero, 4)
@@ -1073,27 +1207,32 @@ def apagar_foco():
     campo_ativo.setText(texto_atual [:-1] )
 
 def ir_para_calculadora():
+    janela.resize(300, 440) 
     apagar_tudo_foco ()
     ui.stackedWidget.setCurrentIndex(0)
     
 def ir_para_distancias():
+    janela.resize(300, 440)    
     apagar_tudo_foco ()
     ui.stackedWidget.setCurrentIndex(1)
 
 def ir_para_temperatura () :
+    janela.resize(300, 440)
     apagar_tudo_foco ()
     ui.stackedWidget.setCurrentIndex(2)
 
 def ir_para_tempo () :
+    janela.resize(300, 440)
     apagar_tudo_foco ()
     ui.stackedWidget.setCurrentIndex(3)
 
 def ir_para_datas () :
     apagar_tudo_foco ()
-    
+    janela.resize(300, 440)
     ui.stackedWidget.setCurrentIndex(4)
 
 def ir_para_datas_2 () :
+    janela.resize(300, 440)
     
     if ui.combo_datas_1.currentIndex() == 0 :
         return
@@ -1112,25 +1251,34 @@ def ir_para_datas_2_1 () :
         ui.combo_datas_1.setCurrentIndex(0)
         ui.combo_datas_1.blockSignals(False)
         ui.stackedWidget.setCurrentIndex(4)
-
+    janela.resize(300, 440)
 def ir_para_velocidades () :
+    janela.resize(300, 440)
     apagar_tudo_foco ()
-    ui.stackedWidget.setCurrentIndex(5)
+    ui.stackedWidget.setCurrentIndex(6)
 
 def ir_para_moedas () :
+    janela.resize(300, 520)
     apagar_tudo_foco ()
-    ui.stackedWidget.setCurrentIndex(5)
+    ui.stackedWidget.setCurrentIndex(7)
 
 def ir_para_defenicoes () :
+    janela.resize(300, 440)
     apagar_tudo_foco ()
     ui.stackedWidget.setCurrentIndex(5)
 
 def ir_para_acerca_de () :
+    janela.resize(300, 440)
     apagar_tudo_foco ()
     ui.stackedWidget.setCurrentIndex(5)
 
 
 ui.botao_resultado.setDefault(True)
+ui.radio_adicionar.setChecked(True)
+ui.date_edit_2.setDate(QDate.currentDate())
+ui.date_edit_1.setDate(QDate.currentDate())
+ui.date_edit_3.setDate(QDate.currentDate())
+
 
 
 #conexões
@@ -1209,6 +1357,9 @@ ui.toolButton_3.clicked.connect(abrir_menu)
 ui.toolButton_4.clicked.connect(abrir_menu)
 ui.toolButton_5.clicked.connect(abrir_menu)
 ui.toolButton_6.clicked.connect(abrir_menu)
+ui.toolButton_7.clicked.connect(abrir_menu)
+ui.toolButton_8.clicked.connect(abrir_menu)
+
 
 
 ui.date_edit_1.dateChanged.connect(calcular_datas)
@@ -1221,6 +1372,11 @@ ui.combo_temp_1.currentIndexChanged.connect(converter_temperatura1)
 ui.temperatura_2.textChanged.connect(converter_temperatura2)
 ui.combo_temp_2.currentIndexChanged.connect(converter_temperatura2)
 ui.spinbox_dias.valueChanged.connect(diferenca_datas)
+ui.spinbox_anos.valueChanged.connect(diferenca_datas)
+ui.spinbox_meses.valueChanged.connect(diferenca_datas)
+ui.botao_data_atual.clicked.connect(lambda: ui.date_edit_3.setDate(QDate.currentDate()))
+ui.botao_data_atual_2.clicked.connect(lambda: ui.date_edit_1.setDate(QDate.currentDate()))
+
 
 
 QShortcut(QKeySequence("1"), janela).activated.connect(lambda: numeros(1))
