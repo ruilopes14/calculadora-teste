@@ -19,6 +19,7 @@ ui.setupUi(janela)
 janela.setWindowTitle("Calculadora")
 janela.setWindowIcon(QIcon("icon.ico"))
 janela.setStyleSheet("background-color: #f0f0f0;") 
+janela.resize(300, 440)
 
 ui.label_dias.setText("")
 ui.label_erro.setVisible(False)
@@ -318,6 +319,7 @@ else:
 
 caminho_seta = resource_path("arrow.png").replace("\\", "/")
 caminho_calen = resource_path("calendar.png").replace("\\", "/")
+
 estilo_combo = f"""
     QComboBox {{
         background-color: white;
