@@ -5,7 +5,7 @@ a = Analysis(
     ['calculadora.py'],
     pathex=[],
     binaries=[],
-    datas=[('icon.ico', '.'), ('DS-Digit.ttf', '.'), ('arrow.png', '.'), ('arrow.png', '.'), ('construcao.png', '.')],
+    datas=[('icon.ico', '.'), ('DS-Digit.ttf', '.'), ('arrow.png', '.'), ('calendar.png', '.'), ('construcao.png', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

@@ -32,7 +32,7 @@
     <cursorShape>ArrowCursor</cursorShape>
    </property>
    <property name="currentIndex">
-    <number>7</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="calculadora">
     <widget class="QPushButton" name="numero_6">
