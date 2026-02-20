@@ -2102,11 +2102,11 @@ class Ui_Dialog(object):
         self.combo_moeda_1.setGeometry(QRect(11, 130, 191, 31))
         self.combo_moeda_1.setFont(font2)
         self.combo_moeda_1.setStyleSheet(u"")
-        self.tempo_5 = QLineEdit(self.page_7)
-        self.tempo_5.setObjectName(u"tempo_5")
-        self.tempo_5.setGeometry(QRect(10, 60, 281, 61))
-        self.tempo_5.setFont(font)
-        self.tempo_5.setStyleSheet(u"QLineEdit {\n"
+        self.valor_origem = QLineEdit(self.page_7)
+        self.valor_origem.setObjectName(u"valor_origem")
+        self.valor_origem.setGeometry(QRect(10, 60, 281, 61))
+        self.valor_origem.setFont(font)
+        self.valor_origem.setStyleSheet(u"QLineEdit {\n"
 "    background-color: white;\n"
 "    color: #000;\n"
 "    font-size: 42px;\n"
@@ -2118,11 +2118,11 @@ class Ui_Dialog(object):
 "QLineEdit:focus {\n"
 "    border: 2px solid #ff7052;\n"
 "}")
-        self.tempo_6 = QLineEdit(self.page_7)
-        self.tempo_6.setObjectName(u"tempo_6")
-        self.tempo_6.setGeometry(QRect(10, 170, 281, 61))
-        self.tempo_6.setFont(font)
-        self.tempo_6.setStyleSheet(u"QLineEdit {\n"
+        self.valor_destino = QLineEdit(self.page_7)
+        self.valor_destino.setObjectName(u"valor_destino")
+        self.valor_destino.setGeometry(QRect(10, 170, 281, 61))
+        self.valor_destino.setFont(font)
+        self.valor_destino.setStyleSheet(u"QLineEdit {\n"
 "    background-color: white;\n"
 "    color: #000;\n"
 "    font-size: 42px;\n"
@@ -2402,7 +2402,7 @@ class Ui_Dialog(object):
 "}")
         self.label_cambio = QLabel(self.page_7)
         self.label_cambio.setObjectName(u"label_cambio")
-        self.label_cambio.setGeometry(QRect(20, 280, 47, 13))
+        self.label_cambio.setGeometry(QRect(20, 280, 221, 16))
         self.label_dataup = QLabel(self.page_7)
         self.label_dataup.setObjectName(u"label_dataup")
         self.label_dataup.setGeometry(QRect(20, 310, 111, 16))
@@ -2435,7 +2435,7 @@ class Ui_Dialog(object):
 
         self.retranslateUi(Dialog)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(7)
         self.operador_multiplicar.setDefault(False)
 
 
@@ -2636,8 +2636,8 @@ class Ui_Dialog(object):
         self.toolButton_8.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
         self.label_distancias_6.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Moedas</span></p></body></html>", None))
         self.combo_moeda_1.setCurrentText("")
-        self.tempo_5.setText(QCoreApplication.translate("Dialog", u"0", None))
-        self.tempo_6.setText(QCoreApplication.translate("Dialog", u"0", None))
+        self.valor_origem.setText(QCoreApplication.translate("Dialog", u"0", None))
+        self.valor_destino.setText(QCoreApplication.translate("Dialog", u"0", None))
         self.combo_moeda_2.setCurrentText("")
         self.numero_7_tempo_19.setText(QCoreApplication.translate("Dialog", u"7", None))
         self.numero_3_tempo_19.setText(QCoreApplication.translate("Dialog", u"3", None))

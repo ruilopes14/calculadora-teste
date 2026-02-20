@@ -32,7 +32,7 @@
     <cursorShape>ArrowCursor</cursorShape>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>7</number>
    </property>
    <widget class="QWidget" name="calculadora">
     <widget class="QPushButton" name="numero_6">
@@ -4904,7 +4904,7 @@ QPushButton:hover {
       <string/>
      </property>
     </widget>
-    <widget class="QLineEdit" name="tempo_5">
+    <widget class="QLineEdit" name="valor_origem">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -4938,7 +4938,7 @@ QLineEdit:focus {
       <string>0</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="tempo_6">
+    <widget class="QLineEdit" name="valor_destino">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -5559,8 +5559,8 @@ QPushButton#botao_update:pressed {
       <rect>
        <x>20</x>
        <y>280</y>
-       <width>47</width>
-       <height>13</height>
+       <width>221</width>
+       <height>16</height>
       </rect>
      </property>
      <property name="text">

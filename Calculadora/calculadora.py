@@ -489,6 +489,10 @@ texto_atual = ""
 convertendo = False
 ajustando_texto = False
 menu = ""
+taxas_globais = {}
+widget = QApplication.focusWidget()
+foco_origem = True
+foco_destino = False
 
 
 estilo_spinbox = """
@@ -1043,11 +1047,105 @@ def diferenca_datas () :
 
 #Moedas
 
-API_KEY = "rrfdfb941ee8c4bdd8b7591a28"
-url = f"https://v6.exchangerate-api.com/v6/{API_KEY}/latest/EUR"
+def obter_taxas ():
+    global taxas_globais
+    API_KEY = "fdfb941ee8c4bdd8b7591a28"
+    url = f"https://v6.exchangerate-api.com/v6/{API_KEY}/latest/EUR"
 
-response = requests.get(url)
-dados = response.json()
+    response = requests.get(url)
+    dados = response.json()
+
+    try:
+        response = requests.get(url)
+        dados = response.json()
+
+
+        if response.status_code == 200 :
+
+            return dados["conversion_rates"]
+        else:
+            print(f"Erro! Código: {response.status_code}")
+            return None
+    except:
+        print(f"Erro! Código: {response.status_code}")
+        return None  
+    
+
+def guardar_taxas():
+    global taxas_globais
+    taxas_globais = obter_taxas()
+    converter_moedas()
+    print (taxas_globais)
+
+def converter_moedas () :
+    global convertendo
+    defenir_foco()
+
+    texto_origem = ui.combo_moeda_1.currentText() 
+    moeda_origem = texto_origem[:3]
+
+    texto_destino = ui.combo_moeda_2.currentText() 
+    moeda_destino = texto_destino[:3]
+    print(moeda_destino)
+
+    print(f"Foco origem: {foco_origem}")
+    print(f"Widget ativo: {widget}")
+   
+    if foco_origem: 
+        print("→ Convertendo origem para destino")
+        string_origem = ui.valor_origem.text()
+        valor_origem = float(string_origem)
+
+        if moeda_origem == "EUR" : 
+
+            valor_conversao = valor_origem * taxas_globais[moeda_destino]
+            
+        elif moeda_destino == "EUR" : 
+            valor_conversao = valor_origem / taxas_globais[moeda_origem]
+            valor_conversao = round(valor_conversao, 4)
+        
+        elif foco_destino :
+            print("→ Convertendo destino para origem")
+            valor_eur = valor_origem / taxas_globais[moeda_origem]
+            valor_conversao = valor_eur * taxas_globais[moeda_destino]
+            valor_conversao = round(valor_conversao, 4)
+
+        ui.valor_destino.blockSignals(True)
+        string_destino = str(valor_conversao)
+        ui.valor_destino.setText(string_destino)
+        ui.valor_destino.blockSignals(False)
+
+        
+        ui.label_cambio.setText(f"1 {moeda_origem} = {taxas_globais[moeda_destino]} {moeda_destino} ")
+
+
+    else :
+        string_destino = ui.valor_destino.text()
+        valor_destino = float(string_destino)
+
+        if moeda_destino == "EUR" : 
+
+            valor_conversao = valor_destino * taxas_globais[moeda_origem]
+        
+        elif moeda_origem == "EUR" : 
+            valor_conversao = valor_destino / taxas_globais[moeda_destino]
+            valor_conversao = round(valor_conversao, 4)
+    
+        else :
+            valor_eur = valor_destino / taxas_globais[moeda_destino]
+            valor_conversao = valor_eur * taxas_globais[moeda_origem]
+            valor_conversao = round(valor_conversao, 4)
+
+        ui.valor_origem.blockSignals(True)
+        string_origem = str(valor_conversao)
+        ui.valor_origem.setText(string_origem)
+        ui.valor_origem.blockSignals(False)
+
+        ui.label_cambio.setText(f"1 {moeda_destino} = {taxas_globais[moeda_origem]} {moeda_origem} ")
+ 
+
+
+
 
 moedas = [
     "EUR - Euro",
@@ -1127,7 +1225,7 @@ moedas = [
 ui.combo_moeda_1.addItems(moedas)
 ui.combo_moeda_2.addItems(moedas)
 
-print(response)
+
 
 def formatar_numero(numero):
     numero = round(numero, 4)
@@ -1192,6 +1290,16 @@ def numeros_distancia(num):
         campo_ativo.setText(str(num))
     else:
         campo_ativo.setText(texto_atual + str(num))
+
+def defenir_foco() :
+    global foco_destino, foco_origem, widget
+    if widget == ui.valor_origem:
+        foco_origem = True
+        foco_destino = False 
+    elif widget == ui.valor_destino :
+        foco_origem = False
+        foco_destino = True 
+
 
 def apagar_tudo_foco ():
     global convertendo, ajustando_texto
@@ -1261,8 +1369,11 @@ def ir_para_velocidades () :
 
 def ir_para_moedas () :
     janela.resize(300, 520)
-    apagar_tudo_foco ()
     ui.stackedWidget.setCurrentIndex(7)
+    apagar_tudo_foco ()
+    guardar_taxas ()
+    
+    
 
 def ir_para_defenicoes () :
     janela.resize(300, 440)
@@ -1362,6 +1473,11 @@ ui.toolButton_6.clicked.connect(abrir_menu)
 ui.toolButton_7.clicked.connect(abrir_menu)
 ui.toolButton_8.clicked.connect(abrir_menu)
 
+ui.botao_update.clicked.connect(obter_taxas)
+ui.valor_origem.textChanged.connect(converter_moedas)
+ui.combo_moeda_2.currentIndexChanged.connect(converter_moedas)
+ui.valor_destino.textChanged.connect(converter_moedas)
+ui.combo_moeda_1.currentIndexChanged.connect(converter_moedas)
 
 
 ui.date_edit_1.dateChanged.connect(calcular_datas)
