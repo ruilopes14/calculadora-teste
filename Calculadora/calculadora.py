@@ -9,13 +9,21 @@ from dateutil.relativedelta import relativedelta
 import locale
 import requests
 
-
+class FiltroFoco(QObject):
+    def eventFilter(self, obj, event):
+        if event.type() == QEvent.FocusIn:
+            if obj in (ui.valor_origem, ui.valor_destino):
+                converter_moedas()
+        return super().eventFilter(obj, event)
 
 #setup janela
 app = QApplication([])
 janela = QDialog()
 ui = Ui_Dialog()
 ui.setupUi(janela)
+filtro = FiltroFoco()
+ui.valor_origem.installEventFilter(filtro)
+ui.valor_destino.installEventFilter(filtro)
 janela.setWindowTitle("Calculadora")
 janela.setWindowIcon(QIcon("icon.ico"))
 janela.setStyleSheet("background-color: #f0f0f0;") 
@@ -476,8 +484,6 @@ fonte.setWeight(QFont.Bold)
 ui.fonte_display.setFont(fonte)
 ui.fonte_display.setAlignment(Qt.AlignRight)
 ui.fonte_display.setText("0")
-
-print(f"Fonte no display: {ui.fonte_display.font().family()}")
 
 #variaveis globais
 valor_atual = 0
@@ -1051,14 +1057,9 @@ def obter_taxas ():
     global taxas_globais
     API_KEY = "fdfb941ee8c4bdd8b7591a28"
     url = f"https://v6.exchangerate-api.com/v6/{API_KEY}/latest/EUR"
-
-    response = requests.get(url)
-    dados = response.json()
-
     try:
         response = requests.get(url)
         dados = response.json()
-
 
         if response.status_code == 200 :
 
@@ -1070,9 +1071,11 @@ def obter_taxas ():
         print(f"Erro! Código: {response.status_code}")
         return None  
     
+    
 
 def guardar_taxas():
     global taxas_globais
+    obter_taxas ()
     taxas_globais = obter_taxas()
     converter_moedas()
     print (taxas_globais)
@@ -1089,6 +1092,7 @@ def converter_moedas () :
     print(moeda_destino)
 
     print(f"Foco origem: {foco_origem}")
+    print(f"Foco destino: {foco_destino}")
     print(f"Widget ativo: {widget}")
    
     if foco_origem: 
@@ -1099,16 +1103,26 @@ def converter_moedas () :
         if moeda_origem == "EUR" : 
 
             valor_conversao = valor_origem * taxas_globais[moeda_destino]
-            
+            valor_conversao = round(valor_conversao, 4)
+            ui.label_cambio.setText(f"1 {moeda_origem} = {taxas_globais[moeda_destino]} {moeda_destino} ")
+
         elif moeda_destino == "EUR" : 
             valor_conversao = valor_origem / taxas_globais[moeda_origem]
             valor_conversao = round(valor_conversao, 4)
-        
-        elif foco_destino :
-            print("→ Convertendo destino para origem")
+
+            valor_unitario = 1 / taxas_globais[moeda_origem]
+            valor_unitario = round(valor_unitario, 5)
+            print (valor_unitario)
+            ui.label_cambio.setText(f"1 {moeda_origem} = {valor_unitario} {moeda_destino} ")
+
+        else :
             valor_eur = valor_origem / taxas_globais[moeda_origem]
             valor_conversao = valor_eur * taxas_globais[moeda_destino]
             valor_conversao = round(valor_conversao, 4)
+
+            valor_unitario = (1 / taxas_globais[moeda_origem]) * taxas_globais[moeda_destino]
+            valor_unitario = round(valor_unitario, 5)
+            ui.label_cambio.setText(f"1 {moeda_origem} = {valor_unitario} {moeda_destino} ")
 
         ui.valor_destino.blockSignals(True)
         string_destino = str(valor_conversao)
@@ -1116,32 +1130,40 @@ def converter_moedas () :
         ui.valor_destino.blockSignals(False)
 
         
-        ui.label_cambio.setText(f"1 {moeda_origem} = {taxas_globais[moeda_destino]} {moeda_destino} ")
 
 
     else :
         string_destino = ui.valor_destino.text()
         valor_destino = float(string_destino)
-
+        print("→ Convertendo destino para origem")
         if moeda_destino == "EUR" : 
 
             valor_conversao = valor_destino * taxas_globais[moeda_origem]
-        
+            valor_conversao = round(valor_conversao, 4)
+            ui.label_cambio.setText(f"1 {moeda_destino} = {taxas_globais[moeda_origem]} {moeda_origem} ")
+            
         elif moeda_origem == "EUR" : 
             valor_conversao = valor_destino / taxas_globais[moeda_destino]
             valor_conversao = round(valor_conversao, 4)
-    
+
+            valor_unitario = 1 / taxas_globais[moeda_destino]
+            valor_unitario = round(valor_unitario, 5)
+            print (valor_unitario)
+            ui.label_cambio.setText(f"1 {moeda_destino} = {valor_unitario} {moeda_origem} ")
+
         else :
             valor_eur = valor_destino / taxas_globais[moeda_destino]
             valor_conversao = valor_eur * taxas_globais[moeda_origem]
             valor_conversao = round(valor_conversao, 4)
 
+            valor_unitario = (1 / taxas_globais[moeda_destino]) * taxas_globais[moeda_origem]
+            valor_unitario = round(valor_unitario, 5)
+            ui.label_cambio.setText(f"1 {moeda_destino} = {valor_unitario} {moeda_origem} ")
+
         ui.valor_origem.blockSignals(True)
         string_origem = str(valor_conversao)
         ui.valor_origem.setText(string_origem)
         ui.valor_origem.blockSignals(False)
-
-        ui.label_cambio.setText(f"1 {moeda_destino} = {taxas_globais[moeda_origem]} {moeda_origem} ")
  
 
 
@@ -1293,12 +1315,14 @@ def numeros_distancia(num):
 
 def defenir_foco() :
     global foco_destino, foco_origem, widget
+    widget = QApplication.focusWidget()
     if widget == ui.valor_origem:
         foco_origem = True
         foco_destino = False 
     elif widget == ui.valor_destino :
         foco_origem = False
         foco_destino = True 
+
 
 
 def apagar_tudo_foco ():
@@ -1374,7 +1398,6 @@ def ir_para_moedas () :
     guardar_taxas ()
     
     
-
 def ir_para_defenicoes () :
     janela.resize(300, 440)
     apagar_tudo_foco ()
@@ -1473,11 +1496,15 @@ ui.toolButton_6.clicked.connect(abrir_menu)
 ui.toolButton_7.clicked.connect(abrir_menu)
 ui.toolButton_8.clicked.connect(abrir_menu)
 
-ui.botao_update.clicked.connect(obter_taxas)
+ui.botao_update.clicked.connect(guardar_taxas)
 ui.valor_origem.textChanged.connect(converter_moedas)
 ui.combo_moeda_2.currentIndexChanged.connect(converter_moedas)
 ui.valor_destino.textChanged.connect(converter_moedas)
 ui.combo_moeda_1.currentIndexChanged.connect(converter_moedas)
+ui.valor_origem.selectionChanged.connect(converter_moedas)
+ui.valor_destino.selectionChanged.connect(converter_moedas)
+
+
 
 
 ui.date_edit_1.dateChanged.connect(calcular_datas)
@@ -1515,6 +1542,8 @@ QShortcut(QKeySequence("backspace"), janela).activated.connect(apagar)
 QShortcut(QKeySequence("."), janela).activated.connect(decimal)
 QShortcut(QKeySequence("Delete"), janela).activated.connect(limpar_tudo)
 QShortcut(QKeySequence("Delete"), janela).activated.connect(apagar_tudo_foco)
+
+guardar_taxas()
 
 janela.show()
 app.exec()
