@@ -24,7 +24,7 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
-        Dialog.resize(301, 525)
+        Dialog.resize(300, 525)
         self.stackedWidget = QStackedWidget(Dialog)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setGeometry(QRect(0, 0, 301, 520))
@@ -2106,7 +2106,7 @@ class Ui_Dialog(object):
         self.combo_moeda_1.setInsertPolicy(QComboBox.NoInsert)
         self.valor_origem = QLineEdit(self.page_7)
         self.valor_origem.setObjectName(u"valor_origem")
-        self.valor_origem.setGeometry(QRect(10, 60, 261, 61))
+        self.valor_origem.setGeometry(QRect(10, 60, 281, 61))
         self.valor_origem.setFont(font)
         self.valor_origem.setStyleSheet(u"QLineEdit {\n"
 "    background-color: white;\n"
@@ -2116,13 +2116,14 @@ class Ui_Dialog(object):
 "    border: 2px solid #ddd;\n"
 "    border-radius: 8px;\n"
 "    padding: 10px;\n"
+"	padding-right:52px;\n"
 "}\n"
 "QLineEdit:focus {\n"
 "    border: 2px solid #ff7052;\n"
 "}")
         self.valor_destino = QLineEdit(self.page_7)
         self.valor_destino.setObjectName(u"valor_destino")
-        self.valor_destino.setGeometry(QRect(10, 170, 261, 61))
+        self.valor_destino.setGeometry(QRect(10, 170, 281, 61))
         self.valor_destino.setFont(font)
         self.valor_destino.setStyleSheet(u"QLineEdit {\n"
 "    background-color: white;\n"
@@ -2132,6 +2133,7 @@ class Ui_Dialog(object):
 "    border: 2px solid #ddd;\n"
 "    border-radius: 8px;\n"
 "    padding: 10px;\n"
+"	padding-right: 52px;\n"
 "}\n"
 "QLineEdit:focus {\n"
 "    border: 2px solid #ff7052;\n"
@@ -2412,11 +2414,14 @@ class Ui_Dialog(object):
         self.label_dataup.setGeometry(QRect(20, 310, 251, 16))
         self.simbolo_origem = QLabel(self.page_7)
         self.simbolo_origem.setObjectName(u"simbolo_origem")
-        self.simbolo_origem.setGeometry(QRect(240, 60, 31, 61))
+        self.simbolo_origem.setGeometry(QRect(232, 45, 61, 91))
         self.simbolo_origem.setStyleSheet(u"background-color: transparent;")
+        self.simbolo_origem.setAlignment(Qt.AlignCenter)
         self.simbolo_destino = QLabel(self.page_7)
         self.simbolo_destino.setObjectName(u"simbolo_destino")
-        self.simbolo_destino.setGeometry(QRect(270, 170, 31, 61))
+        self.simbolo_destino.setGeometry(QRect(232, 170, 61, 61))
+        self.simbolo_destino.setStyleSheet(u"")
+        self.simbolo_destino.setAlignment(Qt.AlignCenter)
         self.stackedWidget.addWidget(self.page_7)
         self.page_5 = QWidget()
         self.page_5.setObjectName(u"page_5")
@@ -2446,7 +2451,7 @@ class Ui_Dialog(object):
 
         self.retranslateUi(Dialog)
 
-        self.stackedWidget.setCurrentIndex(7)
+        self.stackedWidget.setCurrentIndex(0)
         self.operador_multiplicar.setDefault(False)
 
 
@@ -2665,8 +2670,8 @@ class Ui_Dialog(object):
         self.botao_update.setText(QCoreApplication.translate("Dialog", u"Atualizar Taxas", None))
         self.label_cambio.setText(QCoreApplication.translate("Dialog", u"1 EUR = 1 EUR", None))
         self.label_dataup.setText(QCoreApplication.translate("Dialog", u"data update", None))
-        self.simbolo_origem.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">\u20ac</span></p></body></html>", None))
-        self.simbolo_destino.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:14pt;\"/></p></body></html>", None))
+        self.simbolo_origem.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:22pt; font-weight:600;\">\u20ac</span></p></body></html>", None))
+        self.simbolo_destino.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">\u20ac.</span></p></body></html>", None))
         self.label.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">Em </span></p><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">constru\u00e7\u00e3o</span></p></body></html>", None))
         self.label_2.setText("")
         self.toolButton_4.setText(QCoreApplication.translate("Dialog", u"\u2630", None))

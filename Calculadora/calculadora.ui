@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>301</width>
+    <width>300</width>
     <height>525</height>
    </rect>
   </property>
@@ -32,7 +32,7 @@
     <cursorShape>ArrowCursor</cursorShape>
    </property>
    <property name="currentIndex">
-    <number>7</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="calculadora">
     <widget class="QPushButton" name="numero_6">
@@ -4915,7 +4915,7 @@ QPushButton:hover {
       <rect>
        <x>10</x>
        <y>60</y>
-       <width>261</width>
+       <width>281</width>
        <height>61</height>
       </rect>
      </property>
@@ -4935,6 +4935,7 @@ QPushButton:hover {
     border: 2px solid #ddd;
     border-radius: 8px;
     padding: 10px;
+	padding-right:52px;
 }
 QLineEdit:focus {
     border: 2px solid #ff7052;
@@ -4949,7 +4950,7 @@ QLineEdit:focus {
       <rect>
        <x>10</x>
        <y>170</y>
-       <width>261</width>
+       <width>281</width>
        <height>61</height>
       </rect>
      </property>
@@ -4969,6 +4970,7 @@ QLineEdit:focus {
     border: 2px solid #ddd;
     border-radius: 8px;
     padding: 10px;
+	padding-right: 52px;
 }
 QLineEdit:focus {
     border: 2px solid #ff7052;
@@ -5595,30 +5597,39 @@ QPushButton#botao_update:pressed {
     <widget class="QLabel" name="simbolo_origem">
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>60</y>
-       <width>31</width>
-       <height>61</height>
+       <x>232</x>
+       <y>45</y>
+       <width>61</width>
+       <height>91</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: transparent;</string>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;€&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; font-weight:600;&quot;&gt;€&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="simbolo_destino">
      <property name="geometry">
       <rect>
-       <x>270</x>
+       <x>232</x>
        <y>170</y>
-       <width>31</width>
+       <width>61</width>
        <height>61</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;€.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>

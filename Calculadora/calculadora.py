@@ -325,6 +325,8 @@ ui.temperatura_1.setValidator(validator)
 ui.temperatura_2.setValidator(validator)
 ui.tempo_1.setValidator(validator)
 ui.tempo_2.setValidator(validator)
+ui.valor_origem.setValidator(validator)
+ui.valor_destino.setValidator(validator)
 
 
 
@@ -559,7 +561,7 @@ ui.combo_moeda_1.completer().setFilterMode(Qt.MatchContains)
 ui.combo_moeda_2.completer().setFilterMode(Qt.MatchContains)
 
 
-
+ui.simbolo_destino.setText("€")
 
 #Operacoes
 
@@ -1396,6 +1398,27 @@ moedas = [
 ui.combo_moeda_1.addItems(moedas)
 ui.combo_moeda_2.addItems(moedas)
 
+def simbolo_moedas ():
+    texto_origem = ui.combo_moeda_1.currentText()
+    simbolo_origem = texto_origem[texto_origem.find("(") + 1 : texto_origem.find(")")]
+    ui.simbolo_origem.setText(simbolo_origem)
+    texto_destino = ui.combo_moeda_2.currentText()
+    simbolo_destino = texto_destino[texto_destino.find("(") + 1 : texto_destino.find(")")]
+    ui.simbolo_destino.setText(simbolo_destino) 
+
+ui.simbolo_origem.setStyleSheet("""
+    border: none;
+    background: transparent;
+    color: #999;
+    font-size: 32px;
+""")
+ui.simbolo_destino.setStyleSheet("""
+    border: none;
+    background: transparent;
+    color: #999;
+    font-size: 32px;
+""")
+
 
 
 def formatar_numero(numero):
@@ -1482,7 +1505,10 @@ def apagar_tudo_foco ():
     ui.distancia_2.setText("0")
     ui.temperatura_1.setText("0")
     ui.temperatura_2.setText("0")
-
+    ui.valor_origem.setText("0")
+    ui.valor_destino.setText("0")
+    ui.combo_moeda_1.setCurrentIndex(0)
+    ui.combo_moeda_2.setCurrentIndex(0)
     convertendo = False
     ajustando_texto = False
 
@@ -1655,6 +1681,8 @@ ui.valor_origem.textChanged.connect(converter_moedas)
 ui.combo_moeda_2.currentIndexChanged.connect(converter_moedas)
 ui.valor_destino.textChanged.connect(converter_moedas)
 ui.combo_moeda_1.currentIndexChanged.connect(converter_moedas)
+ui.combo_moeda_1.currentIndexChanged.connect(simbolo_moedas)
+ui.combo_moeda_2.currentIndexChanged.connect(simbolo_moedas)
 ui.valor_origem.selectionChanged.connect(converter_moedas)
 ui.valor_destino.selectionChanged.connect(converter_moedas)
 ui.valor_origem.installEventFilter(filtro)
