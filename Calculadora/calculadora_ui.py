@@ -2099,12 +2099,14 @@ class Ui_Dialog(object):
         self.label_distancias_6.setGeometry(QRect(40, 5, 191, 41))
         self.combo_moeda_1 = QComboBox(self.page_7)
         self.combo_moeda_1.setObjectName(u"combo_moeda_1")
-        self.combo_moeda_1.setGeometry(QRect(11, 130, 191, 31))
+        self.combo_moeda_1.setGeometry(QRect(11, 130, 201, 31))
         self.combo_moeda_1.setFont(font2)
         self.combo_moeda_1.setStyleSheet(u"")
+        self.combo_moeda_1.setEditable(True)
+        self.combo_moeda_1.setInsertPolicy(QComboBox.NoInsert)
         self.valor_origem = QLineEdit(self.page_7)
         self.valor_origem.setObjectName(u"valor_origem")
-        self.valor_origem.setGeometry(QRect(10, 60, 281, 61))
+        self.valor_origem.setGeometry(QRect(10, 60, 261, 61))
         self.valor_origem.setFont(font)
         self.valor_origem.setStyleSheet(u"QLineEdit {\n"
 "    background-color: white;\n"
@@ -2120,7 +2122,7 @@ class Ui_Dialog(object):
 "}")
         self.valor_destino = QLineEdit(self.page_7)
         self.valor_destino.setObjectName(u"valor_destino")
-        self.valor_destino.setGeometry(QRect(10, 170, 281, 61))
+        self.valor_destino.setGeometry(QRect(10, 170, 261, 61))
         self.valor_destino.setFont(font)
         self.valor_destino.setStyleSheet(u"QLineEdit {\n"
 "    background-color: white;\n"
@@ -2136,15 +2138,17 @@ class Ui_Dialog(object):
 "}")
         self.combo_moeda_2 = QComboBox(self.page_7)
         self.combo_moeda_2.setObjectName(u"combo_moeda_2")
-        self.combo_moeda_2.setGeometry(QRect(11, 240, 191, 31))
+        self.combo_moeda_2.setGeometry(QRect(11, 240, 201, 31))
         self.combo_moeda_2.setFont(font2)
         self.combo_moeda_2.setStyleSheet(u"")
-        self.numero_7_tempo_19 = QPushButton(self.page_7)
-        self.numero_7_tempo_19.setObjectName(u"numero_7_tempo_19")
-        self.numero_7_tempo_19.setGeometry(QRect(10, 460, 71, 51))
-        self.numero_7_tempo_19.setFont(font)
-        self.numero_7_tempo_19.setFocusPolicy(Qt.NoFocus)
-        self.numero_7_tempo_19.setStyleSheet(u"QPushButton {\n"
+        self.combo_moeda_2.setEditable(True)
+        self.combo_moeda_2.setInsertPolicy(QComboBox.NoInsert)
+        self.numero_7_moedas = QPushButton(self.page_7)
+        self.numero_7_moedas.setObjectName(u"numero_7_moedas")
+        self.numero_7_moedas.setGeometry(QRect(10, 460, 71, 51))
+        self.numero_7_moedas.setFont(font)
+        self.numero_7_moedas.setFocusPolicy(Qt.NoFocus)
+        self.numero_7_moedas.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -2157,14 +2161,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_7_tempo_19.setCheckable(False)
-        self.numero_7_tempo_19.setChecked(False)
-        self.numero_3_tempo_19 = QPushButton(self.page_7)
-        self.numero_3_tempo_19.setObjectName(u"numero_3_tempo_19")
-        self.numero_3_tempo_19.setGeometry(QRect(150, 360, 71, 51))
-        self.numero_3_tempo_19.setFont(font)
-        self.numero_3_tempo_19.setFocusPolicy(Qt.NoFocus)
-        self.numero_3_tempo_19.setStyleSheet(u"QPushButton {\n"
+        self.numero_7_moedas.setCheckable(False)
+        self.numero_7_moedas.setChecked(False)
+        self.numero_3_moedas = QPushButton(self.page_7)
+        self.numero_3_moedas.setObjectName(u"numero_3_moedas")
+        self.numero_3_moedas.setGeometry(QRect(150, 360, 71, 51))
+        self.numero_3_moedas.setFont(font)
+        self.numero_3_moedas.setFocusPolicy(Qt.NoFocus)
+        self.numero_3_moedas.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -2177,14 +2181,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_3_tempo_19.setCheckable(False)
-        self.numero_3_tempo_19.setChecked(False)
-        self.numero_2_tempo_19 = QPushButton(self.page_7)
-        self.numero_2_tempo_19.setObjectName(u"numero_2_tempo_19")
-        self.numero_2_tempo_19.setGeometry(QRect(80, 360, 71, 51))
-        self.numero_2_tempo_19.setFont(font)
-        self.numero_2_tempo_19.setFocusPolicy(Qt.NoFocus)
-        self.numero_2_tempo_19.setStyleSheet(u"QPushButton {\n"
+        self.numero_3_moedas.setCheckable(False)
+        self.numero_3_moedas.setChecked(False)
+        self.numero_2_moedas = QPushButton(self.page_7)
+        self.numero_2_moedas.setObjectName(u"numero_2_moedas")
+        self.numero_2_moedas.setGeometry(QRect(80, 360, 71, 51))
+        self.numero_2_moedas.setFont(font)
+        self.numero_2_moedas.setFocusPolicy(Qt.NoFocus)
+        self.numero_2_moedas.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -2197,14 +2201,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_2_tempo_19.setCheckable(False)
-        self.numero_2_tempo_19.setChecked(False)
-        self.botao_apagar_tudo_tempo_19 = QPushButton(self.page_7)
-        self.botao_apagar_tudo_tempo_19.setObjectName(u"botao_apagar_tudo_tempo_19")
-        self.botao_apagar_tudo_tempo_19.setGeometry(QRect(220, 460, 71, 51))
-        self.botao_apagar_tudo_tempo_19.setFont(font)
-        self.botao_apagar_tudo_tempo_19.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_tudo_tempo_19.setStyleSheet(u"\n"
+        self.numero_2_moedas.setCheckable(False)
+        self.numero_2_moedas.setChecked(False)
+        self.botao_apagar_tudo_moedas = QPushButton(self.page_7)
+        self.botao_apagar_tudo_moedas.setObjectName(u"botao_apagar_tudo_moedas")
+        self.botao_apagar_tudo_moedas.setGeometry(QRect(220, 460, 71, 51))
+        self.botao_apagar_tudo_moedas.setFont(font)
+        self.botao_apagar_tudo_moedas.setFocusPolicy(Qt.NoFocus)
+        self.botao_apagar_tudo_moedas.setStyleSheet(u"\n"
 "QPushButton {\n"
 "    background-color: rgb(235, 50, 10);;\n"
 "    color: white;\n"
@@ -2217,14 +2221,14 @@ class Ui_Dialog(object):
 "QPushButton:hover {\n"
 "    background-color: #ff7052;\n"
 "}")
-        self.botao_apagar_tudo_tempo_19.setCheckable(False)
-        self.botao_apagar_tudo_tempo_19.setChecked(False)
-        self.botao_apagar_tempo_19 = QPushButton(self.page_7)
-        self.botao_apagar_tempo_19.setObjectName(u"botao_apagar_tempo_19")
-        self.botao_apagar_tempo_19.setGeometry(QRect(220, 360, 71, 51))
-        self.botao_apagar_tempo_19.setFont(font)
-        self.botao_apagar_tempo_19.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_tempo_19.setStyleSheet(u"\n"
+        self.botao_apagar_tudo_moedas.setCheckable(False)
+        self.botao_apagar_tudo_moedas.setChecked(False)
+        self.botao_apagar_moedas = QPushButton(self.page_7)
+        self.botao_apagar_moedas.setObjectName(u"botao_apagar_moedas")
+        self.botao_apagar_moedas.setGeometry(QRect(220, 360, 71, 51))
+        self.botao_apagar_moedas.setFont(font)
+        self.botao_apagar_moedas.setFocusPolicy(Qt.NoFocus)
+        self.botao_apagar_moedas.setStyleSheet(u"\n"
 "QPushButton {\n"
 "    background-color: #ff8a80;\n"
 "    color: white;\n"
@@ -2238,14 +2242,14 @@ class Ui_Dialog(object):
 "    background-color: #ff7052;\n"
 "}\n"
 "font-size: 24px !important;")
-        self.botao_apagar_tempo_19.setCheckable(False)
-        self.botao_apagar_tempo_19.setChecked(False)
-        self.numero_1_tempo_19 = QPushButton(self.page_7)
-        self.numero_1_tempo_19.setObjectName(u"numero_1_tempo_19")
-        self.numero_1_tempo_19.setGeometry(QRect(10, 360, 71, 51))
-        self.numero_1_tempo_19.setFont(font)
-        self.numero_1_tempo_19.setFocusPolicy(Qt.NoFocus)
-        self.numero_1_tempo_19.setStyleSheet(u"QPushButton {\n"
+        self.botao_apagar_moedas.setCheckable(False)
+        self.botao_apagar_moedas.setChecked(False)
+        self.numero_1_moedas = QPushButton(self.page_7)
+        self.numero_1_moedas.setObjectName(u"numero_1_moedas")
+        self.numero_1_moedas.setGeometry(QRect(10, 360, 71, 51))
+        self.numero_1_moedas.setFont(font)
+        self.numero_1_moedas.setFocusPolicy(Qt.NoFocus)
+        self.numero_1_moedas.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -2258,14 +2262,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_1_tempo_19.setCheckable(False)
-        self.numero_1_tempo_19.setChecked(False)
-        self.numero_5_tempo_19 = QPushButton(self.page_7)
-        self.numero_5_tempo_19.setObjectName(u"numero_5_tempo_19")
-        self.numero_5_tempo_19.setGeometry(QRect(80, 410, 71, 51))
-        self.numero_5_tempo_19.setFont(font)
-        self.numero_5_tempo_19.setFocusPolicy(Qt.NoFocus)
-        self.numero_5_tempo_19.setStyleSheet(u"QPushButton {\n"
+        self.numero_1_moedas.setCheckable(False)
+        self.numero_1_moedas.setChecked(False)
+        self.numero_5_moedas = QPushButton(self.page_7)
+        self.numero_5_moedas.setObjectName(u"numero_5_moedas")
+        self.numero_5_moedas.setGeometry(QRect(80, 410, 71, 51))
+        self.numero_5_moedas.setFont(font)
+        self.numero_5_moedas.setFocusPolicy(Qt.NoFocus)
+        self.numero_5_moedas.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -2278,14 +2282,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_5_tempo_19.setCheckable(False)
-        self.numero_5_tempo_19.setChecked(False)
-        self.numero_9_tempo_19 = QPushButton(self.page_7)
-        self.numero_9_tempo_19.setObjectName(u"numero_9_tempo_19")
-        self.numero_9_tempo_19.setGeometry(QRect(150, 460, 71, 51))
-        self.numero_9_tempo_19.setFont(font)
-        self.numero_9_tempo_19.setFocusPolicy(Qt.NoFocus)
-        self.numero_9_tempo_19.setStyleSheet(u"QPushButton {\n"
+        self.numero_5_moedas.setCheckable(False)
+        self.numero_5_moedas.setChecked(False)
+        self.numero_9_moedas = QPushButton(self.page_7)
+        self.numero_9_moedas.setObjectName(u"numero_9_moedas")
+        self.numero_9_moedas.setGeometry(QRect(150, 460, 71, 51))
+        self.numero_9_moedas.setFont(font)
+        self.numero_9_moedas.setFocusPolicy(Qt.NoFocus)
+        self.numero_9_moedas.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -2298,14 +2302,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_9_tempo_19.setCheckable(False)
-        self.numero_9_tempo_19.setChecked(False)
-        self.numero_8_tempo_19 = QPushButton(self.page_7)
-        self.numero_8_tempo_19.setObjectName(u"numero_8_tempo_19")
-        self.numero_8_tempo_19.setGeometry(QRect(80, 460, 71, 51))
-        self.numero_8_tempo_19.setFont(font)
-        self.numero_8_tempo_19.setFocusPolicy(Qt.NoFocus)
-        self.numero_8_tempo_19.setStyleSheet(u"QPushButton {\n"
+        self.numero_9_moedas.setCheckable(False)
+        self.numero_9_moedas.setChecked(False)
+        self.numero_8_moedas = QPushButton(self.page_7)
+        self.numero_8_moedas.setObjectName(u"numero_8_moedas")
+        self.numero_8_moedas.setGeometry(QRect(80, 460, 71, 51))
+        self.numero_8_moedas.setFont(font)
+        self.numero_8_moedas.setFocusPolicy(Qt.NoFocus)
+        self.numero_8_moedas.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -2318,14 +2322,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_8_tempo_19.setCheckable(False)
-        self.numero_8_tempo_19.setChecked(False)
-        self.numero_4_tempo_19 = QPushButton(self.page_7)
-        self.numero_4_tempo_19.setObjectName(u"numero_4_tempo_19")
-        self.numero_4_tempo_19.setGeometry(QRect(10, 410, 71, 51))
-        self.numero_4_tempo_19.setFont(font)
-        self.numero_4_tempo_19.setFocusPolicy(Qt.NoFocus)
-        self.numero_4_tempo_19.setStyleSheet(u"QPushButton {\n"
+        self.numero_8_moedas.setCheckable(False)
+        self.numero_8_moedas.setChecked(False)
+        self.numero_4_moedas = QPushButton(self.page_7)
+        self.numero_4_moedas.setObjectName(u"numero_4_moedas")
+        self.numero_4_moedas.setGeometry(QRect(10, 410, 71, 51))
+        self.numero_4_moedas.setFont(font)
+        self.numero_4_moedas.setFocusPolicy(Qt.NoFocus)
+        self.numero_4_moedas.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -2338,14 +2342,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_4_tempo_19.setCheckable(False)
-        self.numero_4_tempo_19.setChecked(False)
-        self.numero_0_tempo_19 = QPushButton(self.page_7)
-        self.numero_0_tempo_19.setObjectName(u"numero_0_tempo_19")
-        self.numero_0_tempo_19.setGeometry(QRect(220, 410, 71, 51))
-        self.numero_0_tempo_19.setFont(font)
-        self.numero_0_tempo_19.setFocusPolicy(Qt.NoFocus)
-        self.numero_0_tempo_19.setStyleSheet(u"QPushButton {\n"
+        self.numero_4_moedas.setCheckable(False)
+        self.numero_4_moedas.setChecked(False)
+        self.numero_0_moedas = QPushButton(self.page_7)
+        self.numero_0_moedas.setObjectName(u"numero_0_moedas")
+        self.numero_0_moedas.setGeometry(QRect(220, 410, 71, 51))
+        self.numero_0_moedas.setFont(font)
+        self.numero_0_moedas.setFocusPolicy(Qt.NoFocus)
+        self.numero_0_moedas.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -2358,14 +2362,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_0_tempo_19.setCheckable(False)
-        self.numero_0_tempo_19.setChecked(False)
-        self.numero_6_tempo_19 = QPushButton(self.page_7)
-        self.numero_6_tempo_19.setObjectName(u"numero_6_tempo_19")
-        self.numero_6_tempo_19.setGeometry(QRect(150, 410, 71, 51))
-        self.numero_6_tempo_19.setFont(font)
-        self.numero_6_tempo_19.setFocusPolicy(Qt.NoFocus)
-        self.numero_6_tempo_19.setStyleSheet(u"QPushButton {\n"
+        self.numero_0_moedas.setCheckable(False)
+        self.numero_0_moedas.setChecked(False)
+        self.numero_6_moedas = QPushButton(self.page_7)
+        self.numero_6_moedas.setObjectName(u"numero_6_moedas")
+        self.numero_6_moedas.setGeometry(QRect(150, 410, 71, 51))
+        self.numero_6_moedas.setFont(font)
+        self.numero_6_moedas.setFocusPolicy(Qt.NoFocus)
+        self.numero_6_moedas.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -2378,8 +2382,8 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_6_tempo_19.setCheckable(False)
-        self.numero_6_tempo_19.setChecked(False)
+        self.numero_6_moedas.setCheckable(False)
+        self.numero_6_moedas.setChecked(False)
         self.botao_update = QPushButton(self.page_7)
         self.botao_update.setObjectName(u"botao_update")
         self.botao_update.setGeometry(QRect(0, 330, 121, 23))
@@ -2405,7 +2409,14 @@ class Ui_Dialog(object):
         self.label_cambio.setGeometry(QRect(20, 280, 221, 16))
         self.label_dataup = QLabel(self.page_7)
         self.label_dataup.setObjectName(u"label_dataup")
-        self.label_dataup.setGeometry(QRect(20, 310, 111, 16))
+        self.label_dataup.setGeometry(QRect(20, 310, 251, 16))
+        self.simbolo_origem = QLabel(self.page_7)
+        self.simbolo_origem.setObjectName(u"simbolo_origem")
+        self.simbolo_origem.setGeometry(QRect(240, 60, 31, 61))
+        self.simbolo_origem.setStyleSheet(u"background-color: transparent;")
+        self.simbolo_destino = QLabel(self.page_7)
+        self.simbolo_destino.setObjectName(u"simbolo_destino")
+        self.simbolo_destino.setGeometry(QRect(270, 170, 31, 61))
         self.stackedWidget.addWidget(self.page_7)
         self.page_5 = QWidget()
         self.page_5.setObjectName(u"page_5")
@@ -2639,21 +2650,23 @@ class Ui_Dialog(object):
         self.valor_origem.setText(QCoreApplication.translate("Dialog", u"0", None))
         self.valor_destino.setText(QCoreApplication.translate("Dialog", u"0", None))
         self.combo_moeda_2.setCurrentText("")
-        self.numero_7_tempo_19.setText(QCoreApplication.translate("Dialog", u"7", None))
-        self.numero_3_tempo_19.setText(QCoreApplication.translate("Dialog", u"3", None))
-        self.numero_2_tempo_19.setText(QCoreApplication.translate("Dialog", u"2", None))
-        self.botao_apagar_tudo_tempo_19.setText(QCoreApplication.translate("Dialog", u"CE", None))
-        self.botao_apagar_tempo_19.setText(QCoreApplication.translate("Dialog", u"\u27f5", None))
-        self.numero_1_tempo_19.setText(QCoreApplication.translate("Dialog", u"1", None))
-        self.numero_5_tempo_19.setText(QCoreApplication.translate("Dialog", u"5", None))
-        self.numero_9_tempo_19.setText(QCoreApplication.translate("Dialog", u"9", None))
-        self.numero_8_tempo_19.setText(QCoreApplication.translate("Dialog", u"8", None))
-        self.numero_4_tempo_19.setText(QCoreApplication.translate("Dialog", u"4", None))
-        self.numero_0_tempo_19.setText(QCoreApplication.translate("Dialog", u"0", None))
-        self.numero_6_tempo_19.setText(QCoreApplication.translate("Dialog", u"6", None))
+        self.numero_7_moedas.setText(QCoreApplication.translate("Dialog", u"7", None))
+        self.numero_3_moedas.setText(QCoreApplication.translate("Dialog", u"3", None))
+        self.numero_2_moedas.setText(QCoreApplication.translate("Dialog", u"2", None))
+        self.botao_apagar_tudo_moedas.setText(QCoreApplication.translate("Dialog", u"CE", None))
+        self.botao_apagar_moedas.setText(QCoreApplication.translate("Dialog", u"\u27f5", None))
+        self.numero_1_moedas.setText(QCoreApplication.translate("Dialog", u"1", None))
+        self.numero_5_moedas.setText(QCoreApplication.translate("Dialog", u"5", None))
+        self.numero_9_moedas.setText(QCoreApplication.translate("Dialog", u"9", None))
+        self.numero_8_moedas.setText(QCoreApplication.translate("Dialog", u"8", None))
+        self.numero_4_moedas.setText(QCoreApplication.translate("Dialog", u"4", None))
+        self.numero_0_moedas.setText(QCoreApplication.translate("Dialog", u"0", None))
+        self.numero_6_moedas.setText(QCoreApplication.translate("Dialog", u"6", None))
         self.botao_update.setText(QCoreApplication.translate("Dialog", u"Atualizar Taxas", None))
-        self.label_cambio.setText(QCoreApplication.translate("Dialog", u"cambio", None))
+        self.label_cambio.setText(QCoreApplication.translate("Dialog", u"1 EUR = 1 EUR", None))
         self.label_dataup.setText(QCoreApplication.translate("Dialog", u"data update", None))
+        self.simbolo_origem.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">\u20ac</span></p></body></html>", None))
+        self.simbolo_destino.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:14pt;\"/></p></body></html>", None))
         self.label.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">Em </span></p><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">constru\u00e7\u00e3o</span></p></body></html>", None))
         self.label_2.setText("")
         self.toolButton_4.setText(QCoreApplication.translate("Dialog", u"\u2630", None))

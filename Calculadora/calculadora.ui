@@ -4890,7 +4890,7 @@ QPushButton:hover {
       <rect>
        <x>11</x>
        <y>130</y>
-       <width>191</width>
+       <width>201</width>
        <height>31</height>
       </rect>
      </property>
@@ -4900,8 +4900,14 @@ QPushButton:hover {
      <property name="styleSheet">
       <string notr="true"/>
      </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
      <property name="currentText">
       <string/>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::NoInsert</enum>
      </property>
     </widget>
     <widget class="QLineEdit" name="valor_origem">
@@ -4909,7 +4915,7 @@ QPushButton:hover {
       <rect>
        <x>10</x>
        <y>60</y>
-       <width>281</width>
+       <width>261</width>
        <height>61</height>
       </rect>
      </property>
@@ -4943,7 +4949,7 @@ QLineEdit:focus {
       <rect>
        <x>10</x>
        <y>170</y>
-       <width>281</width>
+       <width>261</width>
        <height>61</height>
       </rect>
      </property>
@@ -4977,7 +4983,7 @@ QLineEdit:focus {
       <rect>
        <x>11</x>
        <y>240</y>
-       <width>191</width>
+       <width>201</width>
        <height>31</height>
       </rect>
      </property>
@@ -4987,11 +4993,17 @@ QLineEdit:focus {
      <property name="styleSheet">
       <string notr="true"/>
      </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
      <property name="currentText">
       <string/>
      </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::NoInsert</enum>
+     </property>
     </widget>
-    <widget class="QPushButton" name="numero_7_tempo_19">
+    <widget class="QPushButton" name="numero_7_moedas">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -5035,7 +5047,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_3_tempo_19">
+    <widget class="QPushButton" name="numero_3_moedas">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -5079,7 +5091,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_2_tempo_19">
+    <widget class="QPushButton" name="numero_2_moedas">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -5123,7 +5135,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="botao_apagar_tudo_tempo_19">
+    <widget class="QPushButton" name="botao_apagar_tudo_moedas">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -5167,7 +5179,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="botao_apagar_tempo_19">
+    <widget class="QPushButton" name="botao_apagar_moedas">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -5212,7 +5224,7 @@ font-size: 24px !important;</string>
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_1_tempo_19">
+    <widget class="QPushButton" name="numero_1_moedas">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -5256,7 +5268,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_5_tempo_19">
+    <widget class="QPushButton" name="numero_5_moedas">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -5300,7 +5312,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_9_tempo_19">
+    <widget class="QPushButton" name="numero_9_moedas">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -5344,7 +5356,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_8_tempo_19">
+    <widget class="QPushButton" name="numero_8_moedas">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -5388,7 +5400,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_4_tempo_19">
+    <widget class="QPushButton" name="numero_4_moedas">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -5432,7 +5444,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_0_tempo_19">
+    <widget class="QPushButton" name="numero_0_moedas">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -5476,7 +5488,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_6_tempo_19">
+    <widget class="QPushButton" name="numero_6_moedas">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -5564,7 +5576,7 @@ QPushButton#botao_update:pressed {
       </rect>
      </property>
      <property name="text">
-      <string>cambio</string>
+      <string>1 EUR = 1 EUR</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_dataup">
@@ -5572,12 +5584,41 @@ QPushButton#botao_update:pressed {
       <rect>
        <x>20</x>
        <y>310</y>
-       <width>111</width>
+       <width>251</width>
        <height>16</height>
       </rect>
      </property>
      <property name="text">
       <string>data update</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="simbolo_origem">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>60</y>
+       <width>31</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: transparent;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;€&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="simbolo_destino">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>170</y>
+       <width>31</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </widget>
