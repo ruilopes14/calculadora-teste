@@ -1419,6 +1419,39 @@ ui.simbolo_destino.setStyleSheet("""
     font-size: 32px;
 """)
 
+#Velocidades
+Velocidades_conversao = {
+    "Centímetros por segundo": 0.01,
+    "Metros por segundo": 1.0,
+    "Quilómetros por hora": 0.2777777777777778,
+    "Pés por segundo": 0.3048,
+    "Milhas por hora": 0.4470388888888889,
+    "Nós": 0.5144444444444445,
+    "Mach": 343.0 
+}
+
+Velocidades = [
+    "Centímetros por segundo",
+    "Metros por segundo",
+    "Quilómetros por hora",
+    "Pés por segundo",
+    "Milhas por hora",
+    "Nós",
+    "Mach"
+]
+
+ui.combo_velocidades_origem.addItems(Velocidades)
+ui.combo_velocidades_destino.addItems(Velocidades)
+
+
+
+
+
+
+
+
+
+
 
 
 def formatar_numero(numero):
@@ -1580,12 +1613,12 @@ def ir_para_moedas () :
 def ir_para_defenicoes () :
     janela.resize(300, 440)
     apagar_tudo_foco ()
-    ui.stackedWidget.setCurrentIndex(5)
+    ui.stackedWidget.setCurrentIndex(8)
 
 def ir_para_acerca_de () :
     janela.resize(300, 440)
     apagar_tudo_foco ()
-    ui.stackedWidget.setCurrentIndex(5)
+    ui.stackedWidget.setCurrentIndex(9)
 
 
 ui.botao_resultado.setDefault(True)
@@ -1674,6 +1707,7 @@ ui.toolButton_5.clicked.connect(abrir_menu)
 ui.toolButton_6.clicked.connect(abrir_menu)
 ui.toolButton_7.clicked.connect(abrir_menu)
 ui.toolButton_8.clicked.connect(abrir_menu)
+ui.toolButton_9.clicked.connect(abrir_menu)
 
 
 ui.botao_update.clicked.connect(botao_atualizar)

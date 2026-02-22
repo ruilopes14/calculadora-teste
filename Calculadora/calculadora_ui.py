@@ -1781,11 +1781,11 @@ class Ui_Dialog(object):
         self.label_distancias_7 = QLabel(self.page_6)
         self.label_distancias_7.setObjectName(u"label_distancias_7")
         self.label_distancias_7.setGeometry(QRect(40, 5, 191, 41))
-        self.tempo_3 = QLineEdit(self.page_6)
-        self.tempo_3.setObjectName(u"tempo_3")
-        self.tempo_3.setGeometry(QRect(10, 60, 281, 61))
-        self.tempo_3.setFont(font)
-        self.tempo_3.setStyleSheet(u"QLineEdit {\n"
+        self.velocidade_origem = QLineEdit(self.page_6)
+        self.velocidade_origem.setObjectName(u"velocidade_origem")
+        self.velocidade_origem.setGeometry(QRect(10, 60, 281, 61))
+        self.velocidade_origem.setFont(font)
+        self.velocidade_origem.setStyleSheet(u"QLineEdit {\n"
 "    background-color: white;\n"
 "    color: #000;\n"
 "    font-size: 42px;\n"
@@ -1797,24 +1797,16 @@ class Ui_Dialog(object):
 "QLineEdit:focus {\n"
 "    border: 2px solid #ff7052;\n"
 "}")
-        self.combo_tempo_3 = QComboBox(self.page_6)
-        self.combo_tempo_3.addItem("")
-        self.combo_tempo_3.addItem("")
-        self.combo_tempo_3.addItem("")
-        self.combo_tempo_3.addItem("")
-        self.combo_tempo_3.addItem("")
-        self.combo_tempo_3.addItem("")
-        self.combo_tempo_3.addItem("")
-        self.combo_tempo_3.addItem("")
-        self.combo_tempo_3.setObjectName(u"combo_tempo_3")
-        self.combo_tempo_3.setGeometry(QRect(10, 130, 141, 31))
-        self.combo_tempo_3.setFont(font2)
-        self.combo_tempo_3.setStyleSheet(u"")
-        self.tempo_4 = QLineEdit(self.page_6)
-        self.tempo_4.setObjectName(u"tempo_4")
-        self.tempo_4.setGeometry(QRect(10, 170, 281, 61))
-        self.tempo_4.setFont(font)
-        self.tempo_4.setStyleSheet(u"QLineEdit {\n"
+        self.combo_velocidades_origem = QComboBox(self.page_6)
+        self.combo_velocidades_origem.setObjectName(u"combo_velocidades_origem")
+        self.combo_velocidades_origem.setGeometry(QRect(10, 130, 171, 31))
+        self.combo_velocidades_origem.setFont(font2)
+        self.combo_velocidades_origem.setStyleSheet(u"")
+        self.velocidade_destino = QLineEdit(self.page_6)
+        self.velocidade_destino.setObjectName(u"velocidade_destino")
+        self.velocidade_destino.setGeometry(QRect(10, 170, 281, 61))
+        self.velocidade_destino.setFont(font)
+        self.velocidade_destino.setStyleSheet(u"QLineEdit {\n"
 "    background-color: white;\n"
 "    color: #000;\n"
 "    font-size: 42px;\n"
@@ -1826,19 +1818,11 @@ class Ui_Dialog(object):
 "QLineEdit:focus {\n"
 "    border: 2px solid #ff7052;\n"
 "}")
-        self.combo_tempo_4 = QComboBox(self.page_6)
-        self.combo_tempo_4.addItem("")
-        self.combo_tempo_4.addItem("")
-        self.combo_tempo_4.addItem("")
-        self.combo_tempo_4.addItem("")
-        self.combo_tempo_4.addItem("")
-        self.combo_tempo_4.addItem("")
-        self.combo_tempo_4.addItem("")
-        self.combo_tempo_4.addItem("")
-        self.combo_tempo_4.setObjectName(u"combo_tempo_4")
-        self.combo_tempo_4.setGeometry(QRect(10, 240, 141, 31))
-        self.combo_tempo_4.setFont(font2)
-        self.combo_tempo_4.setStyleSheet(u"")
+        self.combo_velocidades_destino = QComboBox(self.page_6)
+        self.combo_velocidades_destino.setObjectName(u"combo_velocidades_destino")
+        self.combo_velocidades_destino.setGeometry(QRect(10, 240, 171, 31))
+        self.combo_velocidades_destino.setFont(font2)
+        self.combo_velocidades_destino.setStyleSheet(u"")
         self.numero_0_tempo_2 = QPushButton(self.page_6)
         self.numero_0_tempo_2.setObjectName(u"numero_0_tempo_2")
         self.numero_0_tempo_2.setGeometry(QRect(220, 330, 71, 51))
@@ -2444,9 +2428,26 @@ class Ui_Dialog(object):
 "        border-radius: 5px;\n"
 "    }\n"
 " ")
+        self.label_distancias_8 = QLabel(self.page_5)
+        self.label_distancias_8.setObjectName(u"label_distancias_8")
+        self.label_distancias_8.setGeometry(QRect(40, 5, 191, 41))
         self.stackedWidget.addWidget(self.page_5)
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
+        self.label_distancias_9 = QLabel(self.page_2)
+        self.label_distancias_9.setObjectName(u"label_distancias_9")
+        self.label_distancias_9.setGeometry(QRect(40, 5, 191, 41))
+        self.toolButton_9 = QToolButton(self.page_2)
+        self.toolButton_9.setObjectName(u"toolButton_9")
+        self.toolButton_9.setGeometry(QRect(10, 10, 21, 31))
+        self.toolButton_9.setFont(font2)
+        self.toolButton_9.setTabletTracking(False)
+        self.toolButton_9.setStyleSheet(u"QToolButton:hover {\n"
+"        color: #000;\n"
+"        background-color: #e0e0e0;\n"
+"        border-radius: 5px;\n"
+"    }\n"
+" ")
         self.stackedWidget.addWidget(self.page_2)
 
         self.retranslateUi(Dialog)
@@ -2615,28 +2616,10 @@ class Ui_Dialog(object):
         self.botao_data_atual.setText(QCoreApplication.translate("Dialog", u"Repor data", None))
         self.toolButton_7.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
         self.label_distancias_7.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Velocidades</span></p></body></html>", None))
-        self.tempo_3.setText(QCoreApplication.translate("Dialog", u"0", None))
-        self.combo_tempo_3.setItemText(0, QCoreApplication.translate("Dialog", u"Microssegundos", None))
-        self.combo_tempo_3.setItemText(1, QCoreApplication.translate("Dialog", u"Milissegundos", None))
-        self.combo_tempo_3.setItemText(2, QCoreApplication.translate("Dialog", u"Segundos", None))
-        self.combo_tempo_3.setItemText(3, QCoreApplication.translate("Dialog", u"Minutos", None))
-        self.combo_tempo_3.setItemText(4, QCoreApplication.translate("Dialog", u"Horas", None))
-        self.combo_tempo_3.setItemText(5, QCoreApplication.translate("Dialog", u"Dias", None))
-        self.combo_tempo_3.setItemText(6, QCoreApplication.translate("Dialog", u"Semanas", None))
-        self.combo_tempo_3.setItemText(7, QCoreApplication.translate("Dialog", u"Anos", None))
-
-        self.combo_tempo_3.setCurrentText(QCoreApplication.translate("Dialog", u"Microssegundos", None))
-        self.tempo_4.setText(QCoreApplication.translate("Dialog", u"0", None))
-        self.combo_tempo_4.setItemText(0, QCoreApplication.translate("Dialog", u"Milissegundos", None))
-        self.combo_tempo_4.setItemText(1, QCoreApplication.translate("Dialog", u"Microssegundos", None))
-        self.combo_tempo_4.setItemText(2, QCoreApplication.translate("Dialog", u"Segundos", None))
-        self.combo_tempo_4.setItemText(3, QCoreApplication.translate("Dialog", u"Minutos", None))
-        self.combo_tempo_4.setItemText(4, QCoreApplication.translate("Dialog", u"Horas", None))
-        self.combo_tempo_4.setItemText(5, QCoreApplication.translate("Dialog", u"Dias", None))
-        self.combo_tempo_4.setItemText(6, QCoreApplication.translate("Dialog", u"Semanas", None))
-        self.combo_tempo_4.setItemText(7, QCoreApplication.translate("Dialog", u"Anos", None))
-
-        self.combo_tempo_4.setCurrentText(QCoreApplication.translate("Dialog", u"Milissegundos", None))
+        self.velocidade_origem.setText(QCoreApplication.translate("Dialog", u"0", None))
+        self.combo_velocidades_origem.setCurrentText("")
+        self.velocidade_destino.setText(QCoreApplication.translate("Dialog", u"0", None))
+        self.combo_velocidades_destino.setCurrentText("")
         self.numero_0_tempo_2.setText(QCoreApplication.translate("Dialog", u"0", None))
         self.numero_3_tempo_2.setText(QCoreApplication.translate("Dialog", u"3", None))
         self.numero_2_tempo_2.setText(QCoreApplication.translate("Dialog", u"2", None))
@@ -2675,5 +2658,8 @@ class Ui_Dialog(object):
         self.label.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">Em </span></p><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">constru\u00e7\u00e3o</span></p></body></html>", None))
         self.label_2.setText("")
         self.toolButton_4.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
+        self.label_distancias_8.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Defeni\u00e7\u00f5es</span></p></body></html>", None))
+        self.label_distancias_9.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Acerca de</span></p></body></html>", None))
+        self.toolButton_9.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
     # retranslateUi
 
