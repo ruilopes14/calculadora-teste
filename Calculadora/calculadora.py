@@ -62,7 +62,21 @@ class FiltroVirgula(QObject):
             self.campo.insert(",")
             return True
         return False
-    
+
+def limpar_zeros(line_edit):
+        texto = line_edit.text()
+        if texto.startswith("0") and len(texto) > 1 and texto[1] not in (",", "."):
+            line_edit.blockSignals(True)
+            line_edit.setText(texto.lstrip("0"))
+            line_edit.blockSignals(False)
+
+
+ui.valor_origem.textChanged.connect(lambda: limpar_zeros(ui.valor_origem))
+ui.valor_destino.textChanged.connect(lambda: limpar_zeros(ui.valor_destino))
+ui.velocidade_origem.textChanged.connect(lambda: limpar_zeros(ui.velocidade_origem))
+ui.velocidade_destino.textChanged.connect(lambda: limpar_zeros(ui.velocidade_destino))
+
+
 filtro1 = FiltroVirgula(ui.distancia_1)
 ui.distancia_1.installEventFilter(filtro1)
 filtro2 = FiltroVirgula(ui.distancia_2)
@@ -82,6 +96,13 @@ filtro_moeda_1 = FiltroVirgula(ui.valor_origem)
 ui.valor_origem.installEventFilter(filtro_moeda_1)
 filtro_moeda_2 = FiltroVirgula(ui.valor_destino)
 ui.valor_destino.installEventFilter(filtro_moeda_2)
+
+filtro_velocidade_1 = FiltroVirgula(ui.velocidade_origem)
+ui.velocidade_origem.installEventFilter(filtro_velocidade_1)
+filtro_velocidade_2 = FiltroVirgula(ui.velocidade_destino)
+ui.velocidade_destino.installEventFilter(filtro_velocidade_2)
+
+
 
 ui.combo_distancia_1.view().window().setStyleSheet("""
     QWidget {
@@ -327,6 +348,9 @@ ui.tempo_1.setValidator(validator)
 ui.tempo_2.setValidator(validator)
 ui.valor_origem.setValidator(validator)
 ui.valor_destino.setValidator(validator)
+ui.velocidade_origem.setValidator(validator)
+ui.velocidade_destino.setValidator(validator)
+
 
 
 
@@ -1109,7 +1133,7 @@ def carregar_taxas() :
             with open(ficheiro_taxas, "w") as f:
                 json.dump(dados, f)
         
-        return
+            return
 
     atualizar_taxas()
 
@@ -1130,7 +1154,6 @@ def atualizar_taxas():
         print("Taxas atualizadas da API")
 
 def converter_moedas () :
-    global convertendo
     defenir_foco()
 
     texto_origem = ui.combo_moeda_1.currentText() 
@@ -1443,15 +1466,30 @@ Velocidades = [
 ui.combo_velocidades_origem.addItems(Velocidades)
 ui.combo_velocidades_destino.addItems(Velocidades)
 
+def converter_velocidades() :
+    global convertendo
+    if convertendo:  
+        return
+    
+    defenir_foco()
+
+    unidade1 = ui.combo_velocidades_origem.currentText()
+    unidade2 = ui.combo_velocidades_destino.currentText()
 
 
+    if foco_origem: 
+        print("→ Convertendo origem para destino")
+        valor_origem = texto_para_float(ui.velocidade_origem.text())
 
+        convertendo = True
+        em_ms = valor_origem * Velocidades_conversao[unidade1]
+        resultado = em_ms / Velocidades_conversao[unidade2]
+        resultado = round(resultado, 4)
+    
+        texto_formatado = formatar_numero(resultado)
+        ui.velocidade_destino.setText(texto_formatado)
 
-
-
-
-
-
+        convertendo = False 
 
 
 def formatar_numero(numero):
@@ -1521,10 +1559,10 @@ def numeros_distancia(num):
 def defenir_foco() :
     global foco_destino, foco_origem, widget
     widget = QApplication.focusWidget()
-    if widget == ui.valor_origem:
+    if widget == ui.valor_origem or widget == ui.velocidade_origem:
         foco_origem = True
         foco_destino = False 
-    elif widget == ui.valor_destino :
+    elif widget == ui.valor_destino or widget == ui.velocidade_destino :
         foco_origem = False
         foco_destino = True 
 
@@ -1536,8 +1574,9 @@ def apagar_tudo_foco ():
     global convertendo, ajustando_texto
     ui.distancia_1.setText("0")
     ui.distancia_2.setText("0")
-    ui.temperatura_1.setText("0")
     ui.temperatura_2.setText("0")
+    ui.temperatura_1.setText("0")
+    ui.combo_temp_2.setCurrentIndex(1)
     ui.valor_origem.setText("0")
     ui.valor_destino.setText("0")
     ui.combo_moeda_1.setCurrentIndex(0)
@@ -1752,6 +1791,13 @@ ui.spinbox_anos.valueChanged.connect(diferenca_datas)
 ui.spinbox_meses.valueChanged.connect(diferenca_datas)
 ui.botao_data_atual.clicked.connect(lambda: ui.date_edit_3.setDate(QDate.currentDate()))
 ui.botao_data_atual_2.clicked.connect(lambda: ui.date_edit_1.setDate(QDate.currentDate()))
+
+
+ui.velocidade_origem.textChanged.connect(converter_velocidades)
+ui.velocidade_destino.textChanged.connect(converter_velocidades)
+ui.combo_velocidades_origem.currentIndexChanged.connect(converter_velocidades)
+ui.combo_velocidades_destino.currentIndexChanged.connect(converter_velocidades)
+
 
 
 
