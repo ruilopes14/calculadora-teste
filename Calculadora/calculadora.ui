@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>300</width>
-    <height>525</height>
+    <height>441</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -4167,7 +4167,7 @@ QLineEdit:focus {
       <rect>
        <x>10</x>
        <y>130</y>
-       <width>171</width>
+       <width>191</width>
        <height>31</height>
       </rect>
      </property>
@@ -4220,7 +4220,7 @@ QLineEdit:focus {
       <rect>
        <x>10</x>
        <y>240</y>
-       <width>171</width>
+       <width>191</width>
        <height>31</height>
       </rect>
      </property>
@@ -4234,7 +4234,7 @@ QLineEdit:focus {
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_0_tempo_2">
+    <widget class="QPushButton" name="numero_0_velocidade">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -4278,7 +4278,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_3_tempo_2">
+    <widget class="QPushButton" name="numero_3_velocidade">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -4322,7 +4322,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_2_tempo_2">
+    <widget class="QPushButton" name="numero_2_velocidade">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -4366,7 +4366,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_4_tempo_2">
+    <widget class="QPushButton" name="numero_4_velocidade">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -4410,7 +4410,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_5_tempo_2">
+    <widget class="QPushButton" name="numero_5_velocidade">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -4454,7 +4454,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_6_tempo_2">
+    <widget class="QPushButton" name="numero_6_velocidade">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -4498,7 +4498,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_1_tempo_2">
+    <widget class="QPushButton" name="numero_1_velocidade">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -4542,7 +4542,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="botao_apagar_tudo_tempo_2">
+    <widget class="QPushButton" name="botao_apagar_tudo_velocidade">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -4586,7 +4586,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="botao_apagar_tempo_2">
+    <widget class="QPushButton" name="botao_apagar_velocidade">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -4631,7 +4631,7 @@ font-size: 24px !important;</string>
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_8_tempo_2">
+    <widget class="QPushButton" name="numero_8_velocidade">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -4675,7 +4675,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_7_tempo_2">
+    <widget class="QPushButton" name="numero_7_velocidade">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -4719,7 +4719,7 @@ QPushButton:hover {
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="numero_9_tempo_2">
+    <widget class="QPushButton" name="numero_9_velocidade">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -5554,38 +5554,6 @@ QPushButton#botao_update:pressed {
     </widget>
    </widget>
    <widget class="QWidget" name="page_5">
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>-10</y>
-       <width>321</width>
-       <height>251</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; font-weight:600; font-style:italic;&quot;&gt;Em &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; font-weight:600; font-style:italic;&quot;&gt;construção&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>-10</x>
-       <y>210</y>
-       <width>311</width>
-       <height>171</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../../Users/ruidl/.designer/backup/construcao.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-    </widget>
     <widget class="QToolButton" name="toolButton_4">
      <property name="geometry">
       <rect>
@@ -5624,6 +5592,42 @@ QPushButton#botao_update:pressed {
      </property>
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Defenições&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Casas Decimais </string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>71</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>150</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>tema</string>
      </property>
     </widget>
    </widget>
@@ -5666,6 +5670,57 @@ QPushButton#botao_update:pressed {
      </property>
      <property name="text">
       <string>☰</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>281</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 12px;
+font-weight: bold;
+color: #ff7052;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Calculadora v0.7&lt;/p&gt;&lt;p&gt;Made with Python, Pyside6.&lt;/p&gt;&lt;p&gt;APIs usadas : ExchangeRate API, CoinGecko&lt;/p&gt;&lt;p&gt;@ 2026 Rui Lopes &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>320</y>
+       <width>271</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 12px;
+color: #444;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aplicação de código aberto desenvolvida como&lt;/p&gt;&lt;p&gt;projeto de aprendizagem&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_link">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>380</y>
+       <width>261</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/ruilopes14?tab=repositories&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/ruilopes14?tab=repositories&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </widget>

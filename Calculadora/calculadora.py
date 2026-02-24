@@ -338,6 +338,54 @@ ui.combo_moeda_1.view().setStyleSheet("""
 """)
 
 
+ui.combo_velocidades_origem.view().window().setStyleSheet("""
+    QWidget {
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+    }
+""")
+ui.combo_velocidades_origem.view().setStyleSheet("""
+    QListView {
+        background-color: white;
+        border: 1px solid #ddd;
+        outline: 0;
+    }
+    QListView::item {
+        padding: 5px;
+        outline: 0 ;                                  
+    }
+    QListView::item:selected {
+        background-color: #ff7052;
+        color: white;
+    }
+""")
+
+ui.combo_velocidades_destino.view().window().setStyleSheet("""
+    QWidget {
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+    }
+""")
+ui.combo_velocidades_destino.view().setStyleSheet("""
+    QListView {
+        background-color: white;
+        border: 1px solid #ddd;
+        outline: 0;
+    }
+    QListView::item {
+        padding: 5px;
+        outline: 0 ;                                  
+    }
+    QListView::item:selected {
+        background-color: #ff7052;
+        color: white;
+    }
+""")
+
+
+
 validator = QDoubleValidator()
 validator.setLocale(QLocale(QLocale.Portuguese, QLocale.Portugal))
 ui.distancia_1.setValidator(validator)
@@ -436,6 +484,8 @@ ui.combo_moeda_1.setStyleSheet(estilo_combo)
 ui.date_edit_1.setStyleSheet(estilo_dateedit)
 ui.date_edit_2.setStyleSheet(estilo_dateedit)
 ui.date_edit_3.setStyleSheet(estilo_dateedit)
+ui.combo_velocidades_origem.setStyleSheet(estilo_combo)
+ui.combo_velocidades_destino.setStyleSheet(estilo_combo)
 
 
 
@@ -1100,11 +1150,24 @@ def diferenca_datas () :
     ui.label_final.setText(f"📅 {data}")
 
 #Moedas
+def obter_cripto ():
+    url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=eur"
+    
+    try :
+        response = requests.get(url)
+        dados = response.json()
+        print(dados)
+    except:
+        print(f"Erro! Código: {response.status_code}")
+        return None
+    
 
 def obter_taxas ():
     global taxas_globais
     API_KEY = "fdfb941ee8c4bdd8b7591a28"
     url = f"https://v6.exchangerate-api.com/v6/{API_KEY}/latest/EUR"
+
+
     try:
         response = requests.get(url)
         dados = response.json()
@@ -1209,7 +1272,6 @@ def converter_moedas () :
     else :
         string_destino = ui.valor_destino.text()
         valor_destino = texto_para_float(ui.valor_destino.text())        
-        print("→ Convertendo destino para origem")
 
         print("→ Convertendo destino para origem")
         if moeda_destino == "EUR" : 
@@ -1491,7 +1553,18 @@ def converter_velocidades() :
 
         convertendo = False 
 
+    else : 
+        print("→ Convertendo destino para origem")
+        valor_destino = texto_para_float(ui.velocidade_destino.text())
+        convertendo = True
+        em_ms = valor_destino * Velocidades_conversao[unidade2]
+        resultado = em_ms / Velocidades_conversao[unidade1]
+        resultado = round(resultado, 4)
 
+        texto_formatado = formatar_numero(resultado)
+        ui.velocidade_origem.setText(texto_formatado)
+        convertendo = False 
+        
 def formatar_numero(numero):
     numero = round(numero, 4)
     
@@ -1581,6 +1654,12 @@ def apagar_tudo_foco ():
     ui.valor_destino.setText("0")
     ui.combo_moeda_1.setCurrentIndex(0)
     ui.combo_moeda_2.setCurrentIndex(0)
+    ui.velocidade_origem.setText("0")
+    ui.velocidade_destino.setText("0")
+    ui.tempo_1.setText("0")
+    ui.tempo_2.setText("0")
+
+
     convertendo = False
     ajustando_texto = False
 
@@ -1732,6 +1811,9 @@ ui.tempo_1.textChanged.connect(converter_tempo1)
 ui.combo_tempo_1.currentIndexChanged.connect(converter_tempo1)
 ui.tempo_2.textChanged.connect(converter_tempo2)
 ui.combo_tempo_2.currentIndexChanged.connect(converter_tempo2)
+ui.botao_apagar_tempo.clicked.connect(apagar_foco)
+ui.botao_apagar_tudo_tempo.clicked.connect(apagar_tudo_foco)
+
 
 ui.botao_apagar_dist.clicked.connect(apagar_foco)
 ui.botao_apagar_temp.clicked.connect(apagar_foco)
@@ -1774,7 +1856,7 @@ ui.numero_9_moedas.clicked.connect(lambda: numeros_distancia(9))
 ui.numero_0_moedas.clicked.connect(lambda: numeros_distancia(0))
 ui.botao_apagar_moedas.clicked.connect(apagar_foco)
 ui.botao_apagar_tudo_moedas.clicked.connect(apagar_tudo_foco)
-
+ui.botao_update.clicked.connect(obter_cripto)
 
 
 ui.date_edit_1.dateChanged.connect(calcular_datas)
@@ -1797,8 +1879,23 @@ ui.velocidade_origem.textChanged.connect(converter_velocidades)
 ui.velocidade_destino.textChanged.connect(converter_velocidades)
 ui.combo_velocidades_origem.currentIndexChanged.connect(converter_velocidades)
 ui.combo_velocidades_destino.currentIndexChanged.connect(converter_velocidades)
+ui.botao_apagar_velocidade.clicked.connect(apagar_foco)
+ui.numero_1_velocidade.clicked.connect(lambda: numeros_distancia(1))
+ui.numero_2_velocidade.clicked.connect(lambda: numeros_distancia(2))
+ui.numero_3_velocidade.clicked.connect(lambda: numeros_distancia(3))
+ui.numero_4_velocidade.clicked.connect(lambda: numeros_distancia(4))
+ui.numero_5_velocidade.clicked.connect(lambda: numeros_distancia(5))
+ui.numero_6_velocidade.clicked.connect(lambda: numeros_distancia(6))
+ui.numero_7_velocidade.clicked.connect(lambda: numeros_distancia(7))
+ui.numero_8_velocidade.clicked.connect(lambda: numeros_distancia(8))
+ui.numero_9_velocidade.clicked.connect(lambda: numeros_distancia(9))
+ui.numero_0_velocidade.clicked.connect(lambda: numeros_distancia(0))
+ui.botao_apagar_tudo_velocidade.clicked.connect(apagar_tudo_foco)
 
-
+ui.label_link.setStyleSheet("""
+    font-size: 12px;
+    color: #ff7052;
+""")
 
 
 QShortcut(QKeySequence("1"), janela).activated.connect(lambda: numeros(1))

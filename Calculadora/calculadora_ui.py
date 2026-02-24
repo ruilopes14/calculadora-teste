@@ -24,7 +24,7 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
-        Dialog.resize(300, 525)
+        Dialog.resize(300, 441)
         self.stackedWidget = QStackedWidget(Dialog)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setGeometry(QRect(0, 0, 301, 520))
@@ -1799,7 +1799,7 @@ class Ui_Dialog(object):
 "}")
         self.combo_velocidades_origem = QComboBox(self.page_6)
         self.combo_velocidades_origem.setObjectName(u"combo_velocidades_origem")
-        self.combo_velocidades_origem.setGeometry(QRect(10, 130, 171, 31))
+        self.combo_velocidades_origem.setGeometry(QRect(10, 130, 191, 31))
         self.combo_velocidades_origem.setFont(font2)
         self.combo_velocidades_origem.setStyleSheet(u"")
         self.velocidade_destino = QLineEdit(self.page_6)
@@ -1820,15 +1820,15 @@ class Ui_Dialog(object):
 "}")
         self.combo_velocidades_destino = QComboBox(self.page_6)
         self.combo_velocidades_destino.setObjectName(u"combo_velocidades_destino")
-        self.combo_velocidades_destino.setGeometry(QRect(10, 240, 171, 31))
+        self.combo_velocidades_destino.setGeometry(QRect(10, 240, 191, 31))
         self.combo_velocidades_destino.setFont(font2)
         self.combo_velocidades_destino.setStyleSheet(u"")
-        self.numero_0_tempo_2 = QPushButton(self.page_6)
-        self.numero_0_tempo_2.setObjectName(u"numero_0_tempo_2")
-        self.numero_0_tempo_2.setGeometry(QRect(220, 330, 71, 51))
-        self.numero_0_tempo_2.setFont(font)
-        self.numero_0_tempo_2.setFocusPolicy(Qt.NoFocus)
-        self.numero_0_tempo_2.setStyleSheet(u"QPushButton {\n"
+        self.numero_0_velocidade = QPushButton(self.page_6)
+        self.numero_0_velocidade.setObjectName(u"numero_0_velocidade")
+        self.numero_0_velocidade.setGeometry(QRect(220, 330, 71, 51))
+        self.numero_0_velocidade.setFont(font)
+        self.numero_0_velocidade.setFocusPolicy(Qt.NoFocus)
+        self.numero_0_velocidade.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -1841,14 +1841,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_0_tempo_2.setCheckable(False)
-        self.numero_0_tempo_2.setChecked(False)
-        self.numero_3_tempo_2 = QPushButton(self.page_6)
-        self.numero_3_tempo_2.setObjectName(u"numero_3_tempo_2")
-        self.numero_3_tempo_2.setGeometry(QRect(150, 280, 71, 51))
-        self.numero_3_tempo_2.setFont(font)
-        self.numero_3_tempo_2.setFocusPolicy(Qt.NoFocus)
-        self.numero_3_tempo_2.setStyleSheet(u"QPushButton {\n"
+        self.numero_0_velocidade.setCheckable(False)
+        self.numero_0_velocidade.setChecked(False)
+        self.numero_3_velocidade = QPushButton(self.page_6)
+        self.numero_3_velocidade.setObjectName(u"numero_3_velocidade")
+        self.numero_3_velocidade.setGeometry(QRect(150, 280, 71, 51))
+        self.numero_3_velocidade.setFont(font)
+        self.numero_3_velocidade.setFocusPolicy(Qt.NoFocus)
+        self.numero_3_velocidade.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -1861,14 +1861,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_3_tempo_2.setCheckable(False)
-        self.numero_3_tempo_2.setChecked(False)
-        self.numero_2_tempo_2 = QPushButton(self.page_6)
-        self.numero_2_tempo_2.setObjectName(u"numero_2_tempo_2")
-        self.numero_2_tempo_2.setGeometry(QRect(80, 280, 71, 51))
-        self.numero_2_tempo_2.setFont(font)
-        self.numero_2_tempo_2.setFocusPolicy(Qt.NoFocus)
-        self.numero_2_tempo_2.setStyleSheet(u"QPushButton {\n"
+        self.numero_3_velocidade.setCheckable(False)
+        self.numero_3_velocidade.setChecked(False)
+        self.numero_2_velocidade = QPushButton(self.page_6)
+        self.numero_2_velocidade.setObjectName(u"numero_2_velocidade")
+        self.numero_2_velocidade.setGeometry(QRect(80, 280, 71, 51))
+        self.numero_2_velocidade.setFont(font)
+        self.numero_2_velocidade.setFocusPolicy(Qt.NoFocus)
+        self.numero_2_velocidade.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -1881,14 +1881,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_2_tempo_2.setCheckable(False)
-        self.numero_2_tempo_2.setChecked(False)
-        self.numero_4_tempo_2 = QPushButton(self.page_6)
-        self.numero_4_tempo_2.setObjectName(u"numero_4_tempo_2")
-        self.numero_4_tempo_2.setGeometry(QRect(10, 330, 71, 51))
-        self.numero_4_tempo_2.setFont(font)
-        self.numero_4_tempo_2.setFocusPolicy(Qt.NoFocus)
-        self.numero_4_tempo_2.setStyleSheet(u"QPushButton {\n"
+        self.numero_2_velocidade.setCheckable(False)
+        self.numero_2_velocidade.setChecked(False)
+        self.numero_4_velocidade = QPushButton(self.page_6)
+        self.numero_4_velocidade.setObjectName(u"numero_4_velocidade")
+        self.numero_4_velocidade.setGeometry(QRect(10, 330, 71, 51))
+        self.numero_4_velocidade.setFont(font)
+        self.numero_4_velocidade.setFocusPolicy(Qt.NoFocus)
+        self.numero_4_velocidade.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -1901,14 +1901,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_4_tempo_2.setCheckable(False)
-        self.numero_4_tempo_2.setChecked(False)
-        self.numero_5_tempo_2 = QPushButton(self.page_6)
-        self.numero_5_tempo_2.setObjectName(u"numero_5_tempo_2")
-        self.numero_5_tempo_2.setGeometry(QRect(80, 330, 71, 51))
-        self.numero_5_tempo_2.setFont(font)
-        self.numero_5_tempo_2.setFocusPolicy(Qt.NoFocus)
-        self.numero_5_tempo_2.setStyleSheet(u"QPushButton {\n"
+        self.numero_4_velocidade.setCheckable(False)
+        self.numero_4_velocidade.setChecked(False)
+        self.numero_5_velocidade = QPushButton(self.page_6)
+        self.numero_5_velocidade.setObjectName(u"numero_5_velocidade")
+        self.numero_5_velocidade.setGeometry(QRect(80, 330, 71, 51))
+        self.numero_5_velocidade.setFont(font)
+        self.numero_5_velocidade.setFocusPolicy(Qt.NoFocus)
+        self.numero_5_velocidade.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -1921,14 +1921,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_5_tempo_2.setCheckable(False)
-        self.numero_5_tempo_2.setChecked(False)
-        self.numero_6_tempo_2 = QPushButton(self.page_6)
-        self.numero_6_tempo_2.setObjectName(u"numero_6_tempo_2")
-        self.numero_6_tempo_2.setGeometry(QRect(150, 330, 71, 51))
-        self.numero_6_tempo_2.setFont(font)
-        self.numero_6_tempo_2.setFocusPolicy(Qt.NoFocus)
-        self.numero_6_tempo_2.setStyleSheet(u"QPushButton {\n"
+        self.numero_5_velocidade.setCheckable(False)
+        self.numero_5_velocidade.setChecked(False)
+        self.numero_6_velocidade = QPushButton(self.page_6)
+        self.numero_6_velocidade.setObjectName(u"numero_6_velocidade")
+        self.numero_6_velocidade.setGeometry(QRect(150, 330, 71, 51))
+        self.numero_6_velocidade.setFont(font)
+        self.numero_6_velocidade.setFocusPolicy(Qt.NoFocus)
+        self.numero_6_velocidade.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -1941,14 +1941,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_6_tempo_2.setCheckable(False)
-        self.numero_6_tempo_2.setChecked(False)
-        self.numero_1_tempo_2 = QPushButton(self.page_6)
-        self.numero_1_tempo_2.setObjectName(u"numero_1_tempo_2")
-        self.numero_1_tempo_2.setGeometry(QRect(10, 280, 71, 51))
-        self.numero_1_tempo_2.setFont(font)
-        self.numero_1_tempo_2.setFocusPolicy(Qt.NoFocus)
-        self.numero_1_tempo_2.setStyleSheet(u"QPushButton {\n"
+        self.numero_6_velocidade.setCheckable(False)
+        self.numero_6_velocidade.setChecked(False)
+        self.numero_1_velocidade = QPushButton(self.page_6)
+        self.numero_1_velocidade.setObjectName(u"numero_1_velocidade")
+        self.numero_1_velocidade.setGeometry(QRect(10, 280, 71, 51))
+        self.numero_1_velocidade.setFont(font)
+        self.numero_1_velocidade.setFocusPolicy(Qt.NoFocus)
+        self.numero_1_velocidade.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -1961,14 +1961,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_1_tempo_2.setCheckable(False)
-        self.numero_1_tempo_2.setChecked(False)
-        self.botao_apagar_tudo_tempo_2 = QPushButton(self.page_6)
-        self.botao_apagar_tudo_tempo_2.setObjectName(u"botao_apagar_tudo_tempo_2")
-        self.botao_apagar_tudo_tempo_2.setGeometry(QRect(220, 380, 71, 51))
-        self.botao_apagar_tudo_tempo_2.setFont(font)
-        self.botao_apagar_tudo_tempo_2.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_tudo_tempo_2.setStyleSheet(u"\n"
+        self.numero_1_velocidade.setCheckable(False)
+        self.numero_1_velocidade.setChecked(False)
+        self.botao_apagar_tudo_velocidade = QPushButton(self.page_6)
+        self.botao_apagar_tudo_velocidade.setObjectName(u"botao_apagar_tudo_velocidade")
+        self.botao_apagar_tudo_velocidade.setGeometry(QRect(220, 380, 71, 51))
+        self.botao_apagar_tudo_velocidade.setFont(font)
+        self.botao_apagar_tudo_velocidade.setFocusPolicy(Qt.NoFocus)
+        self.botao_apagar_tudo_velocidade.setStyleSheet(u"\n"
 "QPushButton {\n"
 "    background-color: rgb(235, 50, 10);;\n"
 "    color: white;\n"
@@ -1981,14 +1981,14 @@ class Ui_Dialog(object):
 "QPushButton:hover {\n"
 "    background-color: #ff7052;\n"
 "}")
-        self.botao_apagar_tudo_tempo_2.setCheckable(False)
-        self.botao_apagar_tudo_tempo_2.setChecked(False)
-        self.botao_apagar_tempo_2 = QPushButton(self.page_6)
-        self.botao_apagar_tempo_2.setObjectName(u"botao_apagar_tempo_2")
-        self.botao_apagar_tempo_2.setGeometry(QRect(220, 280, 71, 51))
-        self.botao_apagar_tempo_2.setFont(font)
-        self.botao_apagar_tempo_2.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_tempo_2.setStyleSheet(u"\n"
+        self.botao_apagar_tudo_velocidade.setCheckable(False)
+        self.botao_apagar_tudo_velocidade.setChecked(False)
+        self.botao_apagar_velocidade = QPushButton(self.page_6)
+        self.botao_apagar_velocidade.setObjectName(u"botao_apagar_velocidade")
+        self.botao_apagar_velocidade.setGeometry(QRect(220, 280, 71, 51))
+        self.botao_apagar_velocidade.setFont(font)
+        self.botao_apagar_velocidade.setFocusPolicy(Qt.NoFocus)
+        self.botao_apagar_velocidade.setStyleSheet(u"\n"
 "QPushButton {\n"
 "    background-color: #ff8a80;\n"
 "    color: white;\n"
@@ -2002,14 +2002,14 @@ class Ui_Dialog(object):
 "    background-color: #ff7052;\n"
 "}\n"
 "font-size: 24px !important;")
-        self.botao_apagar_tempo_2.setCheckable(False)
-        self.botao_apagar_tempo_2.setChecked(False)
-        self.numero_8_tempo_2 = QPushButton(self.page_6)
-        self.numero_8_tempo_2.setObjectName(u"numero_8_tempo_2")
-        self.numero_8_tempo_2.setGeometry(QRect(80, 380, 71, 51))
-        self.numero_8_tempo_2.setFont(font)
-        self.numero_8_tempo_2.setFocusPolicy(Qt.NoFocus)
-        self.numero_8_tempo_2.setStyleSheet(u"QPushButton {\n"
+        self.botao_apagar_velocidade.setCheckable(False)
+        self.botao_apagar_velocidade.setChecked(False)
+        self.numero_8_velocidade = QPushButton(self.page_6)
+        self.numero_8_velocidade.setObjectName(u"numero_8_velocidade")
+        self.numero_8_velocidade.setGeometry(QRect(80, 380, 71, 51))
+        self.numero_8_velocidade.setFont(font)
+        self.numero_8_velocidade.setFocusPolicy(Qt.NoFocus)
+        self.numero_8_velocidade.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -2022,14 +2022,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_8_tempo_2.setCheckable(False)
-        self.numero_8_tempo_2.setChecked(False)
-        self.numero_7_tempo_2 = QPushButton(self.page_6)
-        self.numero_7_tempo_2.setObjectName(u"numero_7_tempo_2")
-        self.numero_7_tempo_2.setGeometry(QRect(10, 380, 71, 51))
-        self.numero_7_tempo_2.setFont(font)
-        self.numero_7_tempo_2.setFocusPolicy(Qt.NoFocus)
-        self.numero_7_tempo_2.setStyleSheet(u"QPushButton {\n"
+        self.numero_8_velocidade.setCheckable(False)
+        self.numero_8_velocidade.setChecked(False)
+        self.numero_7_velocidade = QPushButton(self.page_6)
+        self.numero_7_velocidade.setObjectName(u"numero_7_velocidade")
+        self.numero_7_velocidade.setGeometry(QRect(10, 380, 71, 51))
+        self.numero_7_velocidade.setFont(font)
+        self.numero_7_velocidade.setFocusPolicy(Qt.NoFocus)
+        self.numero_7_velocidade.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -2042,14 +2042,14 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_7_tempo_2.setCheckable(False)
-        self.numero_7_tempo_2.setChecked(False)
-        self.numero_9_tempo_2 = QPushButton(self.page_6)
-        self.numero_9_tempo_2.setObjectName(u"numero_9_tempo_2")
-        self.numero_9_tempo_2.setGeometry(QRect(150, 380, 71, 51))
-        self.numero_9_tempo_2.setFont(font)
-        self.numero_9_tempo_2.setFocusPolicy(Qt.NoFocus)
-        self.numero_9_tempo_2.setStyleSheet(u"QPushButton {\n"
+        self.numero_7_velocidade.setCheckable(False)
+        self.numero_7_velocidade.setChecked(False)
+        self.numero_9_velocidade = QPushButton(self.page_6)
+        self.numero_9_velocidade.setObjectName(u"numero_9_velocidade")
+        self.numero_9_velocidade.setGeometry(QRect(150, 380, 71, 51))
+        self.numero_9_velocidade.setFont(font)
+        self.numero_9_velocidade.setFocusPolicy(Qt.NoFocus)
+        self.numero_9_velocidade.setStyleSheet(u"QPushButton {\n"
 "    background-color: white;\n"
 "    color: #333;\n"
 "    font-size: 20px;\n"
@@ -2062,8 +2062,8 @@ class Ui_Dialog(object):
 "    background-color: #f5f5f5;\n"
 "    border: 1px solid #ccc;\n"
 "}")
-        self.numero_9_tempo_2.setCheckable(False)
-        self.numero_9_tempo_2.setChecked(False)
+        self.numero_9_velocidade.setCheckable(False)
+        self.numero_9_velocidade.setChecked(False)
         self.stackedWidget.addWidget(self.page_6)
         self.page_7 = QWidget()
         self.page_7.setObjectName(u"page_7")
@@ -2409,14 +2409,6 @@ class Ui_Dialog(object):
         self.stackedWidget.addWidget(self.page_7)
         self.page_5 = QWidget()
         self.page_5.setObjectName(u"page_5")
-        self.label = QLabel(self.page_5)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(20, -10, 321, 251))
-        self.label_2 = QLabel(self.page_5)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(-10, 210, 311, 171))
-        self.label_2.setPixmap(QPixmap(u"../../Users/ruidl/.designer/backup/construcao.png"))
-        self.label_2.setScaledContents(True)
         self.toolButton_4 = QToolButton(self.page_5)
         self.toolButton_4.setObjectName(u"toolButton_4")
         self.toolButton_4.setGeometry(QRect(10, 10, 21, 31))
@@ -2431,6 +2423,15 @@ class Ui_Dialog(object):
         self.label_distancias_8 = QLabel(self.page_5)
         self.label_distancias_8.setObjectName(u"label_distancias_8")
         self.label_distancias_8.setGeometry(QRect(40, 5, 191, 41))
+        self.label = QLabel(self.page_5)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(20, 60, 111, 16))
+        self.spinBox = QSpinBox(self.page_5)
+        self.spinBox.setObjectName(u"spinBox")
+        self.spinBox.setGeometry(QRect(20, 80, 71, 22))
+        self.label_2 = QLabel(self.page_5)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(20, 150, 47, 13))
         self.stackedWidget.addWidget(self.page_5)
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
@@ -2448,6 +2449,21 @@ class Ui_Dialog(object):
 "        border-radius: 5px;\n"
 "    }\n"
 " ")
+        self.label_10 = QLabel(self.page_2)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setGeometry(QRect(10, 50, 281, 161))
+        self.label_10.setStyleSheet(u"font-size: 12px;\n"
+"font-weight: bold;\n"
+"color: #ff7052;")
+        self.label_11 = QLabel(self.page_2)
+        self.label_11.setObjectName(u"label_11")
+        self.label_11.setGeometry(QRect(10, 320, 271, 141))
+        self.label_11.setStyleSheet(u"font-size: 12px;\n"
+"color: #444;")
+        self.label_link = QLabel(self.page_2)
+        self.label_link.setObjectName(u"label_link")
+        self.label_link.setGeometry(QRect(10, 380, 261, 31))
+        self.label_link.setStyleSheet(u"")
         self.stackedWidget.addWidget(self.page_2)
 
         self.retranslateUi(Dialog)
@@ -2620,18 +2636,18 @@ class Ui_Dialog(object):
         self.combo_velocidades_origem.setCurrentText("")
         self.velocidade_destino.setText(QCoreApplication.translate("Dialog", u"0", None))
         self.combo_velocidades_destino.setCurrentText("")
-        self.numero_0_tempo_2.setText(QCoreApplication.translate("Dialog", u"0", None))
-        self.numero_3_tempo_2.setText(QCoreApplication.translate("Dialog", u"3", None))
-        self.numero_2_tempo_2.setText(QCoreApplication.translate("Dialog", u"2", None))
-        self.numero_4_tempo_2.setText(QCoreApplication.translate("Dialog", u"4", None))
-        self.numero_5_tempo_2.setText(QCoreApplication.translate("Dialog", u"5", None))
-        self.numero_6_tempo_2.setText(QCoreApplication.translate("Dialog", u"6", None))
-        self.numero_1_tempo_2.setText(QCoreApplication.translate("Dialog", u"1", None))
-        self.botao_apagar_tudo_tempo_2.setText(QCoreApplication.translate("Dialog", u"CE", None))
-        self.botao_apagar_tempo_2.setText(QCoreApplication.translate("Dialog", u"\u27f5", None))
-        self.numero_8_tempo_2.setText(QCoreApplication.translate("Dialog", u"8", None))
-        self.numero_7_tempo_2.setText(QCoreApplication.translate("Dialog", u"7", None))
-        self.numero_9_tempo_2.setText(QCoreApplication.translate("Dialog", u"9", None))
+        self.numero_0_velocidade.setText(QCoreApplication.translate("Dialog", u"0", None))
+        self.numero_3_velocidade.setText(QCoreApplication.translate("Dialog", u"3", None))
+        self.numero_2_velocidade.setText(QCoreApplication.translate("Dialog", u"2", None))
+        self.numero_4_velocidade.setText(QCoreApplication.translate("Dialog", u"4", None))
+        self.numero_5_velocidade.setText(QCoreApplication.translate("Dialog", u"5", None))
+        self.numero_6_velocidade.setText(QCoreApplication.translate("Dialog", u"6", None))
+        self.numero_1_velocidade.setText(QCoreApplication.translate("Dialog", u"1", None))
+        self.botao_apagar_tudo_velocidade.setText(QCoreApplication.translate("Dialog", u"CE", None))
+        self.botao_apagar_velocidade.setText(QCoreApplication.translate("Dialog", u"\u27f5", None))
+        self.numero_8_velocidade.setText(QCoreApplication.translate("Dialog", u"8", None))
+        self.numero_7_velocidade.setText(QCoreApplication.translate("Dialog", u"7", None))
+        self.numero_9_velocidade.setText(QCoreApplication.translate("Dialog", u"9", None))
         self.toolButton_8.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
         self.label_distancias_6.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Moedas</span></p></body></html>", None))
         self.combo_moeda_1.setCurrentText("")
@@ -2655,11 +2671,14 @@ class Ui_Dialog(object):
         self.label_dataup.setText(QCoreApplication.translate("Dialog", u"data update", None))
         self.simbolo_origem.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:22pt; font-weight:600;\">\u20ac</span></p></body></html>", None))
         self.simbolo_destino.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">\u20ac.</span></p></body></html>", None))
-        self.label.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">Em </span></p><p><span style=\" font-size:36pt; font-weight:600; font-style:italic;\">constru\u00e7\u00e3o</span></p></body></html>", None))
-        self.label_2.setText("")
         self.toolButton_4.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
         self.label_distancias_8.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Defeni\u00e7\u00f5es</span></p></body></html>", None))
+        self.label.setText(QCoreApplication.translate("Dialog", u"Casas Decimais ", None))
+        self.label_2.setText(QCoreApplication.translate("Dialog", u"tema", None))
         self.label_distancias_9.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Acerca de</span></p></body></html>", None))
         self.toolButton_9.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
+        self.label_10.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p>Calculadora v0.7</p><p>Made with Python, Pyside6.</p><p>APIs usadas : ExchangeRate API, CoinGecko</p><p>@ 2026 Rui Lopes </p></body></html>", None))
+        self.label_11.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p>Aplica\u00e7\u00e3o de c\u00f3digo aberto desenvolvida como</p><p>projeto de aprendizagem</p><p><br/></p><p><br/></p></body></html>", None))
+        self.label_link.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><a href=\"https://github.com/ruilopes14?tab=repositories\"><span style=\" text-decoration: underline; color:#0000ff;\">https://github.com/ruilopes14?tab=repositories</span></a></p></body></html>", None))
     # retranslateUi
 
