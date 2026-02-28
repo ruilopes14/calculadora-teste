@@ -1055,7 +1055,7 @@ class Ui_Dialog(object):
 
         self.retranslateUi(Dialog)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(9)
         self.operador_multiplicar.setDefault(False)
 
 
@@ -1268,7 +1268,7 @@ class Ui_Dialog(object):
         self.label_tema.setText(QCoreApplication.translate("Dialog", u"Tema", None))
         self.label_distancias_9.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Acerca de</span></p></body></html>", None))
         self.toolButton_9.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
-        self.label_10.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p>Calculadora v0.7</p><p>Made with Python, Pyside6.</p><p>APIs usadas : ExchangeRate API, CoinGecko</p><p>@ 2026 Rui Lopes </p></body></html>", None))
+        self.label_10.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p>Calculadora v1.0</p><p>Made with Python, Pyside6.</p><p>APIs usadas : ExchangeRate API, CoinGecko</p><p>@ 2026 Rui Lopes </p></body></html>", None))
         self.label_11.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p>Aplica\u00e7\u00e3o de c\u00f3digo aberto desenvolvida como</p><p>projeto de aprendizagem</p><p><br/></p><p><br/></p></body></html>", None))
         self.label_link.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><a href=\"https://github.com/ruilopes14?tab=repositories\"><span style=\" text-decoration: underline; color:#0000ff;\">https://github.com/ruilopes14?tab=repositories</span></a></p></body></html>", None))
     # retranslateUi

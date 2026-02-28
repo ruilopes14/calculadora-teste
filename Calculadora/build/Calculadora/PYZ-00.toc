@@ -467,6 +467,7 @@
   ('email.utils',
    'C:\\Users\\ruidl\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\email\\utils.py',
    'PYMODULE'),
+  ('estilos', 'C:\\Projetos\\Calculadora\\estilos.py', 'PYMODULE'),
   ('fnmatch',
    'C:\\Users\\ruidl\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\fnmatch.py',
    'PYMODULE'),

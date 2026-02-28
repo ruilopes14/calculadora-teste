@@ -32,7 +32,7 @@
     <cursorShape>ArrowCursor</cursorShape>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>9</number>
    </property>
    <widget class="QWidget" name="calculadora">
     <widget class="QPushButton" name="numero_6">
@@ -3966,7 +3966,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Calculadora v0.7&lt;/p&gt;&lt;p&gt;Made with Python, Pyside6.&lt;/p&gt;&lt;p&gt;APIs usadas : ExchangeRate API, CoinGecko&lt;/p&gt;&lt;p&gt;@ 2026 Rui Lopes &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Calculadora v1.0&lt;/p&gt;&lt;p&gt;Made with Python, Pyside6.&lt;/p&gt;&lt;p&gt;APIs usadas : ExchangeRate API, CoinGecko&lt;/p&gt;&lt;p&gt;@ 2026 Rui Lopes &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_11">
