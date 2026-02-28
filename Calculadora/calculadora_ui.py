@@ -39,19 +39,6 @@ class Ui_Dialog(object):
         font.setBold(True)
         self.numero_6.setFont(font)
         self.numero_6.setFocusPolicy(Qt.NoFocus)
-        self.numero_6.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_6.setCheckable(False)
         self.numero_6.setChecked(False)
         self.numero_1 = QPushButton(self.calculadora)
@@ -59,20 +46,6 @@ class Ui_Dialog(object):
         self.numero_1.setGeometry(QRect(10, 170, 71, 51))
         self.numero_1.setFont(font)
         self.numero_1.setFocusPolicy(Qt.NoFocus)
-        self.numero_1.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}\n"
-"")
         self.numero_1.setCheckable(False)
         self.numero_1.setChecked(False)
         self.numero_4 = QPushButton(self.calculadora)
@@ -80,19 +53,6 @@ class Ui_Dialog(object):
         self.numero_4.setGeometry(QRect(10, 220, 71, 51))
         self.numero_4.setFont(font)
         self.numero_4.setFocusPolicy(Qt.NoFocus)
-        self.numero_4.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_4.setCheckable(False)
         self.numero_4.setChecked(False)
         self.numero_5 = QPushButton(self.calculadora)
@@ -100,19 +60,6 @@ class Ui_Dialog(object):
         self.numero_5.setGeometry(QRect(80, 220, 71, 51))
         self.numero_5.setFont(font)
         self.numero_5.setFocusPolicy(Qt.NoFocus)
-        self.numero_5.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_5.setCheckable(False)
         self.numero_5.setChecked(False)
         self.botao_apagar = QPushButton(self.calculadora)
@@ -120,20 +67,6 @@ class Ui_Dialog(object):
         self.botao_apagar.setGeometry(QRect(220, 270, 71, 51))
         self.botao_apagar.setFont(font)
         self.botao_apagar.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: #ff8a80;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}\n"
-"font-size: 24px !important;")
         self.botao_apagar.setCheckable(False)
         self.botao_apagar.setChecked(False)
         self.toolButton_0 = QToolButton(self.calculadora)
@@ -145,11 +78,6 @@ class Ui_Dialog(object):
         self.toolButton_0.setFont(font1)
         self.toolButton_0.setTabletTracking(False)
         self.toolButton_0.setContextMenuPolicy(Qt.DefaultContextMenu)
-        self.toolButton_0.setStyleSheet(u"QToolButton:hover {\n"
-"        color: #000;\n"
-"        background-color: #e0e0e0;\n"
-"        border-radius: 5px;\n"
-"    }")
         self.toolButton_0.setToolButtonStyle(Qt.ToolButtonIconOnly)
         self.botao_decimal = QPushButton(self.calculadora)
         self.botao_decimal.setObjectName(u"botao_decimal")
@@ -157,18 +85,6 @@ class Ui_Dialog(object):
         self.botao_decimal.setFont(font)
         self.botao_decimal.setFocusPolicy(Qt.NoFocus)
         self.botao_decimal.setAutoFillBackground(False)
-        self.botao_decimal.setStyleSheet(u"QPushButton {\n"
-"    background-color: #ff5032;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.botao_decimal.setCheckable(False)
         self.botao_decimal.setChecked(False)
         self.operador_menos = QPushButton(self.calculadora)
@@ -176,19 +92,6 @@ class Ui_Dialog(object):
         self.operador_menos.setGeometry(QRect(220, 220, 71, 51))
         self.operador_menos.setFont(font)
         self.operador_menos.setFocusPolicy(Qt.NoFocus)
-        self.operador_menos.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: #ff5032;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.operador_menos.setCheckable(False)
         self.operador_menos.setChecked(False)
         self.fonte_display = QLineEdit(self.calculadora)
@@ -196,33 +99,12 @@ class Ui_Dialog(object):
         self.fonte_display.setGeometry(QRect(10, 80, 281, 71))
         self.fonte_display.setFont(font)
         self.fonte_display.setCursor(QCursor(Qt.CursorShape.ArrowCursor))
-        self.fonte_display.setStyleSheet(u"QLineEdit {\n"
-"    background-color: transparent;\n"
-"    color: #000000;\n"
-"    font-size: 48px;\n"
-"    font-weight: bold;\n"
-"    border: 2px solid #cccccc;\n"
-"    border-radius: 5px;\n"
-"    padding: 10px;\n"
-"}")
         self.fonte_display.setReadOnly(True)
         self.operador_percentagem = QPushButton(self.calculadora)
         self.operador_percentagem.setObjectName(u"operador_percentagem")
         self.operador_percentagem.setGeometry(QRect(150, 370, 71, 51))
         self.operador_percentagem.setFont(font)
         self.operador_percentagem.setFocusPolicy(Qt.NoFocus)
-        self.operador_percentagem.setStyleSheet(u"QPushButton {\n"
-"    background-color: #ff5032;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.operador_percentagem.setCheckable(False)
         self.operador_percentagem.setChecked(False)
         self.numero_9 = QPushButton(self.calculadora)
@@ -230,19 +112,6 @@ class Ui_Dialog(object):
         self.numero_9.setGeometry(QRect(150, 270, 71, 51))
         self.numero_9.setFont(font)
         self.numero_9.setFocusPolicy(Qt.NoFocus)
-        self.numero_9.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_9.setCheckable(False)
         self.numero_9.setChecked(False)
         self.operador_dividir = QPushButton(self.calculadora)
@@ -250,18 +119,6 @@ class Ui_Dialog(object):
         self.operador_dividir.setGeometry(QRect(10, 370, 71, 51))
         self.operador_dividir.setFont(font)
         self.operador_dividir.setFocusPolicy(Qt.NoFocus)
-        self.operador_dividir.setStyleSheet(u"QPushButton {\n"
-"    background-color: #ff5032;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.operador_dividir.setCheckable(False)
         self.operador_dividir.setChecked(False)
         self.numero_8 = QPushButton(self.calculadora)
@@ -269,19 +126,6 @@ class Ui_Dialog(object):
         self.numero_8.setGeometry(QRect(80, 270, 71, 51))
         self.numero_8.setFont(font)
         self.numero_8.setFocusPolicy(Qt.NoFocus)
-        self.numero_8.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_8.setCheckable(False)
         self.numero_8.setChecked(False)
         self.operador_mais = QPushButton(self.calculadora)
@@ -289,18 +133,6 @@ class Ui_Dialog(object):
         self.operador_mais.setGeometry(QRect(220, 170, 71, 51))
         self.operador_mais.setFont(font)
         self.operador_mais.setFocusPolicy(Qt.NoFocus)
-        self.operador_mais.setStyleSheet(u"QPushButton {\n"
-"    background-color: #ff5032;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.operador_mais.setCheckable(False)
         self.operador_mais.setChecked(False)
         self.botao_sinal = QPushButton(self.calculadora)
@@ -308,18 +140,6 @@ class Ui_Dialog(object):
         self.botao_sinal.setGeometry(QRect(80, 370, 71, 51))
         self.botao_sinal.setFont(font)
         self.botao_sinal.setFocusPolicy(Qt.NoFocus)
-        self.botao_sinal.setStyleSheet(u"QPushButton {\n"
-"    background-color: #ff5032;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.botao_sinal.setCheckable(False)
         self.botao_sinal.setChecked(False)
         self.numero_0 = QPushButton(self.calculadora)
@@ -327,19 +147,6 @@ class Ui_Dialog(object):
         self.numero_0.setGeometry(QRect(80, 320, 71, 51))
         self.numero_0.setFont(font)
         self.numero_0.setFocusPolicy(Qt.NoFocus)
-        self.numero_0.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_0.setCheckable(False)
         self.numero_0.setChecked(False)
         self.numero_7 = QPushButton(self.calculadora)
@@ -347,19 +154,6 @@ class Ui_Dialog(object):
         self.numero_7.setGeometry(QRect(10, 270, 71, 51))
         self.numero_7.setFont(font)
         self.numero_7.setFocusPolicy(Qt.NoFocus)
-        self.numero_7.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_7.setCheckable(False)
         self.numero_7.setChecked(False)
         self.numero_2 = QPushButton(self.calculadora)
@@ -367,19 +161,6 @@ class Ui_Dialog(object):
         self.numero_2.setGeometry(QRect(80, 170, 71, 51))
         self.numero_2.setFont(font)
         self.numero_2.setFocusPolicy(Qt.NoFocus)
-        self.numero_2.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_2.setCheckable(False)
         self.numero_2.setChecked(False)
         self.botao_apagar_tudo = QPushButton(self.calculadora)
@@ -387,38 +168,12 @@ class Ui_Dialog(object):
         self.botao_apagar_tudo.setGeometry(QRect(220, 320, 71, 51))
         self.botao_apagar_tudo.setFont(font)
         self.botao_apagar_tudo.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_tudo.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: rgb(235, 50, 10);;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.botao_apagar_tudo.setCheckable(False)
         self.botao_apagar_tudo.setChecked(False)
         self.botao_resultado = QPushButton(self.calculadora)
         self.botao_resultado.setObjectName(u"botao_resultado")
         self.botao_resultado.setGeometry(QRect(220, 370, 71, 51))
         self.botao_resultado.setFont(font)
-        self.botao_resultado.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color:rgb(255, 170, 127);\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.botao_resultado.setCheckable(False)
         self.botao_resultado.setChecked(False)
         self.numero_3 = QPushButton(self.calculadora)
@@ -426,19 +181,6 @@ class Ui_Dialog(object):
         self.numero_3.setGeometry(QRect(150, 170, 71, 51))
         self.numero_3.setFont(font)
         self.numero_3.setFocusPolicy(Qt.NoFocus)
-        self.numero_3.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_3.setCheckable(False)
         self.numero_3.setChecked(False)
         self.operador_multiplicar = QPushButton(self.calculadora)
@@ -448,18 +190,6 @@ class Ui_Dialog(object):
         self.operador_multiplicar.setFont(font)
         self.operador_multiplicar.setMouseTracking(False)
         self.operador_multiplicar.setFocusPolicy(Qt.NoFocus)
-        self.operador_multiplicar.setStyleSheet(u"QPushButton {\n"
-"    background-color: #ff5032;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.operador_multiplicar.setCheckable(False)
         self.operador_multiplicar.setChecked(False)
         self.operador_multiplicar.setAutoDefault(True)
@@ -487,18 +217,6 @@ class Ui_Dialog(object):
         self.distancia_1.setObjectName(u"distancia_1")
         self.distancia_1.setGeometry(QRect(10, 60, 281, 61))
         self.distancia_1.setFont(font)
-        self.distancia_1.setStyleSheet(u"QLineEdit {\n"
-"    background-color: white;\n"
-"    color: #000;\n"
-"    font-size: 42px;\n"
-"    font-weight: bold;\n"
-"    border: 2px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    padding: 10px;\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #ff7052;\n"
-"}")
         self.label_distancias = QLabel(self.temperaturas)
         self.label_distancias.setObjectName(u"label_distancias")
         self.label_distancias.setGeometry(QRect(40, 10, 141, 31))
@@ -506,18 +224,6 @@ class Ui_Dialog(object):
         self.distancia_2.setObjectName(u"distancia_2")
         self.distancia_2.setGeometry(QRect(10, 170, 281, 61))
         self.distancia_2.setFont(font)
-        self.distancia_2.setStyleSheet(u"QLineEdit {\n"
-"    background-color: white;\n"
-"    color: #000;\n"
-"    font-size: 42px;\n"
-"    font-weight: bold;\n"
-"    border: 2px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    padding: 10px;\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #ff7052;\n"
-"}")
         self.combo_distancia_2 = QComboBox(self.temperaturas)
         self.combo_distancia_2.addItem("")
         self.combo_distancia_2.addItem("")
@@ -534,19 +240,6 @@ class Ui_Dialog(object):
         self.numero_0_dist.setGeometry(QRect(220, 330, 71, 51))
         self.numero_0_dist.setFont(font)
         self.numero_0_dist.setFocusPolicy(Qt.NoFocus)
-        self.numero_0_dist.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_0_dist.setCheckable(False)
         self.numero_0_dist.setChecked(False)
         self.numero_6_dist = QPushButton(self.temperaturas)
@@ -554,19 +247,6 @@ class Ui_Dialog(object):
         self.numero_6_dist.setGeometry(QRect(150, 330, 71, 51))
         self.numero_6_dist.setFont(font)
         self.numero_6_dist.setFocusPolicy(Qt.NoFocus)
-        self.numero_6_dist.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_6_dist.setCheckable(False)
         self.numero_6_dist.setChecked(False)
         self.numero_7_dist = QPushButton(self.temperaturas)
@@ -574,19 +254,6 @@ class Ui_Dialog(object):
         self.numero_7_dist.setGeometry(QRect(10, 380, 71, 51))
         self.numero_7_dist.setFont(font)
         self.numero_7_dist.setFocusPolicy(Qt.NoFocus)
-        self.numero_7_dist.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_7_dist.setCheckable(False)
         self.numero_7_dist.setChecked(False)
         self.numero_1_dist = QPushButton(self.temperaturas)
@@ -594,19 +261,6 @@ class Ui_Dialog(object):
         self.numero_1_dist.setGeometry(QRect(10, 280, 71, 51))
         self.numero_1_dist.setFont(font)
         self.numero_1_dist.setFocusPolicy(Qt.NoFocus)
-        self.numero_1_dist.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_1_dist.setCheckable(False)
         self.numero_1_dist.setChecked(False)
         self.numero_3_dist = QPushButton(self.temperaturas)
@@ -614,19 +268,6 @@ class Ui_Dialog(object):
         self.numero_3_dist.setGeometry(QRect(150, 280, 71, 51))
         self.numero_3_dist.setFont(font)
         self.numero_3_dist.setFocusPolicy(Qt.NoFocus)
-        self.numero_3_dist.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_3_dist.setCheckable(False)
         self.numero_3_dist.setChecked(False)
         self.numero_9_dist = QPushButton(self.temperaturas)
@@ -634,19 +275,6 @@ class Ui_Dialog(object):
         self.numero_9_dist.setGeometry(QRect(150, 380, 71, 51))
         self.numero_9_dist.setFont(font)
         self.numero_9_dist.setFocusPolicy(Qt.NoFocus)
-        self.numero_9_dist.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_9_dist.setCheckable(False)
         self.numero_9_dist.setChecked(False)
         self.numero_2_dist = QPushButton(self.temperaturas)
@@ -654,19 +282,6 @@ class Ui_Dialog(object):
         self.numero_2_dist.setGeometry(QRect(80, 280, 71, 51))
         self.numero_2_dist.setFont(font)
         self.numero_2_dist.setFocusPolicy(Qt.NoFocus)
-        self.numero_2_dist.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_2_dist.setCheckable(False)
         self.numero_2_dist.setChecked(False)
         self.numero_4_dist = QPushButton(self.temperaturas)
@@ -674,19 +289,6 @@ class Ui_Dialog(object):
         self.numero_4_dist.setGeometry(QRect(10, 330, 71, 51))
         self.numero_4_dist.setFont(font)
         self.numero_4_dist.setFocusPolicy(Qt.NoFocus)
-        self.numero_4_dist.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_4_dist.setCheckable(False)
         self.numero_4_dist.setChecked(False)
         self.numero_8_dist = QPushButton(self.temperaturas)
@@ -694,19 +296,6 @@ class Ui_Dialog(object):
         self.numero_8_dist.setGeometry(QRect(80, 380, 71, 51))
         self.numero_8_dist.setFont(font)
         self.numero_8_dist.setFocusPolicy(Qt.NoFocus)
-        self.numero_8_dist.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_8_dist.setCheckable(False)
         self.numero_8_dist.setChecked(False)
         self.numero_5_dist = QPushButton(self.temperaturas)
@@ -714,19 +303,6 @@ class Ui_Dialog(object):
         self.numero_5_dist.setGeometry(QRect(80, 330, 71, 51))
         self.numero_5_dist.setFont(font)
         self.numero_5_dist.setFocusPolicy(Qt.NoFocus)
-        self.numero_5_dist.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_5_dist.setCheckable(False)
         self.numero_5_dist.setChecked(False)
         self.botao_apagar_dist = QPushButton(self.temperaturas)
@@ -734,20 +310,6 @@ class Ui_Dialog(object):
         self.botao_apagar_dist.setGeometry(QRect(220, 280, 71, 51))
         self.botao_apagar_dist.setFont(font)
         self.botao_apagar_dist.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_dist.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: #ff8a80;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}\n"
-"font-size: 24px !important;")
         self.botao_apagar_dist.setCheckable(False)
         self.botao_apagar_dist.setChecked(False)
         self.botao_apagar_tudo_dist = QPushButton(self.temperaturas)
@@ -755,19 +317,6 @@ class Ui_Dialog(object):
         self.botao_apagar_tudo_dist.setGeometry(QRect(220, 380, 71, 51))
         self.botao_apagar_tudo_dist.setFont(font)
         self.botao_apagar_tudo_dist.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_tudo_dist.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: rgb(235, 50, 10);;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.botao_apagar_tudo_dist.setCheckable(False)
         self.botao_apagar_tudo_dist.setChecked(False)
         self.toolButton_1 = QToolButton(self.temperaturas)
@@ -775,12 +324,6 @@ class Ui_Dialog(object):
         self.toolButton_1.setGeometry(QRect(10, 10, 21, 31))
         self.toolButton_1.setFont(font2)
         self.toolButton_1.setTabletTracking(False)
-        self.toolButton_1.setStyleSheet(u"QToolButton:hover {\n"
-"        color: #000;\n"
-"        background-color: #e0e0e0;\n"
-"        border-radius: 5px;\n"
-"    }\n"
-" ")
         self.stackedWidget.addWidget(self.temperaturas)
         self.page = QWidget()
         self.page.setObjectName(u"page")
@@ -789,12 +332,6 @@ class Ui_Dialog(object):
         self.toolButton_2.setGeometry(QRect(10, 10, 21, 31))
         self.toolButton_2.setFont(font2)
         self.toolButton_2.setTabletTracking(False)
-        self.toolButton_2.setStyleSheet(u"QToolButton:hover {\n"
-"        color: #000;\n"
-"        background-color: #e0e0e0;\n"
-"        border-radius: 5px;\n"
-"    }\n"
-" ")
         self.label_distancias_2 = QLabel(self.page)
         self.label_distancias_2.setObjectName(u"label_distancias_2")
         self.label_distancias_2.setGeometry(QRect(40, 5, 191, 41))
@@ -809,34 +346,10 @@ class Ui_Dialog(object):
         self.temperatura_2.setObjectName(u"temperatura_2")
         self.temperatura_2.setGeometry(QRect(10, 170, 281, 61))
         self.temperatura_2.setFont(font)
-        self.temperatura_2.setStyleSheet(u"QLineEdit {\n"
-"    background-color: white;\n"
-"    color: #000;\n"
-"    font-size: 42px;\n"
-"    font-weight: bold;\n"
-"    border: 2px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    padding: 10px;\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #ff7052;\n"
-"}")
         self.temperatura_1 = QLineEdit(self.page)
         self.temperatura_1.setObjectName(u"temperatura_1")
         self.temperatura_1.setGeometry(QRect(10, 60, 281, 61))
         self.temperatura_1.setFont(font)
-        self.temperatura_1.setStyleSheet(u"QLineEdit {\n"
-"    background-color: white;\n"
-"    color: #000;\n"
-"    font-size: 42px;\n"
-"    font-weight: bold;\n"
-"    border: 2px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    padding: 10px;\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #ff7052;\n"
-"}")
         self.combo_temp_1 = QComboBox(self.page)
         self.combo_temp_1.addItem("")
         self.combo_temp_1.addItem("")
@@ -850,19 +363,6 @@ class Ui_Dialog(object):
         self.numero_4_temp.setGeometry(QRect(10, 330, 71, 51))
         self.numero_4_temp.setFont(font)
         self.numero_4_temp.setFocusPolicy(Qt.NoFocus)
-        self.numero_4_temp.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_4_temp.setCheckable(False)
         self.numero_4_temp.setChecked(False)
         self.numero_2_temp = QPushButton(self.page)
@@ -870,19 +370,6 @@ class Ui_Dialog(object):
         self.numero_2_temp.setGeometry(QRect(80, 280, 71, 51))
         self.numero_2_temp.setFont(font)
         self.numero_2_temp.setFocusPolicy(Qt.NoFocus)
-        self.numero_2_temp.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_2_temp.setCheckable(False)
         self.numero_2_temp.setChecked(False)
         self.numero_6_temp = QPushButton(self.page)
@@ -890,19 +377,6 @@ class Ui_Dialog(object):
         self.numero_6_temp.setGeometry(QRect(150, 330, 71, 51))
         self.numero_6_temp.setFont(font)
         self.numero_6_temp.setFocusPolicy(Qt.NoFocus)
-        self.numero_6_temp.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_6_temp.setCheckable(False)
         self.numero_6_temp.setChecked(False)
         self.numero_8_temp = QPushButton(self.page)
@@ -910,19 +384,6 @@ class Ui_Dialog(object):
         self.numero_8_temp.setGeometry(QRect(80, 380, 71, 51))
         self.numero_8_temp.setFont(font)
         self.numero_8_temp.setFocusPolicy(Qt.NoFocus)
-        self.numero_8_temp.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_8_temp.setCheckable(False)
         self.numero_8_temp.setChecked(False)
         self.botao_apagar_tudo_temp = QPushButton(self.page)
@@ -930,19 +391,6 @@ class Ui_Dialog(object):
         self.botao_apagar_tudo_temp.setGeometry(QRect(220, 380, 71, 51))
         self.botao_apagar_tudo_temp.setFont(font)
         self.botao_apagar_tudo_temp.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_tudo_temp.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: rgb(235, 50, 10);;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.botao_apagar_tudo_temp.setCheckable(False)
         self.botao_apagar_tudo_temp.setChecked(False)
         self.numero_7_temp = QPushButton(self.page)
@@ -950,19 +398,6 @@ class Ui_Dialog(object):
         self.numero_7_temp.setGeometry(QRect(10, 380, 71, 51))
         self.numero_7_temp.setFont(font)
         self.numero_7_temp.setFocusPolicy(Qt.NoFocus)
-        self.numero_7_temp.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_7_temp.setCheckable(False)
         self.numero_7_temp.setChecked(False)
         self.numero_1_temp = QPushButton(self.page)
@@ -970,19 +405,6 @@ class Ui_Dialog(object):
         self.numero_1_temp.setGeometry(QRect(10, 280, 71, 51))
         self.numero_1_temp.setFont(font)
         self.numero_1_temp.setFocusPolicy(Qt.NoFocus)
-        self.numero_1_temp.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_1_temp.setCheckable(False)
         self.numero_1_temp.setChecked(False)
         self.numero_9_temp = QPushButton(self.page)
@@ -990,19 +412,6 @@ class Ui_Dialog(object):
         self.numero_9_temp.setGeometry(QRect(150, 380, 71, 51))
         self.numero_9_temp.setFont(font)
         self.numero_9_temp.setFocusPolicy(Qt.NoFocus)
-        self.numero_9_temp.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_9_temp.setCheckable(False)
         self.numero_9_temp.setChecked(False)
         self.numero_0_temp = QPushButton(self.page)
@@ -1010,19 +419,6 @@ class Ui_Dialog(object):
         self.numero_0_temp.setGeometry(QRect(220, 330, 71, 51))
         self.numero_0_temp.setFont(font)
         self.numero_0_temp.setFocusPolicy(Qt.NoFocus)
-        self.numero_0_temp.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_0_temp.setCheckable(False)
         self.numero_0_temp.setChecked(False)
         self.botao_apagar_temp = QPushButton(self.page)
@@ -1030,20 +426,6 @@ class Ui_Dialog(object):
         self.botao_apagar_temp.setGeometry(QRect(220, 280, 71, 51))
         self.botao_apagar_temp.setFont(font)
         self.botao_apagar_temp.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_temp.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: #ff8a80;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}\n"
-"font-size: 24px !important;")
         self.botao_apagar_temp.setCheckable(False)
         self.botao_apagar_temp.setChecked(False)
         self.numero_5_temp = QPushButton(self.page)
@@ -1051,19 +433,6 @@ class Ui_Dialog(object):
         self.numero_5_temp.setGeometry(QRect(80, 330, 71, 51))
         self.numero_5_temp.setFont(font)
         self.numero_5_temp.setFocusPolicy(Qt.NoFocus)
-        self.numero_5_temp.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_5_temp.setCheckable(False)
         self.numero_5_temp.setChecked(False)
         self.numero_3_temp = QPushButton(self.page)
@@ -1071,19 +440,6 @@ class Ui_Dialog(object):
         self.numero_3_temp.setGeometry(QRect(150, 280, 71, 51))
         self.numero_3_temp.setFont(font)
         self.numero_3_temp.setFocusPolicy(Qt.NoFocus)
-        self.numero_3_temp.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_3_temp.setCheckable(False)
         self.numero_3_temp.setChecked(False)
         self.stackedWidget.addWidget(self.page)
@@ -1112,12 +468,6 @@ class Ui_Dialog(object):
         self.toolButton_3.setGeometry(QRect(10, 10, 21, 31))
         self.toolButton_3.setFont(font2)
         self.toolButton_3.setTabletTracking(False)
-        self.toolButton_3.setStyleSheet(u"QToolButton:hover {\n"
-"        color: #000;\n"
-"        background-color: #e0e0e0;\n"
-"        border-radius: 5px;\n"
-"    }\n"
-" ")
         self.label_distancias_3 = QLabel(self.Tempo)
         self.label_distancias_3.setObjectName(u"label_distancias_3")
         self.label_distancias_3.setGeometry(QRect(40, 13, 191, 41))
@@ -1125,18 +475,6 @@ class Ui_Dialog(object):
         self.tempo_1.setObjectName(u"tempo_1")
         self.tempo_1.setGeometry(QRect(10, 60, 281, 61))
         self.tempo_1.setFont(font)
-        self.tempo_1.setStyleSheet(u"QLineEdit {\n"
-"    background-color: white;\n"
-"    color: #000;\n"
-"    font-size: 42px;\n"
-"    font-weight: bold;\n"
-"    border: 2px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    padding: 10px;\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #ff7052;\n"
-"}")
         self.combo_tempo_1 = QComboBox(self.Tempo)
         self.combo_tempo_1.addItem("")
         self.combo_tempo_1.addItem("")
@@ -1154,37 +492,11 @@ class Ui_Dialog(object):
         self.tempo_2.setObjectName(u"tempo_2")
         self.tempo_2.setGeometry(QRect(10, 170, 281, 61))
         self.tempo_2.setFont(font)
-        self.tempo_2.setStyleSheet(u"QLineEdit {\n"
-"    background-color: white;\n"
-"    color: #000;\n"
-"    font-size: 42px;\n"
-"    font-weight: bold;\n"
-"    border: 2px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    padding: 10px;\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #ff7052;\n"
-"}")
         self.botao_apagar_temp_9 = QPushButton(self.Tempo)
         self.botao_apagar_temp_9.setObjectName(u"botao_apagar_temp_9")
         self.botao_apagar_temp_9.setGeometry(QRect(350, 340, 71, 51))
         self.botao_apagar_temp_9.setFont(font)
         self.botao_apagar_temp_9.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_temp_9.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: #ff8a80;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}\n"
-"font-size: 24px !important;")
         self.botao_apagar_temp_9.setCheckable(False)
         self.botao_apagar_temp_9.setChecked(False)
         self.botao_apagar_tudo_temp_9 = QPushButton(self.Tempo)
@@ -1192,19 +504,6 @@ class Ui_Dialog(object):
         self.botao_apagar_tudo_temp_9.setGeometry(QRect(350, 440, 71, 51))
         self.botao_apagar_tudo_temp_9.setFont(font)
         self.botao_apagar_tudo_temp_9.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_tudo_temp_9.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: rgb(235, 50, 10);;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.botao_apagar_tudo_temp_9.setCheckable(False)
         self.botao_apagar_tudo_temp_9.setChecked(False)
         self.numero_0_temp_9 = QPushButton(self.Tempo)
@@ -1212,19 +511,6 @@ class Ui_Dialog(object):
         self.numero_0_temp_9.setGeometry(QRect(350, 390, 71, 51))
         self.numero_0_temp_9.setFont(font)
         self.numero_0_temp_9.setFocusPolicy(Qt.NoFocus)
-        self.numero_0_temp_9.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_0_temp_9.setCheckable(False)
         self.numero_0_temp_9.setChecked(False)
         self.numero_9_temp_9 = QPushButton(self.Tempo)
@@ -1232,19 +518,6 @@ class Ui_Dialog(object):
         self.numero_9_temp_9.setGeometry(QRect(280, 440, 71, 51))
         self.numero_9_temp_9.setFont(font)
         self.numero_9_temp_9.setFocusPolicy(Qt.NoFocus)
-        self.numero_9_temp_9.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_9_temp_9.setCheckable(False)
         self.numero_9_temp_9.setChecked(False)
         self.numero_7_temp_9 = QPushButton(self.Tempo)
@@ -1252,19 +525,6 @@ class Ui_Dialog(object):
         self.numero_7_temp_9.setGeometry(QRect(140, 440, 71, 51))
         self.numero_7_temp_9.setFont(font)
         self.numero_7_temp_9.setFocusPolicy(Qt.NoFocus)
-        self.numero_7_temp_9.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_7_temp_9.setCheckable(False)
         self.numero_7_temp_9.setChecked(False)
         self.numero_8_temp_9 = QPushButton(self.Tempo)
@@ -1272,19 +532,6 @@ class Ui_Dialog(object):
         self.numero_8_temp_9.setGeometry(QRect(210, 440, 71, 51))
         self.numero_8_temp_9.setFont(font)
         self.numero_8_temp_9.setFocusPolicy(Qt.NoFocus)
-        self.numero_8_temp_9.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_8_temp_9.setCheckable(False)
         self.numero_8_temp_9.setChecked(False)
         self.numero_8_tempo = QPushButton(self.Tempo)
@@ -1292,19 +539,6 @@ class Ui_Dialog(object):
         self.numero_8_tempo.setGeometry(QRect(80, 380, 71, 51))
         self.numero_8_tempo.setFont(font)
         self.numero_8_tempo.setFocusPolicy(Qt.NoFocus)
-        self.numero_8_tempo.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_8_tempo.setCheckable(False)
         self.numero_8_tempo.setChecked(False)
         self.numero_9_tempo = QPushButton(self.Tempo)
@@ -1312,19 +546,6 @@ class Ui_Dialog(object):
         self.numero_9_tempo.setGeometry(QRect(150, 380, 71, 51))
         self.numero_9_tempo.setFont(font)
         self.numero_9_tempo.setFocusPolicy(Qt.NoFocus)
-        self.numero_9_tempo.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_9_tempo.setCheckable(False)
         self.numero_9_tempo.setChecked(False)
         self.numero_2_tempo = QPushButton(self.Tempo)
@@ -1332,19 +553,6 @@ class Ui_Dialog(object):
         self.numero_2_tempo.setGeometry(QRect(80, 280, 71, 51))
         self.numero_2_tempo.setFont(font)
         self.numero_2_tempo.setFocusPolicy(Qt.NoFocus)
-        self.numero_2_tempo.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_2_tempo.setCheckable(False)
         self.numero_2_tempo.setChecked(False)
         self.numero_5_tempo = QPushButton(self.Tempo)
@@ -1352,19 +560,6 @@ class Ui_Dialog(object):
         self.numero_5_tempo.setGeometry(QRect(80, 330, 71, 51))
         self.numero_5_tempo.setFont(font)
         self.numero_5_tempo.setFocusPolicy(Qt.NoFocus)
-        self.numero_5_tempo.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_5_tempo.setCheckable(False)
         self.numero_5_tempo.setChecked(False)
         self.numero_0_tempo = QPushButton(self.Tempo)
@@ -1372,19 +567,6 @@ class Ui_Dialog(object):
         self.numero_0_tempo.setGeometry(QRect(220, 330, 71, 51))
         self.numero_0_tempo.setFont(font)
         self.numero_0_tempo.setFocusPolicy(Qt.NoFocus)
-        self.numero_0_tempo.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_0_tempo.setCheckable(False)
         self.numero_0_tempo.setChecked(False)
         self.botao_apagar_tempo = QPushButton(self.Tempo)
@@ -1392,20 +574,6 @@ class Ui_Dialog(object):
         self.botao_apagar_tempo.setGeometry(QRect(220, 280, 71, 51))
         self.botao_apagar_tempo.setFont(font)
         self.botao_apagar_tempo.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_tempo.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: #ff8a80;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}\n"
-"font-size: 24px !important;")
         self.botao_apagar_tempo.setCheckable(False)
         self.botao_apagar_tempo.setChecked(False)
         self.numero_4_tempo = QPushButton(self.Tempo)
@@ -1413,19 +581,6 @@ class Ui_Dialog(object):
         self.numero_4_tempo.setGeometry(QRect(10, 330, 71, 51))
         self.numero_4_tempo.setFont(font)
         self.numero_4_tempo.setFocusPolicy(Qt.NoFocus)
-        self.numero_4_tempo.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_4_tempo.setCheckable(False)
         self.numero_4_tempo.setChecked(False)
         self.numero_6_tempo = QPushButton(self.Tempo)
@@ -1433,19 +588,6 @@ class Ui_Dialog(object):
         self.numero_6_tempo.setGeometry(QRect(150, 330, 71, 51))
         self.numero_6_tempo.setFont(font)
         self.numero_6_tempo.setFocusPolicy(Qt.NoFocus)
-        self.numero_6_tempo.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_6_tempo.setCheckable(False)
         self.numero_6_tempo.setChecked(False)
         self.numero_3_tempo = QPushButton(self.Tempo)
@@ -1453,19 +595,6 @@ class Ui_Dialog(object):
         self.numero_3_tempo.setGeometry(QRect(150, 280, 71, 51))
         self.numero_3_tempo.setFont(font)
         self.numero_3_tempo.setFocusPolicy(Qt.NoFocus)
-        self.numero_3_tempo.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_3_tempo.setCheckable(False)
         self.numero_3_tempo.setChecked(False)
         self.botao_apagar_tudo_tempo = QPushButton(self.Tempo)
@@ -1473,19 +602,6 @@ class Ui_Dialog(object):
         self.botao_apagar_tudo_tempo.setGeometry(QRect(220, 380, 71, 51))
         self.botao_apagar_tudo_tempo.setFont(font)
         self.botao_apagar_tudo_tempo.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_tudo_tempo.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: rgb(235, 50, 10);;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.botao_apagar_tudo_tempo.setCheckable(False)
         self.botao_apagar_tudo_tempo.setChecked(False)
         self.numero_1_tempo = QPushButton(self.Tempo)
@@ -1493,19 +609,6 @@ class Ui_Dialog(object):
         self.numero_1_tempo.setGeometry(QRect(10, 280, 71, 51))
         self.numero_1_tempo.setFont(font)
         self.numero_1_tempo.setFocusPolicy(Qt.NoFocus)
-        self.numero_1_tempo.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_1_tempo.setCheckable(False)
         self.numero_1_tempo.setChecked(False)
         self.numero_7_tempo = QPushButton(self.Tempo)
@@ -1513,19 +616,6 @@ class Ui_Dialog(object):
         self.numero_7_tempo.setGeometry(QRect(10, 380, 71, 51))
         self.numero_7_tempo.setFont(font)
         self.numero_7_tempo.setFocusPolicy(Qt.NoFocus)
-        self.numero_7_tempo.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_7_tempo.setCheckable(False)
         self.numero_7_tempo.setChecked(False)
         self.combo_tempo_2 = QComboBox(self.Tempo)
@@ -1549,12 +639,6 @@ class Ui_Dialog(object):
         self.toolButton_5.setGeometry(QRect(10, 10, 21, 31))
         self.toolButton_5.setFont(font2)
         self.toolButton_5.setTabletTracking(False)
-        self.toolButton_5.setStyleSheet(u"QToolButton:hover {\n"
-"        color: #000;\n"
-"        background-color: #e0e0e0;\n"
-"        border-radius: 5px;\n"
-"    }\n"
-" ")
         self.label_distancias_4 = QLabel(self.page_3)
         self.label_distancias_4.setObjectName(u"label_distancias_4")
         self.label_distancias_4.setGeometry(QRect(40, 5, 191, 41))
@@ -1586,104 +670,24 @@ class Ui_Dialog(object):
         self.label_erro = QLabel(self.page_3)
         self.label_erro.setObjectName(u"label_erro")
         self.label_erro.setGeometry(QRect(10, 230, 271, 41))
-        self.label_erro.setStyleSheet(u"QLabel#label_erro {\n"
-"    background-color: #ffe6e6;\n"
-"    color: #d32f2f;\n"
-"    border: 2px solid #d32f2f;\n"
-"    border-radius: 8px;\n"
-"    padding: 10px;\n"
-"    font-size: 11px;\n"
-"    font-weight: bold;\n"
-"}")
         self.label_horas = QLabel(self.page_3)
         self.label_horas.setObjectName(u"label_horas")
         self.label_horas.setGeometry(QRect(10, 250, 191, 51))
-        self.label_horas.setStyleSheet(u"QLabel#label_horas {\n"
-"    background-color: transparent;\n"
-"    color: #555;\n"
-"    border-left: 3px solid #ff8c42;\n"
-"    padding: 5px 10px;\n"
-"    font-size: 12px;\n"
-"}")
         self.label_dias = QLabel(self.page_3)
         self.label_dias.setObjectName(u"label_dias")
         self.label_dias.setGeometry(QRect(10, 310, 191, 51))
-        self.label_dias.setStyleSheet(u"\n"
-"\n"
-"QLabel#label_dias {\n"
-"    background-color: transparent;\n"
-"    color: #555;\n"
-"    border-left: 3px solid #ff8c42;\n"
-"    padding: 5px 10px;\n"
-"    font-size: 12px;\n"
-"}")
         self.label_semanas = QLabel(self.page_3)
         self.label_semanas.setObjectName(u"label_semanas")
         self.label_semanas.setGeometry(QRect(10, 370, 191, 51))
-        self.label_semanas.setStyleSheet(u"QLabel#label_semanas {\n"
-"    background-color: transparent;\n"
-"    color: #555;\n"
-"    border-left: 3px solid #ff8c42;\n"
-"    padding: 5px 10px;\n"
-"    font-size: 12px;\n"
-"}")
         self.label_resultado = QLabel(self.page_3)
         self.label_resultado.setObjectName(u"label_resultado")
         self.label_resultado.setGeometry(QRect(10, 220, 191, 31))
-        self.label_resultado.setStyleSheet(u"QLabel#label_resultado {\n"
-"    background-color: transparent;\n"
-"    color: #333;\n"
-"    border: none;\n"
-"    padding: 5px;\n"
-"    font-size: 13px;\n"
-"    font-weight: bold;\n"
-"}")
         self.botao_data_atual_2 = QPushButton(self.page_3)
         self.botao_data_atual_2.setObjectName(u"botao_data_atual_2")
         self.botao_data_atual_2.setGeometry(QRect(180, 120, 101, 31))
-        self.botao_data_atual_2.setStyleSheet(u"QPushButton#botao_data_atual_2 {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    border: 2px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    padding: 8px 15px;\n"
-"    font-size: 11px;\n"
-"    font-weight: bold;\n"
-"}\n"
-"\n"
-"QPushButton#botao_data_atual_2:hover {\n"
-"    background-color: #ff8c42;\n"
-"    color: white;\n"
-"    border: 2px solid #ff8c42;\n"
-"}\n"
-"\n"
-"QPushButton#botao_data_atual_2:pressed {\n"
-"    background-color: #e67a32;\n"
-"    border: 2px solid #e67a32;\n"
-"}")
         self.botao_data_atual_3 = QPushButton(self.page_3)
         self.botao_data_atual_3.setObjectName(u"botao_data_atual_3")
         self.botao_data_atual_3.setGeometry(QRect(180, 190, 101, 31))
-        self.botao_data_atual_3.setStyleSheet(u"QPushButton#botao_data_atual_3 {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    border: 2px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    padding: 8px 15px;\n"
-"    font-size: 11px;\n"
-"    font-weight: bold;\n"
-"}\n"
-"\n"
-"QPushButton#botao_data_atual_3:hover {\n"
-"    background-color: #ff8c42;\n"
-"    color: white;\n"
-"    border: 2px solid #ff8c42;\n"
-"}\n"
-"\n"
-"QPushButton#botao_data_atual_3:pressed {\n"
-"    background-color: #e67a32;\n"
-"    border: 2px solid #e67a32;\n"
-"}")
         self.stackedWidget.addWidget(self.page_3)
         self.page_4 = QWidget()
         self.page_4.setObjectName(u"page_4")
@@ -1702,12 +706,6 @@ class Ui_Dialog(object):
         self.toolButton_6.setGeometry(QRect(10, 10, 21, 31))
         self.toolButton_6.setFont(font2)
         self.toolButton_6.setTabletTracking(False)
-        self.toolButton_6.setStyleSheet(u"QToolButton:hover {\n"
-"        color: #000;\n"
-"        background-color: #e0e0e0;\n"
-"        border-radius: 5px;\n"
-"    }\n"
-" ")
         self.label_5 = QLabel(self.page_4)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setGeometry(QRect(10, 100, 101, 16))
@@ -1734,22 +732,9 @@ class Ui_Dialog(object):
         self.groupBox = QGroupBox(self.page_4)
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setGeometry(QRect(0, 160, 241, 71))
-        self.groupBox.setStyleSheet(u"QGroupBox {\n"
-"    background-color: transparent;\n"
-"    border: none;\n"
-"}")
         self.radio_adicionar = QRadioButton(self.groupBox)
         self.radio_adicionar.setObjectName(u"radio_adicionar")
         self.radio_adicionar.setGeometry(QRect(10, 30, 101, 21))
-        self.radio_adicionar.setStyleSheet(u"estilo_radiobutton = \"\"\"\n"
-"    QRadioButton::indicator:checked {\n"
-"        background-color: #ff8c42;\n"
-"        border: 2px solid #ff8c42;\n"
-"    }\n"
-"\"\"\"\n"
-"\n"
-"ui.radio_adicionar.setStyleSheet(estilo_radiobutton)\n"
-"ui.radio_subtrair.setStyleSheet(estilo_radiobutton)")
         self.radio_subtrair = QRadioButton(self.groupBox)
         self.radio_subtrair.setObjectName(u"radio_subtrair")
         self.radio_subtrair.setGeometry(QRect(100, 30, 101, 21))
@@ -1771,22 +756,6 @@ class Ui_Dialog(object):
         self.botao_data_atual = QPushButton(self.page_4)
         self.botao_data_atual.setObjectName(u"botao_data_atual")
         self.botao_data_atual.setGeometry(QRect(150, 130, 101, 31))
-        self.botao_data_atual.setStyleSheet(u"QPushButton#botao_data_atual {\n"
-"    background-color: transparent;\n"
-"    border: none;\n"
-"    color: #333;\n"
-"    font-size: 12px;\n"
-"    font-weight: bold;\n"
-"    padding: 5px;\n"
-"}\n"
-"\n"
-"QPushButton#bddotao_data_atual {\n"
-"    color: #ff8c42;\n"
-"}\n"
-"\n"
-"QPushButton#botao_data_atual:pressed {\n"
-"    color: #e67a32;\n"
-"}")
         self.stackedWidget.addWidget(self.page_4)
         self.page_6 = QWidget()
         self.page_6.setObjectName(u"page_6")
@@ -1795,12 +764,6 @@ class Ui_Dialog(object):
         self.toolButton_7.setGeometry(QRect(10, 10, 21, 31))
         self.toolButton_7.setFont(font2)
         self.toolButton_7.setTabletTracking(False)
-        self.toolButton_7.setStyleSheet(u"QToolButton:hover {\n"
-"        color: #000;\n"
-"        background-color: #e0e0e0;\n"
-"        border-radius: 5px;\n"
-"    }\n"
-" ")
         self.label_distancias_7 = QLabel(self.page_6)
         self.label_distancias_7.setObjectName(u"label_distancias_7")
         self.label_distancias_7.setGeometry(QRect(40, 5, 191, 41))
@@ -1808,18 +771,6 @@ class Ui_Dialog(object):
         self.velocidade_origem.setObjectName(u"velocidade_origem")
         self.velocidade_origem.setGeometry(QRect(10, 60, 281, 61))
         self.velocidade_origem.setFont(font)
-        self.velocidade_origem.setStyleSheet(u"QLineEdit {\n"
-"    background-color: white;\n"
-"    color: #000;\n"
-"    font-size: 42px;\n"
-"    font-weight: bold;\n"
-"    border: 2px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    padding: 10px;\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #ff7052;\n"
-"}")
         self.combo_velocidades_origem = QComboBox(self.page_6)
         self.combo_velocidades_origem.setObjectName(u"combo_velocidades_origem")
         self.combo_velocidades_origem.setGeometry(QRect(10, 130, 191, 31))
@@ -1829,18 +780,6 @@ class Ui_Dialog(object):
         self.velocidade_destino.setObjectName(u"velocidade_destino")
         self.velocidade_destino.setGeometry(QRect(10, 170, 281, 61))
         self.velocidade_destino.setFont(font)
-        self.velocidade_destino.setStyleSheet(u"QLineEdit {\n"
-"    background-color: white;\n"
-"    color: #000;\n"
-"    font-size: 42px;\n"
-"    font-weight: bold;\n"
-"    border: 2px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    padding: 10px;\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #ff7052;\n"
-"}")
         self.combo_velocidades_destino = QComboBox(self.page_6)
         self.combo_velocidades_destino.setObjectName(u"combo_velocidades_destino")
         self.combo_velocidades_destino.setGeometry(QRect(10, 240, 191, 31))
@@ -1851,19 +790,6 @@ class Ui_Dialog(object):
         self.numero_0_velocidade.setGeometry(QRect(220, 330, 71, 51))
         self.numero_0_velocidade.setFont(font)
         self.numero_0_velocidade.setFocusPolicy(Qt.NoFocus)
-        self.numero_0_velocidade.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_0_velocidade.setCheckable(False)
         self.numero_0_velocidade.setChecked(False)
         self.numero_3_velocidade = QPushButton(self.page_6)
@@ -1871,19 +797,6 @@ class Ui_Dialog(object):
         self.numero_3_velocidade.setGeometry(QRect(150, 280, 71, 51))
         self.numero_3_velocidade.setFont(font)
         self.numero_3_velocidade.setFocusPolicy(Qt.NoFocus)
-        self.numero_3_velocidade.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_3_velocidade.setCheckable(False)
         self.numero_3_velocidade.setChecked(False)
         self.numero_2_velocidade = QPushButton(self.page_6)
@@ -1891,19 +804,6 @@ class Ui_Dialog(object):
         self.numero_2_velocidade.setGeometry(QRect(80, 280, 71, 51))
         self.numero_2_velocidade.setFont(font)
         self.numero_2_velocidade.setFocusPolicy(Qt.NoFocus)
-        self.numero_2_velocidade.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_2_velocidade.setCheckable(False)
         self.numero_2_velocidade.setChecked(False)
         self.numero_4_velocidade = QPushButton(self.page_6)
@@ -1911,19 +811,6 @@ class Ui_Dialog(object):
         self.numero_4_velocidade.setGeometry(QRect(10, 330, 71, 51))
         self.numero_4_velocidade.setFont(font)
         self.numero_4_velocidade.setFocusPolicy(Qt.NoFocus)
-        self.numero_4_velocidade.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_4_velocidade.setCheckable(False)
         self.numero_4_velocidade.setChecked(False)
         self.numero_5_velocidade = QPushButton(self.page_6)
@@ -1931,19 +818,6 @@ class Ui_Dialog(object):
         self.numero_5_velocidade.setGeometry(QRect(80, 330, 71, 51))
         self.numero_5_velocidade.setFont(font)
         self.numero_5_velocidade.setFocusPolicy(Qt.NoFocus)
-        self.numero_5_velocidade.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_5_velocidade.setCheckable(False)
         self.numero_5_velocidade.setChecked(False)
         self.numero_6_velocidade = QPushButton(self.page_6)
@@ -1951,19 +825,6 @@ class Ui_Dialog(object):
         self.numero_6_velocidade.setGeometry(QRect(150, 330, 71, 51))
         self.numero_6_velocidade.setFont(font)
         self.numero_6_velocidade.setFocusPolicy(Qt.NoFocus)
-        self.numero_6_velocidade.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_6_velocidade.setCheckable(False)
         self.numero_6_velocidade.setChecked(False)
         self.numero_1_velocidade = QPushButton(self.page_6)
@@ -1971,19 +832,6 @@ class Ui_Dialog(object):
         self.numero_1_velocidade.setGeometry(QRect(10, 280, 71, 51))
         self.numero_1_velocidade.setFont(font)
         self.numero_1_velocidade.setFocusPolicy(Qt.NoFocus)
-        self.numero_1_velocidade.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_1_velocidade.setCheckable(False)
         self.numero_1_velocidade.setChecked(False)
         self.botao_apagar_tudo_velocidade = QPushButton(self.page_6)
@@ -1991,19 +839,6 @@ class Ui_Dialog(object):
         self.botao_apagar_tudo_velocidade.setGeometry(QRect(220, 380, 71, 51))
         self.botao_apagar_tudo_velocidade.setFont(font)
         self.botao_apagar_tudo_velocidade.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_tudo_velocidade.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: rgb(235, 50, 10);;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.botao_apagar_tudo_velocidade.setCheckable(False)
         self.botao_apagar_tudo_velocidade.setChecked(False)
         self.botao_apagar_velocidade = QPushButton(self.page_6)
@@ -2011,20 +846,6 @@ class Ui_Dialog(object):
         self.botao_apagar_velocidade.setGeometry(QRect(220, 280, 71, 51))
         self.botao_apagar_velocidade.setFont(font)
         self.botao_apagar_velocidade.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_velocidade.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: #ff8a80;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}\n"
-"font-size: 24px !important;")
         self.botao_apagar_velocidade.setCheckable(False)
         self.botao_apagar_velocidade.setChecked(False)
         self.numero_8_velocidade = QPushButton(self.page_6)
@@ -2032,19 +853,6 @@ class Ui_Dialog(object):
         self.numero_8_velocidade.setGeometry(QRect(80, 380, 71, 51))
         self.numero_8_velocidade.setFont(font)
         self.numero_8_velocidade.setFocusPolicy(Qt.NoFocus)
-        self.numero_8_velocidade.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_8_velocidade.setCheckable(False)
         self.numero_8_velocidade.setChecked(False)
         self.numero_7_velocidade = QPushButton(self.page_6)
@@ -2052,19 +860,6 @@ class Ui_Dialog(object):
         self.numero_7_velocidade.setGeometry(QRect(10, 380, 71, 51))
         self.numero_7_velocidade.setFont(font)
         self.numero_7_velocidade.setFocusPolicy(Qt.NoFocus)
-        self.numero_7_velocidade.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_7_velocidade.setCheckable(False)
         self.numero_7_velocidade.setChecked(False)
         self.numero_9_velocidade = QPushButton(self.page_6)
@@ -2072,19 +867,6 @@ class Ui_Dialog(object):
         self.numero_9_velocidade.setGeometry(QRect(150, 380, 71, 51))
         self.numero_9_velocidade.setFont(font)
         self.numero_9_velocidade.setFocusPolicy(Qt.NoFocus)
-        self.numero_9_velocidade.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_9_velocidade.setCheckable(False)
         self.numero_9_velocidade.setChecked(False)
         self.stackedWidget.addWidget(self.page_6)
@@ -2095,12 +877,6 @@ class Ui_Dialog(object):
         self.toolButton_8.setGeometry(QRect(10, 10, 21, 31))
         self.toolButton_8.setFont(font2)
         self.toolButton_8.setTabletTracking(False)
-        self.toolButton_8.setStyleSheet(u"QToolButton:hover {\n"
-"        color: #000;\n"
-"        background-color: #e0e0e0;\n"
-"        border-radius: 5px;\n"
-"    }\n"
-" ")
         self.label_distancias_6 = QLabel(self.page_7)
         self.label_distancias_6.setObjectName(u"label_distancias_6")
         self.label_distancias_6.setGeometry(QRect(40, 5, 191, 41))
@@ -2115,36 +891,10 @@ class Ui_Dialog(object):
         self.valor_origem.setObjectName(u"valor_origem")
         self.valor_origem.setGeometry(QRect(10, 60, 281, 61))
         self.valor_origem.setFont(font)
-        self.valor_origem.setStyleSheet(u"QLineEdit {\n"
-"    background-color: white;\n"
-"    color: #000;\n"
-"    font-size: 42px;\n"
-"    font-weight: bold;\n"
-"    border: 2px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    padding: 10px;\n"
-"	padding-right:52px;\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #ff7052;\n"
-"}")
         self.valor_destino = QLineEdit(self.page_7)
         self.valor_destino.setObjectName(u"valor_destino")
         self.valor_destino.setGeometry(QRect(10, 170, 281, 61))
         self.valor_destino.setFont(font)
-        self.valor_destino.setStyleSheet(u"QLineEdit {\n"
-"    background-color: white;\n"
-"    color: #000;\n"
-"    font-size: 42px;\n"
-"    font-weight: bold;\n"
-"    border: 2px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    padding: 10px;\n"
-"	padding-right: 52px;\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #ff7052;\n"
-"}")
         self.combo_moeda_2 = QComboBox(self.page_7)
         self.combo_moeda_2.setObjectName(u"combo_moeda_2")
         self.combo_moeda_2.setGeometry(QRect(11, 240, 201, 31))
@@ -2157,19 +907,6 @@ class Ui_Dialog(object):
         self.numero_7_moedas.setGeometry(QRect(10, 460, 71, 51))
         self.numero_7_moedas.setFont(font)
         self.numero_7_moedas.setFocusPolicy(Qt.NoFocus)
-        self.numero_7_moedas.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_7_moedas.setCheckable(False)
         self.numero_7_moedas.setChecked(False)
         self.numero_3_moedas = QPushButton(self.page_7)
@@ -2177,19 +914,6 @@ class Ui_Dialog(object):
         self.numero_3_moedas.setGeometry(QRect(150, 360, 71, 51))
         self.numero_3_moedas.setFont(font)
         self.numero_3_moedas.setFocusPolicy(Qt.NoFocus)
-        self.numero_3_moedas.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_3_moedas.setCheckable(False)
         self.numero_3_moedas.setChecked(False)
         self.numero_2_moedas = QPushButton(self.page_7)
@@ -2197,19 +921,6 @@ class Ui_Dialog(object):
         self.numero_2_moedas.setGeometry(QRect(80, 360, 71, 51))
         self.numero_2_moedas.setFont(font)
         self.numero_2_moedas.setFocusPolicy(Qt.NoFocus)
-        self.numero_2_moedas.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_2_moedas.setCheckable(False)
         self.numero_2_moedas.setChecked(False)
         self.botao_apagar_tudo_moedas = QPushButton(self.page_7)
@@ -2217,19 +928,6 @@ class Ui_Dialog(object):
         self.botao_apagar_tudo_moedas.setGeometry(QRect(220, 460, 71, 51))
         self.botao_apagar_tudo_moedas.setFont(font)
         self.botao_apagar_tudo_moedas.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_tudo_moedas.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: rgb(235, 50, 10);;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}")
         self.botao_apagar_tudo_moedas.setCheckable(False)
         self.botao_apagar_tudo_moedas.setChecked(False)
         self.botao_apagar_moedas = QPushButton(self.page_7)
@@ -2237,20 +935,6 @@ class Ui_Dialog(object):
         self.botao_apagar_moedas.setGeometry(QRect(220, 360, 71, 51))
         self.botao_apagar_moedas.setFont(font)
         self.botao_apagar_moedas.setFocusPolicy(Qt.NoFocus)
-        self.botao_apagar_moedas.setStyleSheet(u"\n"
-"QPushButton {\n"
-"    background-color: #ff8a80;\n"
-"    color: white;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;  /* \u2190 adiciona isto */\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #ff7052;\n"
-"}\n"
-"font-size: 24px !important;")
         self.botao_apagar_moedas.setCheckable(False)
         self.botao_apagar_moedas.setChecked(False)
         self.numero_1_moedas = QPushButton(self.page_7)
@@ -2258,19 +942,6 @@ class Ui_Dialog(object):
         self.numero_1_moedas.setGeometry(QRect(10, 360, 71, 51))
         self.numero_1_moedas.setFont(font)
         self.numero_1_moedas.setFocusPolicy(Qt.NoFocus)
-        self.numero_1_moedas.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_1_moedas.setCheckable(False)
         self.numero_1_moedas.setChecked(False)
         self.numero_5_moedas = QPushButton(self.page_7)
@@ -2278,19 +949,6 @@ class Ui_Dialog(object):
         self.numero_5_moedas.setGeometry(QRect(80, 410, 71, 51))
         self.numero_5_moedas.setFont(font)
         self.numero_5_moedas.setFocusPolicy(Qt.NoFocus)
-        self.numero_5_moedas.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_5_moedas.setCheckable(False)
         self.numero_5_moedas.setChecked(False)
         self.numero_9_moedas = QPushButton(self.page_7)
@@ -2298,19 +956,6 @@ class Ui_Dialog(object):
         self.numero_9_moedas.setGeometry(QRect(150, 460, 71, 51))
         self.numero_9_moedas.setFont(font)
         self.numero_9_moedas.setFocusPolicy(Qt.NoFocus)
-        self.numero_9_moedas.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_9_moedas.setCheckable(False)
         self.numero_9_moedas.setChecked(False)
         self.numero_8_moedas = QPushButton(self.page_7)
@@ -2318,19 +963,6 @@ class Ui_Dialog(object):
         self.numero_8_moedas.setGeometry(QRect(80, 460, 71, 51))
         self.numero_8_moedas.setFont(font)
         self.numero_8_moedas.setFocusPolicy(Qt.NoFocus)
-        self.numero_8_moedas.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_8_moedas.setCheckable(False)
         self.numero_8_moedas.setChecked(False)
         self.numero_4_moedas = QPushButton(self.page_7)
@@ -2338,19 +970,6 @@ class Ui_Dialog(object):
         self.numero_4_moedas.setGeometry(QRect(10, 410, 71, 51))
         self.numero_4_moedas.setFont(font)
         self.numero_4_moedas.setFocusPolicy(Qt.NoFocus)
-        self.numero_4_moedas.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_4_moedas.setCheckable(False)
         self.numero_4_moedas.setChecked(False)
         self.numero_0_moedas = QPushButton(self.page_7)
@@ -2358,19 +977,6 @@ class Ui_Dialog(object):
         self.numero_0_moedas.setGeometry(QRect(220, 410, 71, 51))
         self.numero_0_moedas.setFont(font)
         self.numero_0_moedas.setFocusPolicy(Qt.NoFocus)
-        self.numero_0_moedas.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_0_moedas.setCheckable(False)
         self.numero_0_moedas.setChecked(False)
         self.numero_6_moedas = QPushButton(self.page_7)
@@ -2378,41 +984,12 @@ class Ui_Dialog(object):
         self.numero_6_moedas.setGeometry(QRect(150, 410, 71, 51))
         self.numero_6_moedas.setFont(font)
         self.numero_6_moedas.setFocusPolicy(Qt.NoFocus)
-        self.numero_6_moedas.setStyleSheet(u"QPushButton {\n"
-"    background-color: white;\n"
-"    color: #333;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid #ddd;\n"
-"    border-radius: 8px;\n"
-"    margin: 2px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #f5f5f5;\n"
-"    border: 1px solid #ccc;\n"
-"}")
         self.numero_6_moedas.setCheckable(False)
         self.numero_6_moedas.setChecked(False)
         self.botao_update = QPushButton(self.page_7)
         self.botao_update.setObjectName(u"botao_update")
         self.botao_update.setGeometry(QRect(0, 330, 121, 23))
         self.botao_update.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.botao_update.setStyleSheet(u"QPushButton#botao_update {\n"
-"    background-color: transparent;\n"
-"    border: none;\n"
-"    color: #333;\n"
-"    font-size: 12px;\n"
-"    font-weight: bold;\n"
-"    padding: 5px;\n"
-"}\n"
-"\n"
-"QPushButton#nome_do_botao_update {\n"
-"    color: #ff8c42;\n"
-"}\n"
-"\n"
-"QPushButton#botao_update:pressed {\n"
-"    color: #e67a32;\n"
-"}")
         self.label_cambio = QLabel(self.page_7)
         self.label_cambio.setObjectName(u"label_cambio")
         self.label_cambio.setGeometry(QRect(20, 280, 221, 16))
@@ -2422,7 +999,6 @@ class Ui_Dialog(object):
         self.simbolo_origem = QLabel(self.page_7)
         self.simbolo_origem.setObjectName(u"simbolo_origem")
         self.simbolo_origem.setGeometry(QRect(232, 45, 61, 91))
-        self.simbolo_origem.setStyleSheet(u"background-color: transparent;")
         self.simbolo_origem.setAlignment(Qt.AlignCenter)
         self.simbolo_destino = QLabel(self.page_7)
         self.simbolo_destino.setObjectName(u"simbolo_destino")
@@ -2437,12 +1013,6 @@ class Ui_Dialog(object):
         self.toolButton_4.setGeometry(QRect(10, 10, 21, 31))
         self.toolButton_4.setFont(font2)
         self.toolButton_4.setTabletTracking(False)
-        self.toolButton_4.setStyleSheet(u"QToolButton:hover {\n"
-"        color: #000;\n"
-"        background-color: #e0e0e0;\n"
-"        border-radius: 5px;\n"
-"    }\n"
-" ")
         self.label_distancias_8 = QLabel(self.page_5)
         self.label_distancias_8.setObjectName(u"label_distancias_8")
         self.label_distancias_8.setGeometry(QRect(40, 5, 191, 41))
@@ -2452,6 +1022,14 @@ class Ui_Dialog(object):
         self.spinBox_casas_decimais = QSpinBox(self.page_5)
         self.spinBox_casas_decimais.setObjectName(u"spinBox_casas_decimais")
         self.spinBox_casas_decimais.setGeometry(QRect(20, 80, 71, 22))
+        self.combo_tema = QComboBox(self.page_5)
+        self.combo_tema.addItem("")
+        self.combo_tema.addItem("")
+        self.combo_tema.setObjectName(u"combo_tema")
+        self.combo_tema.setGeometry(QRect(20, 170, 171, 31))
+        self.label_tema = QLabel(self.page_5)
+        self.label_tema.setObjectName(u"label_tema")
+        self.label_tema.setGeometry(QRect(20, 140, 47, 13))
         self.stackedWidget.addWidget(self.page_5)
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
@@ -2463,23 +1041,12 @@ class Ui_Dialog(object):
         self.toolButton_9.setGeometry(QRect(10, 10, 21, 31))
         self.toolButton_9.setFont(font2)
         self.toolButton_9.setTabletTracking(False)
-        self.toolButton_9.setStyleSheet(u"QToolButton:hover {\n"
-"        color: #000;\n"
-"        background-color: #e0e0e0;\n"
-"        border-radius: 5px;\n"
-"    }\n"
-" ")
         self.label_10 = QLabel(self.page_2)
         self.label_10.setObjectName(u"label_10")
         self.label_10.setGeometry(QRect(10, 50, 281, 161))
-        self.label_10.setStyleSheet(u"font-size: 12px;\n"
-"font-weight: bold;\n"
-"color: #ff7052;")
         self.label_11 = QLabel(self.page_2)
         self.label_11.setObjectName(u"label_11")
         self.label_11.setGeometry(QRect(10, 320, 271, 141))
-        self.label_11.setStyleSheet(u"font-size: 12px;\n"
-"color: #444;")
         self.label_link = QLabel(self.page_2)
         self.label_link.setObjectName(u"label_link")
         self.label_link.setGeometry(QRect(10, 380, 261, 31))
@@ -2695,6 +1262,10 @@ class Ui_Dialog(object):
         self.toolButton_4.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
         self.label_distancias_8.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Defini\u00e7\u00f5es</span></p></body></html>", None))
         self.label.setText(QCoreApplication.translate("Dialog", u"Casas Decimais ", None))
+        self.combo_tema.setItemText(0, QCoreApplication.translate("Dialog", u"Tema claro(Padr\u00e3o)", None))
+        self.combo_tema.setItemText(1, QCoreApplication.translate("Dialog", u"Tema escuro", None))
+
+        self.label_tema.setText(QCoreApplication.translate("Dialog", u"Tema", None))
         self.label_distancias_9.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:16pt; font-weight:600;\">Acerca de</span></p></body></html>", None))
         self.toolButton_9.setText(QCoreApplication.translate("Dialog", u"\u2630", None))
         self.label_10.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p>Calculadora v0.7</p><p>Made with Python, Pyside6.</p><p>APIs usadas : ExchangeRate API, CoinGecko</p><p>@ 2026 Rui Lopes </p></body></html>", None))

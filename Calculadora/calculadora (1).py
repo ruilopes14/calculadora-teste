@@ -10,8 +10,6 @@ import locale
 import requests
 import json
 from estilos import aplicar_tema
-import ctypes
-
 
 class FiltroFoco(QObject):
     def eventFilter(self, obj, event):
@@ -108,6 +106,9 @@ ui.velocidade_destino.installEventFilter(filtro_velocidade_2)
 
 
 
+
+
+
 validator = QDoubleValidator()
 validator.setLocale(QLocale(QLocale.Portuguese, QLocale.Portugal))
 ui.distancia_1.setValidator(validator)
@@ -151,12 +152,7 @@ aplicar_tema(ui, janela, tema_atual, caminho_seta, caminho_calen)
 
 
 
-def aplicar_titulo_escuro(janela, escuro=True):
-    hwnd = int(janela.winId())
-    valor = ctypes.c_int(1 if escuro else 0)
-    ctypes.windll.dwmapi.DwmSetWindowAttribute(
-        hwnd, 20, ctypes.byref(valor), ctypes.sizeof(valor)
-    )
+
 
 
 
@@ -1234,26 +1230,10 @@ def carregar_config():
         ui.spinBox_casas_decimais.setValue(casas_decimais)
     except :
         ui.spinBox_casas_decimais.setValue(4)
-
     aplicar_tema(ui, janela, tema_atual, caminho_seta, caminho_calen)
 
-def mudar_tema () : 
-    global tema_atual
-    global tema_atual
-    if ui.combo_tema.currentIndex() == 0:
-        tema_atual = "claro"
-    else:
-        tema_atual = "escuro"
-    aplicar_tema(ui, janela, tema_atual, caminho_seta, caminho_calen)
-    guardar_config()
-    aplicar_titulo_escuro(janela, tema_atual == "escuro")
 
 carregar_config()
-
-if tema_atual== "claro" :
-    ui.combo_tema.setCurrentIndex(0)
-else :
-    ui.combo_tema.setCurrentIndex(1)
 
 def ir_para_calculadora():
     janela.resize(300, 440) 
@@ -1491,7 +1471,7 @@ ui.botao_apagar_tudo_velocidade.clicked.connect(apagar_tudo_foco)
 
 ui.spinBox_casas_decimais.valueChanged.connect(casas_decimais_)
 
-ui.combo_tema.currentIndexChanged.connect(mudar_tema)
+
 
 
 QShortcut(QKeySequence("1"), janela).activated.connect(lambda: numeros(1))

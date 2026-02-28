@@ -46,28 +46,12 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>6</string>
@@ -90,29 +74,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}
-</string>
      </property>
      <property name="text">
       <string>1</string>
@@ -135,28 +102,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>4</string>
@@ -179,28 +130,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>5</string>
@@ -223,29 +158,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: #ff8a80;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}
-font-size: 24px !important;</string>
      </property>
      <property name="text">
       <string>⟵</string>
@@ -278,13 +196,6 @@ font-size: 24px !important;</string>
      <property name="contextMenuPolicy">
       <enum>Qt::DefaultContextMenu</enum>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QToolButton:hover {
-        color: #000;
-        background-color: #e0e0e0;
-        border-radius: 5px;
-    }</string>
-     </property>
      <property name="text">
       <string>☰</string>
      </property>
@@ -303,7 +214,6 @@ font-size: 24px !important;</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
@@ -313,20 +223,6 @@ font-size: 24px !important;</string>
      </property>
      <property name="autoFillBackground">
       <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: #ff5032;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>.</string>
@@ -349,28 +245,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: #ff5032;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>-</string>
@@ -393,24 +273,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="cursor">
       <cursorShape>ArrowCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit {
-    background-color: transparent;
-    color: #000000;
-    font-size: 48px;
-    font-weight: bold;
-    border: 2px solid #cccccc;
-    border-radius: 5px;
-    padding: 10px;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -430,27 +298,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: #ff5032;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>%</string>
@@ -473,28 +326,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>9</string>
@@ -517,27 +354,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: #ff5032;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>÷</string>
@@ -560,28 +382,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>8</string>
@@ -604,27 +410,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: #ff5032;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>+</string>
@@ -647,27 +438,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: #ff5032;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>+/-</string>
@@ -690,28 +466,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -734,28 +494,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>7</string>
@@ -778,28 +522,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>2</string>
@@ -822,28 +550,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: rgb(235, 50, 10);;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>CE</string>
@@ -866,25 +578,9 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color:rgb(255, 170, 127);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>=</string>
@@ -907,28 +603,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>3</string>
@@ -954,7 +634,6 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
@@ -964,20 +643,6 @@ QPushButton:hover {
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: #ff5032;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>✕</string>
@@ -1078,24 +743,9 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit {
-    background-color: white;
-    color: #000;
-    font-size: 42px;
-    font-weight: bold;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-}
-QLineEdit:focus {
-    border: 2px solid #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -1125,24 +775,9 @@ QLineEdit:focus {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit {
-    background-color: white;
-    color: #000;
-    font-size: 42px;
-    font-weight: bold;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-}
-QLineEdit:focus {
-    border: 2px solid #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -1207,28 +842,12 @@ QLineEdit:focus {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -1251,28 +870,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>6</string>
@@ -1295,28 +898,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>7</string>
@@ -1339,28 +926,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>1</string>
@@ -1383,28 +954,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>3</string>
@@ -1427,28 +982,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>9</string>
@@ -1471,28 +1010,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>2</string>
@@ -1515,28 +1038,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>4</string>
@@ -1559,28 +1066,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>8</string>
@@ -1603,28 +1094,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>5</string>
@@ -1647,29 +1122,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: #ff8a80;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}
-font-size: 24px !important;</string>
      </property>
      <property name="text">
       <string>⟵</string>
@@ -1692,28 +1150,12 @@ font-size: 24px !important;</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: rgb(235, 50, 10);;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>CE</string>
@@ -1740,14 +1182,6 @@ QPushButton:hover {
      <property name="tabletTracking">
       <bool>false</bool>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QToolButton:hover {
-        color: #000;
-        background-color: #e0e0e0;
-        border-radius: 5px;
-    }
- </string>
-     </property>
      <property name="text">
       <string>☰</string>
      </property>
@@ -1768,14 +1202,6 @@ QPushButton:hover {
      </property>
      <property name="tabletTracking">
       <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QToolButton:hover {
-        color: #000;
-        background-color: #e0e0e0;
-        border-radius: 5px;
-    }
- </string>
      </property>
      <property name="text">
       <string>☰</string>
@@ -1833,24 +1259,9 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit {
-    background-color: white;
-    color: #000;
-    font-size: 42px;
-    font-weight: bold;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-}
-QLineEdit:focus {
-    border: 2px solid #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -1867,24 +1278,9 @@ QLineEdit:focus {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit {
-    background-color: white;
-    color: #000;
-    font-size: 42px;
-    font-weight: bold;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-}
-QLineEdit:focus {
-    border: 2px solid #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -1935,28 +1331,12 @@ QLineEdit:focus {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>4</string>
@@ -1979,28 +1359,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>2</string>
@@ -2023,28 +1387,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>6</string>
@@ -2067,28 +1415,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>8</string>
@@ -2111,28 +1443,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: rgb(235, 50, 10);;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>CE</string>
@@ -2155,28 +1471,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>7</string>
@@ -2199,28 +1499,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>1</string>
@@ -2243,28 +1527,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>9</string>
@@ -2287,28 +1555,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -2331,29 +1583,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: #ff8a80;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}
-font-size: 24px !important;</string>
      </property>
      <property name="text">
       <string>⟵</string>
@@ -2376,28 +1611,12 @@ font-size: 24px !important;</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>5</string>
@@ -2420,28 +1639,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>3</string>
@@ -2488,14 +1691,6 @@ QPushButton:hover {
      <property name="tabletTracking">
       <bool>false</bool>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QToolButton:hover {
-        color: #000;
-        background-color: #e0e0e0;
-        border-radius: 5px;
-    }
- </string>
-     </property>
      <property name="text">
       <string>☰</string>
      </property>
@@ -2524,24 +1719,9 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit {
-    background-color: white;
-    color: #000;
-    font-size: 42px;
-    font-weight: bold;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-}
-QLineEdit:focus {
-    border: 2px solid #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -2617,24 +1797,9 @@ QLineEdit:focus {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit {
-    background-color: white;
-    color: #000;
-    font-size: 42px;
-    font-weight: bold;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-}
-QLineEdit:focus {
-    border: 2px solid #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -2651,29 +1816,12 @@ QLineEdit:focus {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: #ff8a80;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}
-font-size: 24px !important;</string>
      </property>
      <property name="text">
       <string>⟵</string>
@@ -2696,28 +1844,12 @@ font-size: 24px !important;</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: rgb(235, 50, 10);;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>CE</string>
@@ -2740,28 +1872,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -2784,28 +1900,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>9</string>
@@ -2828,28 +1928,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>7</string>
@@ -2872,28 +1956,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>8</string>
@@ -2916,28 +1984,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>8</string>
@@ -2960,28 +2012,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>9</string>
@@ -3004,28 +2040,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>2</string>
@@ -3048,28 +2068,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>5</string>
@@ -3092,28 +2096,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -3136,29 +2124,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: #ff8a80;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}
-font-size: 24px !important;</string>
      </property>
      <property name="text">
       <string>⟵</string>
@@ -3181,28 +2152,12 @@ font-size: 24px !important;</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>4</string>
@@ -3225,28 +2180,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>6</string>
@@ -3269,28 +2208,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>3</string>
@@ -3313,28 +2236,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: rgb(235, 50, 10);;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>CE</string>
@@ -3357,28 +2264,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>1</string>
@@ -3401,28 +2292,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>7</string>
@@ -3509,14 +2384,6 @@ QPushButton:hover {
      </property>
      <property name="tabletTracking">
       <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QToolButton:hover {
-        color: #000;
-        background-color: #e0e0e0;
-        border-radius: 5px;
-    }
- </string>
      </property>
      <property name="text">
       <string>☰</string>
@@ -3645,17 +2512,6 @@ QPushButton:hover {
        <height>41</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel#label_erro {
-    background-color: #ffe6e6;
-    color: #d32f2f;
-    border: 2px solid #d32f2f;
-    border-radius: 8px;
-    padding: 10px;
-    font-size: 11px;
-    font-weight: bold;
-}</string>
-     </property>
      <property name="text">
       <string>label_erro</string>
      </property>
@@ -3668,15 +2524,6 @@ QPushButton:hover {
        <width>191</width>
        <height>51</height>
       </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel#label_horas {
-    background-color: transparent;
-    color: #555;
-    border-left: 3px solid #ff8c42;
-    padding: 5px 10px;
-    font-size: 12px;
-}</string>
      </property>
      <property name="text">
       <string>TextLabel</string>
@@ -3691,17 +2538,6 @@ QPushButton:hover {
        <height>51</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">
-
-QLabel#label_dias {
-    background-color: transparent;
-    color: #555;
-    border-left: 3px solid #ff8c42;
-    padding: 5px 10px;
-    font-size: 12px;
-}</string>
-     </property>
      <property name="text">
       <string>TextLabel</string>
      </property>
@@ -3714,15 +2550,6 @@ QLabel#label_dias {
        <width>191</width>
        <height>51</height>
       </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel#label_semanas {
-    background-color: transparent;
-    color: #555;
-    border-left: 3px solid #ff8c42;
-    padding: 5px 10px;
-    font-size: 12px;
-}</string>
      </property>
      <property name="text">
       <string>TextLabel</string>
@@ -3737,16 +2564,6 @@ QLabel#label_dias {
        <height>31</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel#label_resultado {
-    background-color: transparent;
-    color: #333;
-    border: none;
-    padding: 5px;
-    font-size: 13px;
-    font-weight: bold;
-}</string>
-     </property>
      <property name="text">
       <string>Diferença :</string>
      </property>
@@ -3760,28 +2577,6 @@ QLabel#label_dias {
        <height>31</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton#botao_data_atual_2 {
-    background-color: white;
-    color: #333;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 8px 15px;
-    font-size: 11px;
-    font-weight: bold;
-}
-
-QPushButton#botao_data_atual_2:hover {
-    background-color: #ff8c42;
-    color: white;
-    border: 2px solid #ff8c42;
-}
-
-QPushButton#botao_data_atual_2:pressed {
-    background-color: #e67a32;
-    border: 2px solid #e67a32;
-}</string>
-     </property>
      <property name="text">
       <string>Repor Data</string>
      </property>
@@ -3794,28 +2589,6 @@ QPushButton#botao_data_atual_2:pressed {
        <width>101</width>
        <height>31</height>
       </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton#botao_data_atual_3 {
-    background-color: white;
-    color: #333;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 8px 15px;
-    font-size: 11px;
-    font-weight: bold;
-}
-
-QPushButton#botao_data_atual_3:hover {
-    background-color: #ff8c42;
-    color: white;
-    border: 2px solid #ff8c42;
-}
-
-QPushButton#botao_data_atual_3:pressed {
-    background-color: #e67a32;
-    border: 2px solid #e67a32;
-}</string>
      </property>
      <property name="text">
       <string>Repor Data</string>
@@ -3879,14 +2652,6 @@ QPushButton#botao_data_atual_3:pressed {
      </property>
      <property name="tabletTracking">
       <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QToolButton:hover {
-        color: #000;
-        background-color: #e0e0e0;
-        border-radius: 5px;
-    }
- </string>
      </property>
      <property name="text">
       <string>☰</string>
@@ -3995,12 +2760,6 @@ QPushButton#botao_data_atual_3:pressed {
        <height>71</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QGroupBox {
-    background-color: transparent;
-    border: none;
-}</string>
-     </property>
      <property name="title">
       <string/>
      </property>
@@ -4012,17 +2771,6 @@ QPushButton#botao_data_atual_3:pressed {
         <width>101</width>
         <height>21</height>
        </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">estilo_radiobutton = &quot;&quot;&quot;
-    QRadioButton::indicator:checked {
-        background-color: #ff8c42;
-        border: 2px solid #ff8c42;
-    }
-&quot;&quot;&quot;
-
-ui.radio_adicionar.setStyleSheet(estilo_radiobutton)
-ui.radio_subtrair.setStyleSheet(estilo_radiobutton)</string>
       </property>
       <property name="text">
        <string>Adicionar</string>
@@ -4099,24 +2847,6 @@ ui.radio_subtrair.setStyleSheet(estilo_radiobutton)</string>
        <height>31</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton#botao_data_atual {
-    background-color: transparent;
-    border: none;
-    color: #333;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 5px;
-}
-
-QPushButton#bddotao_data_atual {
-    color: #ff8c42;
-}
-
-QPushButton#botao_data_atual:pressed {
-    color: #e67a32;
-}</string>
-     </property>
      <property name="text">
       <string>Repor data</string>
      </property>
@@ -4137,14 +2867,6 @@ QPushButton#botao_data_atual:pressed {
      </property>
      <property name="tabletTracking">
       <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QToolButton:hover {
-        color: #000;
-        background-color: #e0e0e0;
-        border-radius: 5px;
-    }
- </string>
      </property>
      <property name="text">
       <string>☰</string>
@@ -4174,24 +2896,9 @@ QPushButton#botao_data_atual:pressed {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit {
-    background-color: white;
-    color: #000;
-    font-size: 42px;
-    font-weight: bold;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-}
-QLineEdit:focus {
-    border: 2px solid #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -4227,24 +2934,9 @@ QLineEdit:focus {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit {
-    background-color: white;
-    color: #000;
-    font-size: 42px;
-    font-weight: bold;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-}
-QLineEdit:focus {
-    border: 2px solid #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -4280,28 +2972,12 @@ QLineEdit:focus {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -4324,28 +3000,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>3</string>
@@ -4368,28 +3028,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>2</string>
@@ -4412,28 +3056,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>4</string>
@@ -4456,28 +3084,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>5</string>
@@ -4500,28 +3112,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>6</string>
@@ -4544,28 +3140,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>1</string>
@@ -4588,28 +3168,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: rgb(235, 50, 10);;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>CE</string>
@@ -4632,29 +3196,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: #ff8a80;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}
-font-size: 24px !important;</string>
      </property>
      <property name="text">
       <string>⟵</string>
@@ -4677,28 +3224,12 @@ font-size: 24px !important;</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>8</string>
@@ -4721,28 +3252,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>7</string>
@@ -4765,28 +3280,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>9</string>
@@ -4814,14 +3313,6 @@ QPushButton:hover {
      </property>
      <property name="tabletTracking">
       <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QToolButton:hover {
-        color: #000;
-        background-color: #e0e0e0;
-        border-radius: 5px;
-    }
- </string>
      </property>
      <property name="text">
       <string>☰</string>
@@ -4876,25 +3367,9 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit {
-    background-color: white;
-    color: #000;
-    font-size: 42px;
-    font-weight: bold;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-	padding-right:52px;
-}
-QLineEdit:focus {
-    border: 2px solid #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -4911,25 +3386,9 @@ QLineEdit:focus {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit {
-    background-color: white;
-    color: #000;
-    font-size: 42px;
-    font-weight: bold;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-	padding-right: 52px;
-}
-QLineEdit:focus {
-    border: 2px solid #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -4971,28 +3430,12 @@ QLineEdit:focus {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>7</string>
@@ -5015,28 +3458,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>3</string>
@@ -5059,28 +3486,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>2</string>
@@ -5103,28 +3514,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: rgb(235, 50, 10);;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}</string>
      </property>
      <property name="text">
       <string>CE</string>
@@ -5147,29 +3542,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-    background-color: #ff8a80;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;  /* ← adiciona isto */
-}
-QPushButton:hover {
-    background-color: #ff7052;
-}
-font-size: 24px !important;</string>
      </property>
      <property name="text">
       <string>⟵</string>
@@ -5192,28 +3570,12 @@ font-size: 24px !important;</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>1</string>
@@ -5236,28 +3598,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>5</string>
@@ -5280,28 +3626,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>9</string>
@@ -5324,28 +3654,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>8</string>
@@ -5368,28 +3682,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>4</string>
@@ -5412,28 +3710,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -5456,28 +3738,12 @@ QPushButton:hover {
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: white;
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 2px;
-}
-QPushButton:hover {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-}</string>
      </property>
      <property name="text">
       <string>6</string>
@@ -5500,24 +3766,6 @@ QPushButton:hover {
      </property>
      <property name="cursor">
       <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton#botao_update {
-    background-color: transparent;
-    border: none;
-    color: #333;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 5px;
-}
-
-QPushButton#nome_do_botao_update {
-    color: #ff8c42;
-}
-
-QPushButton#botao_update:pressed {
-    color: #e67a32;
-}</string>
      </property>
      <property name="text">
       <string>Atualizar Taxas</string>
@@ -5557,9 +3805,6 @@ QPushButton#botao_update:pressed {
        <width>61</width>
        <height>91</height>
       </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: transparent;</string>
      </property>
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; font-weight:600;&quot;&gt;€&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -5604,14 +3849,6 @@ QPushButton#botao_update:pressed {
      <property name="tabletTracking">
       <bool>false</bool>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QToolButton:hover {
-        color: #000;
-        background-color: #e0e0e0;
-        border-radius: 5px;
-    }
- </string>
-     </property>
      <property name="text">
       <string>☰</string>
      </property>
@@ -5652,6 +3889,39 @@ QPushButton#botao_update:pressed {
       </rect>
      </property>
     </widget>
+    <widget class="QComboBox" name="combo_tema">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Tema claro(Padrão)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tema escuro</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_tema">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tema</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="page_2">
     <widget class="QLabel" name="label_distancias_9">
@@ -5682,14 +3952,6 @@ QPushButton#botao_update:pressed {
      <property name="tabletTracking">
       <bool>false</bool>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QToolButton:hover {
-        color: #000;
-        background-color: #e0e0e0;
-        border-radius: 5px;
-    }
- </string>
-     </property>
      <property name="text">
       <string>☰</string>
      </property>
@@ -5703,11 +3965,6 @@ QPushButton#botao_update:pressed {
        <height>161</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">font-size: 12px;
-font-weight: bold;
-color: #ff7052;</string>
-     </property>
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Calculadora v0.7&lt;/p&gt;&lt;p&gt;Made with Python, Pyside6.&lt;/p&gt;&lt;p&gt;APIs usadas : ExchangeRate API, CoinGecko&lt;/p&gt;&lt;p&gt;@ 2026 Rui Lopes &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
@@ -5720,10 +3977,6 @@ color: #ff7052;</string>
        <width>271</width>
        <height>141</height>
       </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font-size: 12px;
-color: #444;</string>
      </property>
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aplicação de código aberto desenvolvida como&lt;/p&gt;&lt;p&gt;projeto de aprendizagem&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
